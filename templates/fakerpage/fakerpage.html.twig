@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User List</title>
+</head>
+<body>
+<h1>{{ users|length }} Users</h1>
+
+<table id="navigation">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  {% for user in users %}
+    <tr>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h2>Twig Debug Example</h2>
+<pre>{{ dump(users)}}</pre>
+
+</body>
+</html>
