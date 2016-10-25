@@ -10,6 +10,12 @@ The twig setup supports `{% include %}` and `{% extend %}` etc. so you can struc
 
 For debugging you can `<pre>{{ dump(users)}}</pre>`a variable.
 
+## Gulp and Sass
+Compile Sass using gulp:
+* gulp (compile once)
+* gulp watch (compile and watch for changes)
+* gulp watch -s (compile, watch for changes and use browser reload)
+
 ##Faker
 The setup also includes the [fzaninotto/Faker](https://github.com/fzaninotto/Faker) library to create realistic random content.
 
