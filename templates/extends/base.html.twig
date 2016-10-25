@@ -5,8 +5,56 @@
   <link rel="stylesheet" href="css/styles.css" />
   <title>{% block title %}{% endblock %}</title>
   {% endblock %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/js/menu-toggle.js"></script>
 </head>
 <body>
+<div class="overlay js-menu-toggle"></div>
+<!--menu.html.twig END-->
+<div class="nav-toggle js-menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<!--menu.html.twig START-->
+<nav class="hamburger-menu">
+  <div class="hamburger-menu--inner">
+    <div class="hamburger-menu--links">
+      <div class="hamburger-menu--group">
+        <a href="<?php echo $path_to_site; ?>/om-5-pack/" class="nav--link<?php echo $is_active === 0 ? ' is-active' : '' ?>">
+          Om 5 pack
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="<?php echo $path_to_site; ?>/nyheder/" class="nav--link<?php echo $is_active === 1 ? ' is-active' : '' ?>">
+          Nyheder
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/temaer/" class="nav--link">
+          Temaer
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/netvaerk/" class="nav--link">
+          Netværk
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/kontakt/" class="nav--link">
+          Kontakt
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/english/" class="nav--link">
+          English
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--menu.html.twig END-->
 <div id="content">{% block content %}{% endblock %}</div>
 </body>
 </html>
