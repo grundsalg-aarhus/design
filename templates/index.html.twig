@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site Examples</title>
+</head>
+<body>
+<h1>Site Examples</h1>
+
+<ul id="navigation">
+  {% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "href": "/",
+      "caption": "Home"
+    },
+    {
+      "href": "/whatever",
+      "caption": "Whatever..."
+    },
+    {
+      "href": "/users",
+      "caption": "Users"
+    }
+  ]
+}
