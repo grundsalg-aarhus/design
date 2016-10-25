@@ -1,11 +1,5 @@
 {
-    "name": "aakb/itk-style-guide",
-    "authors": [
-        {
-            "name": "turegjorup",
-            "email": "ture@ignatz.dk"
-        }
-    ],
+    "name": "grundsalg-aarhus/design",
     "require": {
         "twig/twig": "^1.26",
         "fzaninotto/faker": "^1.6"
