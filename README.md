@@ -6,7 +6,7 @@ To make a new page take a look at the testpage in the examples folder:
 * Copy and rename the `testpage` to the `templates` folder
 
 ##Twig
-The twig setup supports `{% include %}` and `{% extend %}` etc. so you can structure your template setup as you wish :-)
+The twig setup supports `{% include %}` and `{% extend %}` etc. so you can structure your template setup as you wish.
 
 For debugging you can `<pre>{{ dump(users)}}</pre>`a variable.
 
