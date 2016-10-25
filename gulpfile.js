@@ -58,15 +58,15 @@ var configuration = {
   // Base theme.
   'grundsalg-design': {
     "js": {
-      "paths": ['./grundsalg-design/js/*.js', '!./grundsalg-design/js/*.min.*'],
-      "dest": './grundsalg-design/js'
+      "paths": ['./js/*.js', '!./grundsalg-design/js/*.min.*'],
+      "dest": './js'
     },
     "sass": {
-      "paths": './grundsalg-design/scss/**/*.scss',
-      'dest': './grundsalg-design/css'
+      "paths": './scss/**/*.scss',
+      'dest': './css'
     },
     "twig": {
-      "paths": './grundsalg-design/templates/**/*.twig'
+      "paths": './templates/**/*.twig'
     }
   }
 };
