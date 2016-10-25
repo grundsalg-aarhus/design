@@ -1,25 +1,9 @@
 # Design
 
-## Setup
-
-```
-git clone git@github.com:grundsalg-Aarhus/design.git
-cd design
-composer install
-php -S localhost:8000
-```
-The site is now accessible at [localhost:8000](http://localhost:8000) where you can see a list of example pages. This list auto-updates when you make new pages.
-
-An example template is located at [/jsonpage](http://localhost:8000/jsonpage)
-
 ##Usage
-To make a new page follow the structure for the jsonpage example:
+To make a new page take a look at the testpage in the examples folder:
 
-* Copy and rename the `jsonpage` directory
-* Edit `vars.json` to reflect the content of your page
-* In `index.php` update the line `echo $twig->render('jsonpage/jsonpage.html.twig', $vars);` to with your pagename
-* Under `/templates` copy and rename the `jsonpage` directory and the `jsonpage.html.twig` template
-* Alter the template as you wish
+* Copy and rename the `testpage` to the `templates` folder
 
 ##Twig
 The twig setup supports `{% include %}` and `{% extend %}` etc. so you can structure your template setup as you wish :-)
