@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Site Examples</title>
-</head>
-<body>
-<h1>Site Examples</h1>
+{% extends "extends/base.html.twig" %}
 
-<ul id="navigation">
-  {% for item in navigation %}
-    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-  {% endfor %}
-</ul>
-
-</body>
-</html>
+{% block title %}Forside{% endblock %}
+{% block content %}
+  <h1>Forside</h1>
+  <p>
+    Forsiden
+  </p>
+{% endblock %}

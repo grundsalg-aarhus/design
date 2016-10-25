@@ -1,0 +1,37 @@
+/**
+ *
+ * Logo.
+ *
+ */
+
+
+// Logo styling.
+// This handles the default logo behaviour whether it is sticky or not.
+.logo,
+.logo.is-sticky,
+.is-frontpage .logo.is-sticky {
+  position: absolute;
+  top: 1.3em;
+  left: $layout-padding;
+  z-index: z($z-index-elements, logo);
+
+  height: 3em;
+  width: 10em;
+
+  background-image: url("../logo.svg");
+  background-repeat: no-repeat;
+
+  @include breakpoint($breakpoint-desk) {
+    position: fixed;
+  }
+}
+
+// Specific override when viewing the frontpage.
+// In this case the logo should show the text below and be slightly bigger on big screens.
+.is-frontpage {
+  .logo {
+    height: 3em;
+    width: 10em;
+    background-image: url("../logo.svg");
+  }
+}
