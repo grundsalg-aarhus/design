@@ -4,6 +4,72 @@
  *
  */
 
+.nav {
+  height: 5.5em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: z($z-index-elements, nav);
+
+  @include breakpoint($breakpoint-desk) {
+    background-color: $white;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    @include flexbox;
+    @include flex-direction(column);
+  }
+
+  &--links {
+    display: none; // Hiding navigation on smaller screens
+
+    @include breakpoint($breakpoint-desk) {
+      margin-right: 6em;
+      text-align: right;
+
+      @include flexbox;
+      @include flex-grow(1);
+      @include align-items(center);
+      @include flex-direction(row);
+      @include justify-content(flex-end);
+
+      a {
+        @include strip-link-styles($black, none);
+      }
+    }
+  }
+
+  /* Drupal's markup dictates that .nav--link has to be inside .nav */
+  .nav--link {
+    @include breakpoint($breakpoint-desk) {
+      color: $black;
+      cursor: pointer;
+      font-size: .95em;
+      font-weight: 600;
+      padding-left: 1.2em;
+      padding-right: 1.2em;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include flexbox;
+      @include align-items(center);
+      @include align-self(stretch);
+
+      &.is-active,
+      &.is-active:hover {
+        @include strip-link-styles($gray-darker, none);
+      }
+
+      &:hover {
+        @include strip-link-styles($gray-darker, none);
+      }
+    }
+  }
+}
+
+
 // hamburger menu toggle-effect
 
 .nav-toggle {

@@ -3,3 +3,20 @@
  * Logo.
  *
  */
+
+.logo {
+  position: absolute;
+  top: 1.6em;
+  left: $layout-padding;
+  z-index: z($z-index-elements, logo);
+
+  height: 2.15em;
+  width: 14.7em;
+
+  background-image: url("../../assets/logo.svg");
+  background-repeat: no-repeat;
+
+  @include breakpoint($breakpoint-desk) {
+    position: fixed;
+  }
+}

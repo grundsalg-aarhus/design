@@ -10,6 +10,15 @@
 </head>
 <body>
 <div class="overlay js-menu-toggle"></div>
+<a href="/" class="logo" title=""></a>
+<nav class="nav">
+  <div class="nav--links">
+    <a href="/villa" class="nav--link">Villa</a>
+    <a href="/erhverv" class="nav--link">Erhverv</a>
+    <a href="/storparcel" class="nav--link">Storparcel</a>
+    <a href="/kontakt" class="nav--link">Kontakt</a>
+  </div>
+</nav>
 <!--menu.html.twig END-->
 <div class="nav-toggle js-menu-toggle">
   <span></span>
@@ -22,33 +31,38 @@
   <div class="hamburger-menu--inner">
     <div class="hamburger-menu--links">
       <div class="hamburger-menu--group">
-        <a href="<?php echo $path_to_site; ?>/om-5-pack/" class="nav--link<?php echo $is_active === 0 ? ' is-active' : '' ?>">
-          Om 5 pack
+        <a href="/villa/" class="nav--link">
+          Villa
         </a>
       </div>
       <div class="hamburger-menu--group">
-        <a href="<?php echo $path_to_site; ?>/nyheder/" class="nav--link<?php echo $is_active === 1 ? ' is-active' : '' ?>">
+        <a href="/erhverv/" class="nav--link">
+          Erhverv
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/storparcel/" class="nav--link">
+          Storparcel
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/projekter/" class="nav--link">
+          Projekter
+        </a>
+      </div>
+      <div class="hamburger-menu--group">
+        <a href="/nyheder/" class="nav--link">
           Nyheder
         </a>
       </div>
       <div class="hamburger-menu--group">
-        <a href="/temaer/" class="nav--link">
-          Temaer
-        </a>
-      </div>
-      <div class="hamburger-menu--group">
-        <a href="/netvaerk/" class="nav--link">
-          Netværk
+        <a href="/tilbudogkob/" class="nav--link">
+          Tilbud og køb
         </a>
       </div>
       <div class="hamburger-menu--group">
         <a href="/kontakt/" class="nav--link">
           Kontakt
-        </a>
-      </div>
-      <div class="hamburger-menu--group">
-        <a href="/english/" class="nav--link">
-          English
         </a>
       </div>
     </div>
