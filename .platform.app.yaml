@@ -23,6 +23,5 @@ disk: 2048
 
 hooks:
     build: |
-        mv public/* ./ || true
-        rm -r public
-
+        mkdir public
+        mv ./* public/ || true
