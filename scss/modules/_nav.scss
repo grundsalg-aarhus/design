@@ -29,7 +29,7 @@
   left: 0;
 
   display: block;
-  height: 5px;
+  height: 6px;
   width: 100%;
 
   background: $black;
@@ -40,16 +40,16 @@
 }
 
 .nav-toggle span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 .nav-toggle span:nth-child(2),
 .nav-toggle span:nth-child(3) {
-  top: 15px;
+  top: 14px;
 }
 
 .nav-toggle span:nth-child(4) {
-  top: 30px;
+  top: 28px;
 }
 
 .nav-toggle.open span {
@@ -57,7 +57,7 @@
 }
 
 .nav-toggle.open span:nth-child(1) {
-  top: 15px;
+  top: 14px;
   left: 50%;
 
   width: 0%;
@@ -74,7 +74,7 @@
 }
 
 .nav-toggle.open span:nth-child(4) {
-  top: 15px;
+  top: 14px;
   width: 0%;
   left: 50%;
 }
