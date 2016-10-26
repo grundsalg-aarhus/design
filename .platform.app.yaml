@@ -20,8 +20,3 @@ web:
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
-
-hooks:
-    build: |
-        mkdir public
-        mv ./* public/ || true
