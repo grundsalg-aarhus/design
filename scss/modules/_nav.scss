@@ -7,17 +7,15 @@
 // hamburger menu toggle-effect
 
 .nav-toggle {
-  position: absolute;
-  top: 1.6em;
-  right: 2em;
-  z-index: z($z-index-elements, nav-toggle);
-
+  cursor: pointer;
   height: 36px;
-  width: 40px;
-
+  position: absolute;
+  right: 2em;
+  top: 1.6em;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  cursor: pointer;
+  width: 40px;
+  z-index: z($z-index-elements, nav-toggle);
 
   @include breakpoint($breakpoint-desk) {
     position: fixed;
@@ -25,18 +23,15 @@
 }
 
 .nav-toggle span {
-  position: absolute;
-  left: 0;
-
+  background: $white;
   display: block;
   height: 5px;
-  width: 100%;
-
-  background: $white;
+  left: 0;
   opacity: 1;
-
+  position: absolute;
   transform: rotate(0deg);
   transition: .25s ease-in-out;
+  width: 100%;
 }
 
 .nav-toggle span:nth-child(1) {
@@ -57,24 +52,23 @@
 }
 
 .nav-toggle.open span:nth-child(1) {
-  top: 15px;
   left: 50%;
-
+  top: 15px;
   width: 0%;
 }
 
 .nav-toggle.open span:nth-child(2) {
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .nav-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .nav-toggle.open span:nth-child(4) {
+  left: 50%;
   top: 15px;
   width: 0%;
-  left: 50%;
 }
