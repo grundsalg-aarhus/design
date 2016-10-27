@@ -14,10 +14,10 @@
 
   @include breakpoint($breakpoint-desk) {
     background-color: $white;
-    right: 0;
-    top: 0;
     display: flex;
     flex-direction: column;
+    right: 0;
+    top: 0;
   }
 
   &--links {
@@ -42,18 +42,17 @@
   /* Drupal's markup dictates that .nav--link has to be inside .nav */
   .nav--link {
     @include breakpoint($breakpoint-desk) {
+      align-items: center;
+      align-self: stretch;
       color: $black;
       cursor: pointer;
+      display: flex;
       font-size: 1em;
       font-weight: 600;
       padding-left: 1.2em;
       padding-right: 1.2em;
       text-decoration: none;
       text-transform: uppercase;
-
-      display: flex;
-      align-items: center;
-      align-self: stretch;
 
       &.is-active,
       &.is-active:hover {
