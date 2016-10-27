@@ -30,5 +30,4 @@ hooks:
 # path is relative to the application root, where this file lives.
 mounts:
     '/compilation_cache': 'shared:files/files/compilation_cache'
-
-# Does it work now?
+    
