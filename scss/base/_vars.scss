@@ -33,11 +33,14 @@ $layout-padding:  1.8em;
 
 $theme-color:            #444;
 $theme-color-secondary:  #e30613;
+$theme-color-erhverv :   #409CDA;
+$theme-color-villa:      #F5C400;
+$theme-color-storparcel: #4E9D2D;    
 
 $black:            #1A1919;
 $white:            #fff;
 
-$gray-lightest:    lighten($black, 95%);
+$gray-lightest:    lighten($black, 85%);
 $gray-lighter:     lighten($black, 80%);
 $gray-light:       lighten($black, 70%);
 $gray:             lighten($black, 60%);
