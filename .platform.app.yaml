@@ -25,6 +25,7 @@ hooks:
     build: |
         mkdir public
         mv ./* public/ || true
+        mv public/compilation_cache compilation_cache
 
 # The mounts that will be performed when the package is deployed. The mount
 # path is relative to the application root, where this file lives.
