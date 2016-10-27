@@ -13,8 +13,4 @@
     top: 1.8em;
     width: 14.7em;
     z-index: z($z-index-elements, logo);
-
-    @include breakpoint($breakpoint-desk) {
-        position: fixed;
-    }
 }
