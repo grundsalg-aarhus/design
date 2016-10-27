@@ -1,0 +1,104 @@
+/**
+ *
+ * Box
+ *
+ */
+
+
+/* Styles
+   ========================================================================== */
+
+/* TODO: Make sure these variables use the shared spacings */
+$box-outer-spacing: 40px;
+$box-inner-spacing: 20px;
+/* End TODO */
+
+.boxes {
+  display: flex;
+  flex-flow: row wrap;
+
+  /* TODO: Make this a shared rule */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1800px;
+  /* End TODO */
+
+  &--box {
+    /* TODO: Use variables */
+    /* stylelint-disable */
+    background-color: #e8e8e8;
+    /* stylelint-enable */
+    /* End TODO */
+    box-sizing: border-box;
+    color: $black;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: column nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    margin: $box-inner-spacing;
+    position: relative;
+
+    @include breakpoint($breakpoint-tablet) {
+      flex-basis: calc(50% - #{$box-outer-spacing});
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      flex-basis: calc(33.333% - #{$box-outer-spacing});
+    }
+  }
+
+  &--box-inner {
+    padding: $box-outer-spacing;
+  }
+
+  &--box-header {
+    flex: 0 0 auto;
+    line-height: 40px;
+
+    a {
+      @include strip-link-styles($black);
+
+      /* TODO: Make this a reusable style */
+      border-bottom: $header-underline $black;
+      padding-bottom: 3px;
+      /* End TODO */
+    }
+  }
+
+  &--box-content {
+    /* TODO: Use variables */
+    margin-top: 20px;
+    /* End TODO */
+  }
+
+  /* TODO: Use variables */
+  /* stylelint-disable */
+  .is-villa,
+  .is-erhverv {
+    color: $white;
+
+    .boxes--box-header {
+      a {
+        @include strip-link-styles($white);
+
+        border-bottom: $header-underline $white;
+      }
+    }
+  }
+
+  .is-villa {
+    background-color: #409cda;
+  }
+
+  .is-erhverv {
+    background-color: #4e9d2d;
+  }
+
+  .is-storparcel {
+    background-color: #f5c400;
+  }
+  /* stylelint-enable */
+  /* End TODO */
+}
