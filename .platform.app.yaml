@@ -24,7 +24,3 @@ disk: 2048
 hooks:
     build: |
 
-# The mounts that will be performed when the package is deployed. The mount
-# path is relative to the application root, where this file lives.
-mounts:
-    '/compilation_cache': 'shared:files/compilation_cache'
