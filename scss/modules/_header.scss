@@ -1,17 +1,20 @@
 .header {
     display: flex;
     flex-direction: row;
-    height: 550px;
+    height: 500px;
     justify-content: center;
-    margin-left: $layout-padding;
-    margin-right: $layout-padding;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 60px;
+    max-width: 1450px;
+    padding-left: $layout-padding;
+    padding-right: $layout-padding;
 
     &--large-box {
         background-image: url("https://unsplash.it/1000/1000/?random");
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 50%;
     }
 
@@ -29,7 +32,7 @@
     }
 
     .is-secondary {
-        background-color: $white;
+        background-color: $gray-lighter;
     }
 
     &--large-box-text {
@@ -53,30 +56,30 @@
 
     &--box-text-caption {
         font-size: 16px;
+        margin-top: 16px;
     }
 
     &--small-box-text {
-        background-color: $white;
         color: $black;
     }
 
     &--small-box-top {
         background-image: url("https://unsplash.it/500/500/?random");
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
         color: $white;
         height: 50%;
     }
 
     &--small-box-bottom {
         background-image: url("https://unsplash.it/600/600/?random");
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
         color: $white;
         display: flex;
-        justify-content: flex-end;
         height: 50%;
+        justify-content: flex-end;
     }
 }
