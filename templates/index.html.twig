@@ -37,12 +37,14 @@
 </header>
 
 <div class="boxes">
-  {% include 'extends/boxes/projekter.html.twig' %}
-  {% include 'extends/boxes/villagrunde-solbjerg.html.twig' %}
-  {% include 'extends/boxes/erhvervsgrunde-kolt-hasselager.html.twig' %}
-  {% include 'extends/boxes/berigtigelse-solbjerg-villagegrunde.twig' %}
-  {% include 'extends/boxes/oplysninger-tilbud-koeb.twig' %}
-  {% include 'extends/boxes/kontaktoplysninger.twig' %}
+  <div class="boxes--inner">
+    {% include 'extends/boxes/projekter.html.twig' %}
+    {% include 'extends/boxes/villagrunde-solbjerg.html.twig' %}
+    {% include 'extends/boxes/erhvervsgrunde-kolt-hasselager.html.twig' %}
+    {% include 'extends/boxes/berigtigelse-solbjerg-villagegrunde.twig' %}
+    {% include 'extends/boxes/oplysninger-tilbud-koeb.twig' %}
+    {% include 'extends/boxes/kontaktoplysninger.twig' %}
+  </div>
 </div>
 
 {% endblock %}
