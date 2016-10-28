@@ -3,3 +3,14 @@
  * Logo.
  *
  */
+
+.logo {
+    background-image: url("../../assets/logo.svg");
+    background-repeat: no-repeat;
+    height: 2.15em;
+    left: $layout-padding;
+    position: absolute;
+    top: 1.8em;
+    width: 14.7em;
+    z-index: z($z-index-elements, logo);
+}

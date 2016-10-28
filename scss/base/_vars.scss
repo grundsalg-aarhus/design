@@ -1,3 +1,5 @@
+/* stylelint-disable color-no-hex */
+
 /**
  *
  * Variables
@@ -24,19 +26,23 @@ $z-index-elements: header-overlay, header, content, nav, logo, overlay, hamburge
    ================================================================================================================== */
 
 $layout-padding:  1.8em;
+$header-underline: 3px solid;
 
 
 /* Colors
    ================================================================================================================== */
 
-$theme-color:             rgb(222, 106, 16);
-$theme-color-secondary:   #e30613;
+$theme-color:            #444;
+$theme-color-secondary:  #e30613;
+$theme-color-erhverv :   #409CDA;
+$theme-color-villa:      #F5C400;
+$theme-color-storparcel: #4E9D2D;    
 
-$black:            #000;
+$black:            #1A1919;
 $white:            #fff;
 
-$gray-lightest:    lighten($black, 95%);
-$gray-lighter:     lighten($black, 90%);
+$gray-lightest:    lighten($black, 85%);
+$gray-lighter:     lighten($black, 80%);
 $gray-light:       lighten($black, 70%);
 $gray:             lighten($black, 60%);
 $gray-dark:        lighten($black, 50%);
@@ -52,7 +58,7 @@ $error-color:      #ffbaba;
 /* Typography
    ================================================================================================================== */
 
-$font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family:      "Open Sans", Arial, sans-serif;
 $font:             1em/1.5 $font-family;
 
 

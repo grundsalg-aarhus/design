@@ -1,9 +1,46 @@
 {% extends "extends/base.html.twig" %}
+{% import "extends/box.html.twig" as box %}
 
 {% block title %}Forside{% endblock %}
 {% block content %}
-  <h1>Forside</h1>
-  <p>
-    Forsiden
-  </p>
+<header class="header">
+  <div class="header--large-box">
+    <div class="header--box-content header--box-content-large is-primary">
+      <div class="header--box-text header--large-box-text">
+        <h1 class="header--box-text-title">Villagrunde</h1>
+        <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
+      </div>
+    </div>
+  </div>
+  <div class="header--small-boxes">
+    <div class="header--small-box header--small-box-top">
+      <div class="header--box-content header--box-content-small-top is-secondary">
+        <div class="header--box-text header--small-box-text header-small-box-top-text">
+          <h2 class="header--box-text-title">Storparceller</h2>
+          <p class="header--box-text-caption">Vil du bygge stort? Se mulighederne for at bygge på storparcelgrunde.</p>
+        </div>
+      </div>
+    </div>
+  <div class="header--small-box header--small-box-bottom">
+    <div class="header--box-content header--box-content-small-bottom is-secondary">
+      <div class="header--box-text header--small-box-text header-small-box-bottom-text">
+        <h2 class="header--box-text-title">Erhvervsgrunde</h2>
+        <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
+      </div>
+    </div>
+  </div>
+  <div>
+</header>
+
+<div class="boxes">
+  <div class="boxes--inner">
+    {% include 'extends/boxes/projekter.html.twig' %}
+    {% include 'extends/boxes/villagrunde-solbjerg.html.twig' %}
+    {% include 'extends/boxes/erhvervsgrunde-kolt-hasselager.html.twig' %}
+    {% include 'extends/boxes/berigtigelse-solbjerg-villagegrunde.twig' %}
+    {% include 'extends/boxes/oplysninger-tilbud-koeb.twig' %}
+    {% include 'extends/boxes/kontaktoplysninger.twig' %}
+  </div>
+</div>
+
 {% endblock %}

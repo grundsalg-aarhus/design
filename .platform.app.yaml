@@ -14,14 +14,17 @@ web:
     locations:
         '/':
             # The public directory of the app, relative to its root.
-            root: 'public'
+            root: ''
             # The front-controller script to send non-static requests to.
-            passthru: '/index.html'
+            passthru: '/index.php'
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
 hooks:
     build: |
-        mkdir public
-        mv ./* public/ || true
+
+# The mounts that will be performed when the package is deployed. The mount
+# path is relative to the application root, where this file lives.
+mounts:
+    '/compilation_cache': 'shared:files/compilation_cache'

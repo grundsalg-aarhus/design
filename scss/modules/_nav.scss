@@ -4,39 +4,93 @@
  *
  */
 
-// hamburger menu toggle-effect
-
-.nav-toggle {
-  position: absolute;
-  top: 1.6em;
-  right: 2em;
-  z-index: z($z-index-elements, nav-toggle);
-
-  height: 34px;
-  width: 34px;
-
-  transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  cursor: pointer;
+.nav {
+  border-bottom: 3px solid $gray-lightest;
+  border-top: 3px solid $black;
+  height: 5.5em;
+  top: 0;
+  width: 100%;
+  z-index: z($z-index-elements, nav);
 
   @include breakpoint($breakpoint-desk) {
-    position: fixed;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+  }
+
+  &--links {
+    display: none; // Hiding navigation on smaller screens
+
+    @include breakpoint($breakpoint-desk) {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      height: 100%;
+      justify-content: flex-end;
+      margin-right: 6em;
+      text-align: right;
+
+      a {
+        @include strip-link-styles($black, none);
+      }
+    }
+  }
+
+  /* Drupal's markup dictates that .nav--link has to be inside .nav */
+  .nav--link {
+    @include breakpoint($breakpoint-desk) {
+      align-items: center;
+      align-self: stretch;
+      color: $black;
+      cursor: pointer;
+      display: flex;
+      font-size: 1em;
+      font-weight: 600;
+      padding-left: 1.2em;
+      padding-right: 1.2em;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.is-active,
+      &.is-active:hover {
+        @include strip-link-styles($gray-darker, none);
+      }
+
+      &:hover {
+        @include strip-link-styles($gray-darker, none);
+      }
+    }
   }
 }
 
-.nav-toggle span {
-  position: absolute;
-  left: 0;
 
+// hamburger menu toggle-effect
+
+.nav-toggle {
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  right: $layout-padding;
+  top: 1.8em;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  width: 40px;
+  z-index: z($z-index-elements, nav-toggle);
+}
+
+.nav-toggle span {
+  background: $black;
   display: block;
   height: 6px;
-  width: 100%;
-
-  background: $black;
+  left: 0;
   opacity: 1;
-
+  position: absolute;
   transform: rotate(0deg);
   transition: .25s ease-in-out;
+  width: 100%;
 }
 
 .nav-toggle span:nth-child(1) {
@@ -57,24 +111,23 @@
 }
 
 .nav-toggle.open span:nth-child(1) {
-  top: 14px;
   left: 50%;
-
+  top: 15px;
   width: 0%;
 }
 
 .nav-toggle.open span:nth-child(2) {
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .nav-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .nav-toggle.open span:nth-child(4) {
+  left: 50%;
   top: 14px;
   width: 0%;
-  left: 50%;
 }
