@@ -11,7 +11,7 @@
     padding-right: $layout-padding;
 
     &--large-box {
-        background-image: url("https://unsplash.it/1000/1000/?random");
+        background-image: url("../../assets/forside_villa.jpg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -19,6 +19,7 @@
     }
 
     &--box-content {
+        position: relative;
         background-color: $white;
         display: flex;
         flex-direction: column;
@@ -28,12 +29,53 @@
     }
 
     .is-primary {
-        background-color: $theme-color-villa;       
+        background-color: $theme-color-villa;   
     }
 
     .is-secondary {
-        background-color: $gray-lighter;
+        background-color: $white;
     }
+
+    /* TODO-START: Make this into a mixin */
+    &--box-content-large {
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0; 
+            height: 0; 
+            right: -20px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid $theme-color-villa;
+        }  
+    }
+
+    &--box-content-small-top {
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0; 
+            height: 0; 
+            right: -20px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid $white;
+        }  
+    }
+
+    &--box-content-small-bottom {
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0; 
+            height: 0; 
+            left: -20px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid $white;
+        }  
+    }
+    /* TODO-END */
 
     &--large-box-text {
         color: $black;
@@ -56,6 +98,7 @@
 
     &--box-text-caption {
         font-size: 16px;
+        line-height: 1.5;
         margin-top: 16px;
     }
 
@@ -64,7 +107,7 @@
     }
 
     &--small-box-top {
-        background-image: url("https://unsplash.it/500/500/?random");
+        background-image: url("../../assets/forside_storparcel.jpg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -73,7 +116,7 @@
     }
 
     &--small-box-bottom {
-        background-image: url("https://unsplash.it/600/600/?random");
+        background-image: url("../../assets/forside_erhverv.jpg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
