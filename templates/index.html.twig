@@ -1,4 +1,5 @@
 {% extends "extends/base.html.twig" %}
+{% import "extends/links.html.twig" as link %}
 {% import "extends/box.html.twig" as box %}
 
 {% block title %}Forside{% endblock %}
@@ -9,6 +10,7 @@
       <div class="header--box-text header--large-box-text">
         <h1 class="header--box-text-title">Villagrunde</h1>
         <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
+        {{ link.arrowLink('http://www.google.dk') }}
       </div>
     </div>
   </div>
@@ -18,6 +20,7 @@
         <div class="header--box-text header--small-box-text header-small-box-top-text">
           <h2 class="header--box-text-title">Storparceller</h2>
           <p class="header--box-text-caption">Vil du bygge stort? Se mulighederne for at bygge på storparcelgrunde.</p>
+          {{ link.arrowLink('http://www.google.dk') }}
         </div>
       </div>
     </div>
@@ -26,6 +29,7 @@
       <div class="header--box-text header--small-box-text header-small-box-bottom-text">
         <h2 class="header--box-text-title">Erhvervsgrunde</h2>
         <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
+        {{ link.arrowLink('http://www.google.dk') }}
       </div>
     </div>
   </div>
