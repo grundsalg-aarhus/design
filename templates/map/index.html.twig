@@ -2,6 +2,13 @@
 {% import "macros/headers.html.twig" as header %}
 
 {% block title %}Map{% endblock %}
+
+{% block head %}
+  {{ parent() }}
+  <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+{% endblock %}
+
 {% block content %}
 
 {% endblock %}
