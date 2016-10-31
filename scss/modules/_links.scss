@@ -2,4 +2,23 @@
     display: block;
     padding-top: 20px;
     width: 20px;
+
+    &.is-villa {
+        .arrow-link--svg {
+            fill: $black;
+        }
+    }
+
+    &.is-erhverv {
+        .arrow-link--svg {
+            fill: $white;
+        }
+    }
+    
+    &.is-storparcel {
+        .arrow-link--svg {
+            fill: $white;
+        }
+    }
+
 }
