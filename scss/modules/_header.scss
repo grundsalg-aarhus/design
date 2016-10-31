@@ -20,6 +20,7 @@
 
     &--box-content {
         background-color: $white;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -28,11 +29,41 @@
         width: 50%;
 
         &.is-primary {
-        background-color: $theme-color-villa;   
+            background-color: $theme-color-villa;
         }
 
         &.is-secondary {
             background-color: $white;
+        }
+
+        &.header--box-content-large {
+            &:hover, &:focus, &:active {
+                background-color: darken($theme-color-villa, 1%);
+
+                &:after {
+                    border-left: 20px solid darken($theme-color-villa, 1%);
+                }
+            }
+        }
+
+        &.header--box-content-small-top {
+            &:hover, &:focus, &:active {
+                background-color: $gray-lightest;
+
+                &:after {
+                    border-left: 20px solid $gray-lightest;;
+                }
+            }
+        }
+
+        &.header--box-content-small-bottom {
+            &:hover, &:focus, &:active {
+                background-color: $gray-lightest;
+
+                &:after {
+                    border-right: 20px solid $gray-lightest;;
+                }
+            }
         }
     }
 
