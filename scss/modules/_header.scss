@@ -37,31 +37,52 @@
         }
 
         &.header--box-content-large {
+            transition: background-color 0.4s ease;
+            
             &:hover, &:focus, &:active {
-                background-color: darken($theme-color-villa, 1%);
+                background-color: darken($theme-color-villa, 2%);
 
                 &:after {
-                    border-left: 20px solid darken($theme-color-villa, 1%);
+                    border-left: 20px solid darken($theme-color-villa, 2%);
+                }
+
+                .arrow-link {
+                    transition: all 0.4s ease;
+                    margin-left: 10px;
                 }
             }
         }
 
         &.header--box-content-small-top {
+            transition: background-color 0.4s ease;
+            
             &:hover, &:focus, &:active {
                 background-color: $gray-lightest;
 
                 &:after {
                     border-left: 20px solid $gray-lightest;;
                 }
+
+                .arrow-link {
+                    transition: all 0.4s ease;
+                    margin-left: 10px;
+                }
             }
         }
 
         &.header--box-content-small-bottom {
+            transition: background-color .4s ease;
+            
             &:hover, &:focus, &:active {
                 background-color: $gray-lightest;
 
                 &:after {
                     border-right: 20px solid $gray-lightest;;
+                }
+
+                .arrow-link {
+                    transition: all 0.4s ease;
+                    margin-left: 10px;
                 }
             }
         }
