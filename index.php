@@ -12,21 +12,4 @@ function is_example($entry) {
   return false;
 }
 
-if ($handle = opendir($doc_root)) {
-//  echo "Directory handle: $handle\n";
-//  echo "Entries:\n";
-
-  $navigation = array();
-
-  while (false !== ($entry = readdir($handle))) {
-    if(is_example($entry)) {
-      $navigation[] = array('href' => $entry, 'caption' => $entry);
-    }
-   }
-
-  closedir($handle);
-}
-
-$vars = array('navigation' => $navigation);
-
-echo $twig->render('index.html.twig', $vars);
+echo $twig->render('index.html.twig');
