@@ -1,0 +1,36 @@
+{% macro frontpageHeader() %}
+
+  {% import "macros/links.html.twig" as link %}
+
+  <header class="header">
+    <div class="header--large-box">
+      <a class="header--box-content header--box-content-large is-primary" href="/villagrund">
+        <div class="header--box-text header--large-box-text">
+          <h1 class="header--box-text-title">Villagrund</h1>
+          <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
+          {{ link.arrowLink() }}
+        </div>
+      </a>
+    </div>
+    <div class="header--small-boxes">
+      <div class="header--small-box header--small-box-top">
+        <a class="header--box-content header--box-content-small-top is-secondary" href="/storparcel">
+          <div class="header--box-text header--small-box-text header-small-box-top-text">
+            <h2 class="header--box-text-title">Storparcel</h2>
+            <p class="header--box-text-caption">Vil du bygge stort? Se mulighederne for at bygge på storparcelgrunde.</p>
+            {{ link.arrowLink() }}
+          </div>
+        </a>
+      </div>
+    <div class="header--small-box header--small-box-bottom">
+      <a class="header--box-content header--box-content-small-bottom is-secondary" href="/erhvervsgrund">
+        <div class="header--box-text header--small-box-text header-small-box-bottom-text">
+          <h2 class="header--box-text-title">Erhvervsgrund</h2>
+          <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
+          {{ link.arrowLink() }}
+        </div>
+      </a>
+    </div>
+    <div>
+  </header>
+{% endmacro %}

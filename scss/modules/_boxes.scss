@@ -25,15 +25,15 @@ $box-inner-spacing: 20px;
     display: flex;
     flex-flow: row wrap;
     /* TODO: Use variables */
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -$box-inner-spacing;
+    margin-right: -$box-inner-spacing;
     /* End TODO */
   }
 
   &--box {
     /* TODO: Use variables */
     /* stylelint-disable */
-    background-color: #e8e8e8;
+    background-color: $gray-lighter;
     /* stylelint-enable */
     /* End TODO */
     box-sizing: border-box;
@@ -53,6 +53,11 @@ $box-inner-spacing: 20px;
 
     @include breakpoint($breakpoint-desk) {
       flex-basis: calc(33.333% - #{$box-outer-spacing});
+    }
+
+    &.is-inside-context-box {
+      border-top: 3px solid $theme-color-villa;
+      background-color: $white;
     }
   }
 
@@ -82,7 +87,7 @@ $box-inner-spacing: 20px;
 
   /* TODO: Use variables */
   /* stylelint-disable */
-  .is-villa,
+  .is-storparcel,
   .is-erhverv {
     color: $white;
 
@@ -96,16 +101,17 @@ $box-inner-spacing: 20px;
   }
 
   .is-villa {
-    background-color: #409cda;
+    background-color: $theme-color-villa;
   }
 
   .is-erhverv {
-    background-color: #4e9d2d;
+    background-color: $theme-color-erhverv;
   }
 
   .is-storparcel {
-    background-color: #f5c400;
+    background-color: $theme-color-storparcel;
   }
+
   /* stylelint-enable */
   /* End TODO */
 }
