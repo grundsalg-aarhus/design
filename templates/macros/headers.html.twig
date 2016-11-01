@@ -1,6 +1,6 @@
 {% macro frontpageHeader() %}
 
-  {% import "macros/links.html.twig" as link %}
+  {% import "macros/arrow.html.twig" as arrow %}
 
   <header class="header">
     <div class="header--large-box">
@@ -8,7 +8,7 @@
         <div class="header--box-text header--large-box-text">
           <h1 class="header--box-text-title">Villagrund</h1>
           <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
-          {{ link.arrowLink() }}
+          {{ arrow.arrowLink() }}
         </div>
       </a>
     </div>
@@ -18,7 +18,7 @@
           <div class="header--box-text header--small-box-text header-small-box-top-text">
             <h2 class="header--box-text-title">Storparcel</h2>
             <p class="header--box-text-caption">Vil du bygge stort? Se mulighederne for at bygge på storparcelgrunde.</p>
-            {{ link.arrowLink() }}
+            {{ arrow.arrowLink() }}
           </div>
         </a>
       </div>
@@ -27,7 +27,7 @@
         <div class="header--box-text header--small-box-text header-small-box-bottom-text">
           <h2 class="header--box-text-title">Erhvervsgrund</h2>
           <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
-          {{ link.arrowLink() }}
+          {{ arrow.arrowLink() }}
         </div>
       </a>
     </div>
