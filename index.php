@@ -1,29 +1,39 @@
 <?php
+require_once __DIR__.'/vendor/autoload.php';
 
-require_once 'twig_setup.php';
+use Symfony\Component\HttpFoundation\Request;
+use Silex\Application;
+use Silex\Provider\TwigServiceProvider;
 
-function is_example($entry) {
-  $exclude_list = array('compilation_cache','templates', 'vendor');
+$twigPath = __DIR__ . '/templates';
 
-  if(is_dir($entry) && mb_substr($entry, 0, 1) !== '.' && !in_array($entry, $exclude_list)) {
-    return true;
-  }
+$app = new Application();
+$app->register(new TwigServiceProvider(), [
+  'twig.path' => $twigPath,
+	'twig.options' => [
+		'cache' => __DIR__ . '/compilation_cache',
+		'debug' => true,
+	],
+]);
+$app['twig']->addExtension(new Twig_Extension_Debug());
 
-  return false;
+// Find all index.html.twig files and create matching routes, e.g. ./templates/map/index.html.twig ⟼ /map/
+$directory = new RecursiveDirectoryIterator($twigPath);
+$iterator = new RecursiveIteratorIterator($directory);
+$regex = new RegexIterator($iterator, '@^' . preg_quote($twigPath, '@') . '(/(?:.+/)?)index\.html\.twig$@i', RecursiveRegexIterator::GET_MATCH);
+
+foreach ($regex as $match) {
+	$path = $match[1];
+	// Create route.
+	$app->get($path, function(Request $request) use($app) {
+		try {
+			// Find and render index.html.twig
+			$templatePath = $request->getRequestUri() . 'index.html.twig';
+			return $app['twig']->render($templatePath);
+		} catch (\Exception $e) {
+			return $e->getMessage();
+		}
+	});
 }
 
-if ($handle = opendir($doc_root)) {
-  $navigation = array();
-
-  while (false !== ($entry = readdir($handle))) {
-    if(is_example($entry)) {
-      $navigation[] = array('href' => $entry, 'caption' => $entry);
-    }
-   }
-
-  closedir($handle);
-}
-
-$vars = array('navigation' => $navigation);
-
-echo $twig->render('index.html.twig', $vars);
+$app->run();
