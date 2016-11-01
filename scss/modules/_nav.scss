@@ -56,11 +56,11 @@
 
       &.is-active,
       &.is-active:hover {
-        @include strip-link-styles($gray-darker, none);
+        background-color: $gray-lighter;
       }
 
       &:hover {
-        @include strip-link-styles($gray-darker, none);
+        background-color: $gray-lightest;
       }
     }
   }

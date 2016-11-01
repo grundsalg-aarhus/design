@@ -33,7 +33,7 @@ $box-inner-spacing: 20px;
   &--box {
     /* TODO: Use variables */
     /* stylelint-disable */
-    background-color: $white;
+    background-color: $gray-lighter;
     /* stylelint-enable */
     /* End TODO */
     box-sizing: border-box;
@@ -57,7 +57,7 @@ $box-inner-spacing: 20px;
 
     &.is-inside-context-box {
       border-top: 3px solid $theme-color-villa;
-      background-color: $gray-lightest;
+      background-color: $white;
     }
   }
 

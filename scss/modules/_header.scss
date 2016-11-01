@@ -21,7 +21,7 @@
         width: 100%;
 
         @include breakpoint($breakpoint-desk) {
-            width: 50%;
+          width: 50%;
         }
     }
 
@@ -36,34 +36,32 @@
         width: 100%;
 
         @include breakpoint($breakpoint-tablet) {
-            flex-direction: column;
-            width: 70%;
+          flex-direction: column;
+          width: 70%;
         }
 
         @include breakpoint($breakpoint-tablet) {
-            flex-direction: column;
-            width: 60%;
+          flex-direction: column;
+          width: 60%;
         }
 
         @include breakpoint($breakpoint-desk) {
-            flex-direction: column;
-            width: 50%;
+          flex-direction: column;
+          width: 50%;
         }
 
         &.is-primary {
-            background-color: $theme-color-villa;
+          background-color: $theme-color-villa;
         }
 
         &.is-secondary {
-            background-color: $white;
+            background-color: $gray-lightest;
         }
 
         &.header--box-content-large {
             transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
-                background-color: darken($theme-color-villa, 2%);
-
                 &:after {
                     border-left: 20px solid darken($theme-color-villa, 2%);
                 }
@@ -79,8 +77,6 @@
             transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
-                background-color: darken($white, 4%);
-
                 &:after {
                     border-left: 20px solid darken($white, 4%);
                 }
@@ -96,8 +92,6 @@
             transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
-                background-color: darken($white, 4%);
-
                 &:after {
                     border-right: 20px solid darken($white, 4%);
                 }
@@ -128,7 +122,7 @@
 
         &:after {
             border-bottom: 20px solid transparent;
-            border-left: 20px solid $white;
+            border-left: 20px solid $gray-lightest;
             border-top: 20px solid transparent;
             content: "";
             height: 0;
@@ -141,7 +135,7 @@
     &--box-content-small-bottom {
         &:after {
             border-bottom: 20px solid transparent;
-            border-right: 20px solid $white;
+            border-right: 20px solid $gray-lightest;
             border-top: 20px solid transparent;
             content: "";
             height: 0;
