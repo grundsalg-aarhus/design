@@ -55,11 +55,11 @@
         }
 
         &.is-secondary {
-            background-color: $gray-lightest;
+            background-color: $white;
         }
 
         &.header--box-content-large {
-            transition: background-color 0.4s ease;
+            transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
                 background-color: darken($theme-color-villa, 2%);
@@ -69,25 +69,25 @@
                 }
 
                 .arrow-link {
-                    transition: all 0.4s ease;
                     margin-left: 10px;
+                    transition: all .4s ease;
                 }
             }
         }
 
         &.header--box-content-small-top {
-            transition: background-color 0.4s ease;
+            transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
-                background-color: darken($gray-lightest, 4%);
+                background-color: darken($white, 4%);
 
                 &:after {
-                    border-left: 20px solid darken($gray-lightest, 4%);
+                    border-left: 20px solid darken($white, 4%);
                 }
 
                 .arrow-link {
-                    transition: all 0.4s ease;
                     margin-left: 10px;
+                    transition: all .4s ease;
                 }
             }
         }
@@ -96,15 +96,15 @@
             transition: background-color .4s ease;
             
             &:hover, &:focus, &:active {
-                background-color: darken($gray-lightest, 4%);
+                background-color: darken($white, 4%);
 
                 &:after {
-                    border-right: 20px solid darken($gray-lightest, 4%);
+                    border-right: 20px solid darken($white, 4%);
                 }
 
                 .arrow-link {
-                    transition: all 0.4s ease;
                     margin-left: 10px;
+                    transition: all .4s ease;
                 }
             }
         }
@@ -128,7 +128,7 @@
 
         &:after {
             border-bottom: 20px solid transparent;
-            border-left: 20px solid $gray-lightest;
+            border-left: 20px solid $white;
             border-top: 20px solid transparent;
             content: "";
             height: 0;
@@ -141,7 +141,7 @@
     &--box-content-small-bottom {
         &:after {
             border-bottom: 20px solid transparent;
-            border-right: 20px solid $gray-lightest;
+            border-right: 20px solid $white;
             border-top: 20px solid transparent;
             content: "";
             height: 0;
