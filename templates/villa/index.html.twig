@@ -1,6 +1,13 @@
 {% extends "extends/base.html.twig" %}
+{% import "extends/box.html.twig" as box %}
 
 {% block title %}Villa{% endblock %}
+
+{% block head %}
+  {{ parent() }}
+  <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+{% endblock %}
 
 {% block content %}
 
@@ -11,5 +18,48 @@
   <div class="filters">
     <h2 class="filters--title">Filtrér</h2>
   </div>
+
+  <div id="mapid" class="map"></div>
+
+  <div class="content-box">
+    <div class="content-box--title">
+      <h2 class="content-box--title-text">Udbud</h2>
+    </div>
+    <div class="content-box--inner">
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1000/356?random', 'Malling', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1001/357?random', 'Solbjerg', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1002/358?random', 'Lystrup', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1003/359?random', 'Skødstrup', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1004/360?random', 'Kolt', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+      {{ box.boxWithImage('is-inside-context-box', 'https://unsplash.it/1005/361?random', 'Hårup', 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.') }}
+    </div>
+  </div>
+
+  <script>
+    var map;
+    var ajaxRequest;
+    var plotlist;
+    var plotlayers=[];
+
+    // set up the map
+    map = new L.Map('mapid');
+
+    // create the tile layer with correct attribution
+    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
+
+    var marker = L.marker([56.235337, 10.222778]).addTo(map);
+    var marker = L.marker([56.248691, 10.260544]).addTo(map);
+    var marker = L.marker([56.165053, 10.130081]).addTo(map);
+    var marker = L.marker([56.157406, 10.150681]).addTo(map);
+    var marker = L.marker([56.149757, 10.171280]).addTo(map);
+    var marker = L.marker([56.037144, 10.194626]).addTo(map);
+    var marker = L.marker([56.057144, 10.124626]).addTo(map);
+
+    // start the map in South-East England
+    map.setView(new L.LatLng(56.150660, 10.187073),11);
+    map.addLayer(osm);
+  </script>
 
 {% endblock %}

@@ -33,7 +33,7 @@ $box-inner-spacing: 20px;
   &--box {
     /* TODO: Use variables */
     /* stylelint-disable */
-    background-color: #e8e8e8;
+    background-color: $white;
     /* stylelint-enable */
     /* End TODO */
     box-sizing: border-box;
@@ -53,6 +53,11 @@ $box-inner-spacing: 20px;
 
     @include breakpoint($breakpoint-desk) {
       flex-basis: calc(33.333% - #{$box-outer-spacing});
+    }
+
+    &.is-inside-context-box {
+      border-top: 3px solid $theme-color-villa;
+      background-color: $gray-lightest;
     }
   }
 
@@ -106,6 +111,7 @@ $box-inner-spacing: 20px;
   .is-storparcel {
     background-color: $theme-color-storparcel;
   }
+
   /* stylelint-enable */
   /* End TODO */
 }
