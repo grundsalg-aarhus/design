@@ -11,4 +11,5 @@
   margin-right: auto;
   max-width: 1450px;
   /* End TODO */
+  z-index: z($z-index-elements, map);
 }
