@@ -2,6 +2,7 @@
     "name": "grundsalg-aarhus/design",
     "require": {
         "twig/twig": "^1.26",
-        "fzaninotto/faker": "^1.6"
+        "fzaninotto/faker": "^1.6",
+        "silex/silex": "~2.0"
     }
 }
