@@ -1,8 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
-{% import "macros/breadcrumb.html.twig" as breadcrumb %}
 
-{% block title %}Balskærvej i Malling{% endblock %}
+{% block title %}Storparcel{% endblock %}
 
 {% block head %}
   {{ parent() }}
@@ -14,9 +13,7 @@
 
   <header class="header-subpage">
     <h1 class="header-subpage--title">
-      {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
-      {{ breadcrumb.breadcrumb('villagrund/malling', 'Malling') }}
-      Balskærvej
+      Storparcel
     </h1>
   </header>
 
@@ -27,8 +24,6 @@
       <h2 class="content-box--title-text">Udbud</h2>
     </div>
     <div class="content-box--inner">
-      {% include 'extends/boxes/villagrund/malling/krekaertoften.html.twig' %}
-      {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
     </div>
   </div>
 
@@ -46,10 +41,15 @@
     var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
 
+    var marker = L.marker([56.235337, 10.222778]).addTo(map);
+    var marker = L.marker([56.248691, 10.260544]).addTo(map);
+    var marker = L.marker([56.165053, 10.130081]).addTo(map);
+    var marker = L.marker([56.157406, 10.150681]).addTo(map);
+    var marker = L.marker([56.149757, 10.171280]).addTo(map);
     var marker = L.marker([56.037144, 10.194626]).addTo(map);
     var marker = L.marker([56.057144, 10.124626]).addTo(map);
 
-    map.setView(new L.LatLng(56.035660, 10.187073),14);
+    map.setView(new L.LatLng(56.150660, 10.187073),11);
     map.addLayer(osm);
   </script>
 
