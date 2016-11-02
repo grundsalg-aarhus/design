@@ -1,37 +1,37 @@
 .content-box {
-    /* TODO: Make this a shared rule */
-    background-color: $gray-lightest;
-    padding-bottom: 30px;
-    margin-bottom: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    max-width: 1450px;
-    /* End TODO */
+  /* TODO: Make this a shared rule */
+  background-color: $gray-lightest;
+  margin-bottom: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  max-width: 1450px;
+  padding-bottom: 30px;
+  /* End TODO */
 
-    &--inner {
-        display: flex;
-        flex-flow: row wrap;
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-top: 20px;
-    }
+  &--inner {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-    &--title {
-        padding-bottom: 10px;
-        padding-right: 20px;
-    }
+  &--title {
+    padding-bottom: 10px;
+    padding-right: 20px;
+  }
 
-    &--title-text {
-        background-color: $black;
-        color: $white;
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 30px;
-        padding-right: 30px;
-        text-transform: uppercase;
-    }
+  &--title-text {
+    background-color: $black;
+    color: $white;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    text-transform: uppercase;
+  }
 }

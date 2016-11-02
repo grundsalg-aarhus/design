@@ -1,213 +1,178 @@
- .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    max-width: 1450px;
-    padding-left: $layout-padding;
-    padding-right: $layout-padding;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  max-width: 1450px;
+  padding-left: $layout-padding;
+  padding-right: $layout-padding;
+
+  @include breakpoint($breakpoint-desk) {
+    flex-direction: row;
+  }
+
+  &--large-box {
+    background-image: url("../../assets/forside_villa.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 
     @include breakpoint($breakpoint-desk) {
-        flex-direction: row;
+      width: 50%;
+    }
+  }
+
+  &--large-box,
+  &--small-box {
+    &:hover, &:focus, &:active {
+      .arrow-link {
+        margin-left: 10px;
+        transition: all .4s ease;
+      }
+    }
+  }
+
+  &--box-content {
+    background-color: $white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column;
+      width: 70%;
     }
 
-    &--large-box {
-        background-image: url("../../assets/forside_villa.jpg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-
-        @include breakpoint($breakpoint-desk) {
-          width: 50%;
-        }
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column;
+      width: 60%;
     }
 
-    &--box-content {
-        background-color: $white;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-
-        @include breakpoint($breakpoint-tablet) {
-          flex-direction: column;
-          width: 70%;
-        }
-
-        @include breakpoint($breakpoint-tablet) {
-          flex-direction: column;
-          width: 60%;
-        }
-
-        @include breakpoint($breakpoint-desk) {
-          flex-direction: column;
-          width: 50%;
-        }
-
-        &.is-primary {
-          background-color: $theme-color-villa;
-        }
-
-        &.is-secondary {
-            background-color: $gray-lightest;
-        }
-
-        &.header--box-content-large {
-            transition: background-color .4s ease;
-            
-            &:hover, &:focus, &:active {
-                &:after {
-                    border-left: 20px solid darken($theme-color-villa, 2%);
-                }
-
-                .arrow-link {
-                    margin-left: 10px;
-                    transition: all .4s ease;
-                }
-            }
-        }
-
-        &.header--box-content-small-top {
-            transition: background-color .4s ease;
-            
-            &:hover, &:focus, &:active {
-                &:after {
-                    border-left: 20px solid darken($white, 4%);
-                }
-
-                .arrow-link {
-                    margin-left: 10px;
-                    transition: all .4s ease;
-                }
-            }
-        }
-
-        &.header--box-content-small-bottom {
-            transition: background-color .4s ease;
-            
-            &:hover, &:focus, &:active {
-                &:after {
-                    border-right: 20px solid darken($white, 4%);
-                }
-
-                .arrow-link {
-                    margin-left: 10px;
-                    transition: all .4s ease;
-                }
-            }
-        }
+    @include breakpoint($breakpoint-desk) {
+      flex-direction: column;
+      width: 50%;
     }
 
-    /* TODO-START: Make this into a mixin */
-    &--box-content-large {
-        &:after {
-            border-bottom: 20px solid transparent;
-            border-left: 20px solid $theme-color-villa;
-            border-top: 20px solid transparent;
-            content: "";
-            height: 0;
-            position: absolute;
-            right: -20px;
-            width: 0;  
-        }  
+    &.is-primary {
+      background-color: $theme-color-villa;
     }
 
-    &--box-content-small-top {
-
-        &:after {
-            border-bottom: 20px solid transparent;
-            border-left: 20px solid $gray-lightest;
-            border-top: 20px solid transparent;
-            content: "";
-            height: 0;
-            position: absolute;
-            right: -20px;
-            width: 0; 
-        }  
+    &.is-secondary {
+      background-color: $gray-lightest;
     }
+  }
 
-    &--box-content-small-bottom {
-        &:after {
-            border-bottom: 20px solid transparent;
-            border-right: 20px solid $gray-lightest;
-            border-top: 20px solid transparent;
-            content: "";
-            height: 0;
-            left: -20px;
-            position: absolute;
-            width: 0;  
-        }  
+  /* TODO-START: Make this into a mixin */
+  &--box-content-large {
+    &:after {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid $theme-color-villa;
+      border-top: 20px solid transparent;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: -20px;
+      width: 0;
     }
-    /* TODO-END */
+  }
 
-    &--large-box-text {
-        color: $black;
+  &--box-content-small-top {
+
+    &:after {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid $gray-lightest;
+      border-top: 20px solid transparent;
+      content: "";
+      height: 0;
+      position: absolute;
+      right: -20px;
+      width: 0;
     }
+  }
 
-    &--small-boxes {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-
-        @include breakpoint($breakpoint-desk) {
-            flex-direction: column;
-            width: 50%;
-        }
+  &--box-content-small-bottom {
+    &:after {
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $gray-lightest;
+      border-top: 20px solid transparent;
+      content: "";
+      height: 0;
+      left: -20px;
+      position: absolute;
+      width: 0;
     }
+  }
+  /* TODO-END */
 
-    &--box-text {
-        padding: 60px;
+  &--large-box-text {
+    color: $black;
+  }
+
+  &--small-boxes {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    @include breakpoint($breakpoint-desk) {
+      flex-direction: column;
+      width: 50%;
     }
+  }
 
-    &--box-text-title {
-        border-bottom: 3px solid $black;
-        display: inline;
-        font-size: 22px;
-        font-weight: 600;
-        padding-bottom: 3px;
+  &--box-text {
+    padding: 60px;
+  }
+
+  &--box-text-title {
+    border-bottom: 3px solid $black;
+    display: inline;
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 3px;
+  }
+
+  &--box-text-caption {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 24px;
+  }
+
+  &--small-box-text {
+    color: $black;
+  }
+
+  &--small-box-top {
+    background-image: url("../../assets/forside_storparcel.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    height: 100%;
+
+    @include breakpoint($breakpoint-desk) {
+      height: 50%;
     }
+  }
 
-    &--box-text-caption {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-top: 24px;
+  &--small-box-bottom {
+    background-image: url("../../assets/forside_erhverv.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+
+    @include breakpoint($breakpoint-desk) {
+      height: 50%;
     }
-
-    &--small-box-text {
-        color: $black;
-    }
-
-    &--small-box-top {
-        background-image: url("../../assets/forside_storparcel.jpg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: $white;
-        height: 100%;
-
-        @include breakpoint($breakpoint-desk) {
-            height: 50%;
-        }
-    }
-
-    &--small-box-bottom {
-        background-image: url("../../assets/forside_erhverv.jpg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: $white;
-        display: flex;
-        height: 100%;
-        justify-content: flex-end;
-
-        @include breakpoint($breakpoint-desk) {
-            height: 50%;
-        }
-    }
+  }
 }
