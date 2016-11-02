@@ -13,4 +13,12 @@
     font-size: 28px;
     font-weight: 600;
   }
+  
+  &--title-link {
+    @include strip-link-styles($gray-darkest);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

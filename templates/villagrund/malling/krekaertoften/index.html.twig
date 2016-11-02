@@ -1,5 +1,6 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
+{% import "macros/breadcrumb.html.twig" as breadcrumb %}
 
 {% block title %}Krekærtoften i Malling{% endblock %}
 
@@ -12,7 +13,11 @@
 {% block content %}
 
   <header class="header-subpage">
-    <h1 class="header-subpage--title">Villagrund / Malling / Krekærtoften</h1>
+    <h1 class="header-subpage--title">
+      {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
+      {{ breadcrumb.breadcrumb('villagrund/malling', 'Malling') }}
+      Krekærtoften
+    </h1>
   </header>
 
   <div class="filters">
@@ -53,8 +58,7 @@
     var marker = L.marker([56.037144, 10.194626]).addTo(map);
     var marker = L.marker([56.057144, 10.124626]).addTo(map);
 
-    // start the map in South-East England
-    map.setView(new L.LatLng(56.150660, 10.187073),11);
+    map.setView(new L.LatLng(56.035660, 10.187073),14);
     map.addLayer(osm);
   </script>
 
