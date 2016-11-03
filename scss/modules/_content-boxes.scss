@@ -2,10 +2,9 @@
   /* TODO: Make this a shared rule */
   background-color: $gray-lightest;
   margin-bottom: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: $layout-padding;
+  margin-right: $layout-padding;
   margin-top: 60px;
-  max-width: 1450px;
   padding-bottom: 30px;
   /* End TODO */
 

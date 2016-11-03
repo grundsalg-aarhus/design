@@ -15,10 +15,9 @@ $box-inner-spacing: 20px;
 
 .boxes {
   /* TODO: Make this a shared rule */
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: $layout-padding;
+  margin-right: $layout-padding;
   margin-top: 60px;
-  max-width: 1450px;
   /* End TODO */
 
   &--inner {
