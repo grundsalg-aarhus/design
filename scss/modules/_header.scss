@@ -1,13 +1,21 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
-  min-height: 700px;
+  @include breakpoint($breakpoint-bigscreen) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-bigscreen;
+  }
 
-  @include breakpoint($breakpoint-desk) {
-    flex-direction: row;
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: $layout-padding;
+    margin-right: $layout-padding;
+    min-height: 700px;
+
+    @include breakpoint($breakpoint-desk) {
+      flex-direction: row;
+    }
   }
 
   &--large-box {
