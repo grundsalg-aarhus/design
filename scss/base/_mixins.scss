@@ -55,6 +55,11 @@
   word-wrap: break-word;
 }
 
+/* Box arrow
+*
+* Lets you add and triangled arrow to a box
+================================================================================================================== */
+
 @mixin box-arrow($color, $direction) {
 
   &:after {
