@@ -36,11 +36,7 @@ $box-inner-spacing: 20px;
   }
 
   &--box {
-    /* TODO: Use variables */
-    /* stylelint-disable */
     background-color: $gray-lighter;
-    /* stylelint-enable */
-    /* End TODO */
     box-sizing: border-box;
     color: $black;
     display: flex;
@@ -90,8 +86,6 @@ $box-inner-spacing: 20px;
     /* End TODO */
   }
 
-  /* TODO: Use variables */
-  /* stylelint-disable */
   .is-storparcel,
   .is-erhverv {
     color: $white;
@@ -116,7 +110,4 @@ $box-inner-spacing: 20px;
   .is-storparcel {
     background-color: $theme-color-storparcel;
   }
-
-  /* stylelint-enable */
-  /* End TODO */
 }
