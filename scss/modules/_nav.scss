@@ -5,9 +5,6 @@
  */
 
 .nav {
-  border-top: 3px solid $black;
-  height: 5.5em;
-  top: 0;
   width: 100%;
   z-index: z($z-index-elements, nav);
 
@@ -15,8 +12,18 @@
     background-color: $white;
     display: flex;
     flex-direction: column;
-    right: 0;
-    top: 0;
+  }
+
+  &--inner {
+    display: flex;
+    height: 90px;
+    width: 100%;
+
+    @include breakpoint($breakpoint-bigscreen) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $breakpoint-bigscreen;
+    }
   }
 
   &--links {
@@ -29,12 +36,16 @@
       flex-grow: 1;
       height: 100%;
       justify-content: flex-end;
-      margin-right: 5em;
-      text-align: right;
+      margin-right: 60px;
 
       a {
         @include strip-link-styles($black, none);
       }
+    }
+
+    // Make sure the toggle hamburger menu element is out of the way.
+    @include breakpoint($breakpoint-bigscreen + $breakpoint-threshold) {
+      margin-right: $layout-padding;
     }
   }
 
@@ -48,8 +59,8 @@
       display: flex;
       font-size: 1em;
       font-weight: 600;
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 20px;
+      padding-right: 20px;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -72,7 +83,7 @@
   height: 30px;
   position: absolute;
   right: $layout-padding;
-  top: 32px;
+  top: 30px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   width: 32px;

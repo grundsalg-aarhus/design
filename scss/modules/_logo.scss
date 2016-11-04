@@ -7,10 +7,11 @@
 .logo {
   background-image: url("../../assets/logo.svg");
   background-repeat: no-repeat;
+  display: block;
   height: 28px;
   left: $layout-padding;
-  position: absolute;
-  top: 32px;
+  position: relative;
+  top: 30px;
   width: 300px;
   z-index: z($z-index-elements, logo);
 }
