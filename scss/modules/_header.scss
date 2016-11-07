@@ -118,16 +118,13 @@
   }
 
   &--box-text-title {
-    border-bottom: 3px solid $black;
+    @include headline-border($black);
     display: inline;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    padding-bottom: 3px;
   }
 
   &--box-text-caption {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 24px;
+    margin-top: $layout-padding;
   }
 }

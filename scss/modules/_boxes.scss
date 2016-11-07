@@ -8,25 +8,16 @@
 /* Styles
    ========================================================================== */
 
-/* TODO: Make sure these variables use the shared spacings */
-$box-outer-spacing: 40px;
-$box-inner-spacing: 20px;
-/* End TODO */
-
 .boxes {
-  /* TODO: Make this a shared rule */
   margin-left: $layout-padding;
   margin-right: $layout-padding;
-  margin-top: 60px;
-  /* End TODO */
+  margin-top: $box-margin-top;
 
   &--inner {
     display: flex;
     flex-flow: row wrap;
-    /* TODO: Use variables */
     margin-left: -$box-inner-spacing;
     margin-right: -$box-inner-spacing;
-    /* End TODO */
 
     @include breakpoint($breakpoint-bigscreen) {
       margin-left: auto;
@@ -72,18 +63,12 @@ $box-inner-spacing: 20px;
 
     a {
       @include strip-link-styles($black);
-
-      /* TODO: Make this a reusable style */
-      border-bottom: $header-underline $black;
-      padding-bottom: 3px;
-      /* End TODO */
+      @include headline-border($black);
     }
   }
 
   &--box-content {
-    /* TODO: Use variables */
-    margin-top: 20px;
-    /* End TODO */
+    margin-top: $layout-padding;
   }
 
   .is-storparcel,
@@ -93,8 +78,7 @@ $box-inner-spacing: 20px;
     .boxes--box-header {
       a {
         @include strip-link-styles($white);
-
-        border-bottom: $header-underline $white;
+        @include headline-border($white);
       }
     }
   }

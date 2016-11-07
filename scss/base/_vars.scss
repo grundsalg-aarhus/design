@@ -26,8 +26,11 @@ $z-index-elements: map, header-overlay, header, content, nav, logo, overlay, ham
 /* Layout
    ================================================================================================================== */
 
-$layout-padding:  20px;
-$header-underline: 3px solid;
+$layout-padding:    20px;
+$box-outer-spacing: 40px;
+$box-inner-spacing: 20px;
+$box-margin-top:    60px;
+$header-underline:  3px solid;
 
 
 /* Colors
