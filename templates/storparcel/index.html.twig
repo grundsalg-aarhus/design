@@ -1,5 +1,6 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
+{% import "macros/breadcrumb.html.twig" as breadcrumb %}
 
 {% block title %}Storparcel{% endblock %}
 
@@ -12,7 +13,8 @@
 {% block content %}
 
   <header class="header-subpage">
-    <h1 class="header-subpage--title">
+    {{ breadcrumb.breadcrumbs([]) }}
+    <h1 class="header-subpage--title is-storparcel">
       Storparcel
     </h1>
   </header>

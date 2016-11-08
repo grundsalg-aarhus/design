@@ -14,13 +14,8 @@
 {% block content %}
 
   <header class="header-subpage">
-    {# TODO: Make this into a macro  #}
-    <div class="breadcrumb">
-      {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
-      {{ breadcrumb.breadcrumb('villagrund/malling', 'Malling') }}
-    </div>
-    {# TODO: End  #}
-    <h1 class="header-subpage--title">
+    {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}]) }}
+    <h1 class="header-subpage--title is-villa">
       Balskærvej
     </h1>
   </header>

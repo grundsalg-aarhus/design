@@ -13,8 +13,8 @@
 {% block content %}
 
   <header class="header-subpage">
-    <h1 class="header-subpage--title">
-      {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
+    {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}]) }}
+    <h1 class="header-subpage--title is-villa">
       Solbjerg
     </h1>
   </header>
