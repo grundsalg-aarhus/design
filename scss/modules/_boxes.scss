@@ -49,7 +49,18 @@
 
     &.is-inside-context-box {
       background-color: $white;
-      border-top: 3px solid $theme-color-villa;
+
+      &.is-villa {
+        border-top: 3px solid $theme-color-villa;
+      }
+
+      &.is-storparcel {
+        border-top: 3px solid $theme-color-storparcel;
+      }
+
+      &.is-erhverv {
+        border-top: 3px solid $theme-color-erhverv;
+      }
     }
   }
 
