@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Villagrund i Malling{% endblock %}
 
@@ -19,7 +20,10 @@
     </h1>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+    <div id="mapid" class="map--view"></div>
+    {{ filters.mapFilters() }}
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">
