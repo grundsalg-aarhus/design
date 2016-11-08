@@ -1,0 +1,113 @@
+.filters {
+  &--checkbox-label {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &--checkbox-label:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &--checkbox-input {
+    opacity: 0;
+    position: absolute;
+
+    & + .filters--checkbox-label {
+      color: $white;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    & + .filters--checkbox-label:before {
+      content: "";
+      display: inline-block;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+      width: 20px;
+    }
+    
+    &.disabled + .filters--checkbox-label,
+    &[disabled] + .filters--checkbox-label {
+      color: $gray-lighter;
+    }
+    
+    &.disabled + .filters--checkbox-label:before,
+    &[disabled] + .filters--checkbox-label:before {
+      background: $gray-light;
+      box-shadow: none;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + .filters--checkbox-label:after {
+      background: $white;
+      box-shadow: 2px 0 0 $white, 4px 0 0 $white, 4px -2px 0 $white, 4px -4px 0 $white, 4px -6px 0 $white;
+      content: "";
+      height: 2px;
+      left: 6px;
+      position: absolute;
+      top: 9px;
+      transform: rotate(45deg);
+      width: 2px;
+    }
+
+    // Colors
+    &.is-sold + .filters--checkbox-label:before {
+      background: $color-sold;
+    }
+
+    &.is-sold:checked + .filters--checkbox-label:before {
+      background: $color-sold;
+    }
+
+    &.is-available + .filters--checkbox-label:before {
+      background: $color-available;
+    }
+
+    &.is-available:checked + .filters--checkbox-label:before {
+      background: $color-available;
+    }
+
+    &.is-future + .filters--checkbox-label:before {
+      background: $color-future;
+    }
+
+    &.is-future:checked + .filters--checkbox-label:before {
+      background: $color-future;
+    }
+
+    &.is-school + .filters--checkbox-label:before {
+      background: $color-schools;
+    }
+
+    &.is-school:checked + .filters--checkbox-label:before {
+      background: $color-schools;
+    }
+
+    &.is-daycare + .filters--checkbox-label:before {
+      background: $color-daycare;
+    }
+
+    &.is-daycare:checked + .filters--checkbox-label:before {
+      background: $color-daycare;
+    }
+
+    &.is-activities + .filters--checkbox-label:before {
+      background: $color-activities;
+    }
+
+    &.is-activities:checked + .filters--checkbox-label:before {
+      background: $color-activities;
+    }
+
+    &.is-forrest + .filters--checkbox-label:before {
+      background: $color-forrest;
+    }
+
+    &.is-forrest:checked + .filters--checkbox-label:before {
+      background: $color-forrest;
+    }
+    
+  }
+}
