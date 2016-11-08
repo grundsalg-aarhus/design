@@ -1,0 +1,13 @@
+.breadcrumb {
+  align-self: flex-start;
+  color: $gray-light;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--link, &--link:visited {
+    color: $gray-darker;
+  }
+}

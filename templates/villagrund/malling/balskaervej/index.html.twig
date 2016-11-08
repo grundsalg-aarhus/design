@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/checkbox.html.twig" as checkbox %}
 
 {% block title %}Balskærvej i Malling{% endblock %}
 
@@ -13,14 +14,32 @@
 {% block content %}
 
   <header class="header-subpage">
-    <h1 class="header-subpage--title">
+    {# TODO: Make this into a macro  #}
+    <div class="breadcrumb">
       {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
       {{ breadcrumb.breadcrumb('villagrund/malling', 'Malling') }}
+    </div>
+    {# TODO: End  #}
+    <h1 class="header-subpage--title">
       Balskærvej
     </h1>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+      <div id="mapid" class="map--view"></div>
+      <div class="map--filters">
+        <div class="map--filters-checkboxes">
+          {{ checkbox.filterCheckbox('Ledige', 'is-available') }}
+          {{ checkbox.filterCheckbox('Udsolgt', 'is-sold') }}
+          {{ checkbox.filterCheckbox('Fremtidige', 'is-future') }}
+          {{ checkbox.filterCheckbox('Skov', 'is-forrest') }}
+          {{ checkbox.filterCheckbox('Fritidsaktiviter', 'is-activities') }}
+          {{ checkbox.filterCheckbox('Børnehaver', 'is-daycare') }}
+          {{ checkbox.filterCheckbox('Skoler', 'is-school') }}
+          
+        </div>
+      </div>
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">

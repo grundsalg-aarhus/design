@@ -1,10 +1,13 @@
 .header-subpage {
-  align-items: center;
   background-color: $gray-lightest;
   display: flex;
+  flex-direction: column;
   height: 100px;
+  justify-content: center;
   margin-left: $layout-padding;
   margin-right: $layout-padding;
+  padding-bottom: $layout-padding;
+  padding-top: $layout-padding;
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -13,10 +16,15 @@
   }
 
   &--title {
+    align-self: flex-start;
+    background-color: $theme-color-villa;
     color: $black;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 600;
-    padding-left: 40px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
   }
   
   &--title-link {
