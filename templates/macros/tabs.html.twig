@@ -1,0 +1,22 @@
+{% macro subheaderTabs() %}    
+    
+    <div class="tabs">
+      <div class="tabs--tab is-active">
+        <div class="tabs--tab-icon">{% include 'icons/map.svg' %}</div>
+        <div class="tabs--tab-title">Kort</div>
+      </div>
+      <div class="tabs--tab">
+        <div class="tabs--tab-icon">{% include 'icons/camera.svg' %}</div>
+        <div class="tabs--tab-title">Billeder</div>
+      </div>
+      <div class="tabs--tab">
+        <div class="tabs--tab-icon">{% include 'icons/video.svg' %}</div>
+        <div class="tabs--tab-title">Video</div>
+      </div>
+      <div class="tabs--tab">
+        <div class="tabs--tab-icon">{% include 'icons/streetview.svg' %}</div>
+        <div class="tabs--tab-title">Streetview</div>
+      </div>
+    </div>
+
+{% endmacro %}    
