@@ -15,10 +15,12 @@
 {% block content %}
 
   <header class="header-subpage is-villa">
-    {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
-    <h1 class="header-subpage--title is-villa">
-      Balskærvej
-    </h1>
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
+      <h1 class="header-subpage--title is-villa">
+        Balskærvej
+      </h1>
+    </div>
   </header>
 
   <div class="map">

@@ -1,12 +1,10 @@
 .header-subpage {
   background-color: $gray-lightest;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   margin-left: $layout-padding;
   margin-right: $layout-padding;
-  padding-bottom: $layout-padding;
-  padding-top: $layout-padding;
 
   &.is-villa {
     background-color: $theme-color-villa;
@@ -24,6 +22,12 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $breakpoint-bigscreen;
+  }
+
+  &--info {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-right: auto;
   }
 
   &--title {

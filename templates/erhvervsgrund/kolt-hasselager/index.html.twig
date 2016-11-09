@@ -14,10 +14,12 @@
 {% block content %}
 
   <header class="header-subpage is-erhverv">
-    {{ breadcrumb.breadcrumbs([{link: 'erhvervsgrund', title:'Erhvervsgrund'}], 'is-erhverv') }}
-    <h1 class="header-subpage--title is-erhverv">
-      Kolt Hasselager
-    </h1>
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([{link: 'erhvervsgrund', title:'Erhvervsgrund'}], 'is-erhverv') }}
+      <h1 class="header-subpage--title is-erhverv">
+        Kolt Hasselager
+      </h1>
+    </div>
   </header>
 
   <div class="map">
