@@ -12,29 +12,36 @@
     justify-content: center;
     margin-left: $layout-padding;
     margin-right: $layout-padding;
-    min-height: 700px;
 
     @include breakpoint($breakpoint-desk) {
       flex-direction: row;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      min-height: 700px;
     }
   }
 
   &--large-box,
   &--small-box {
-    background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
+
+    @include breakpoint($breakpoint-tablet) {
+      background-position: 50%;
+      background-size: cover;
+    }
 
     &:hover, &:focus, &:active {
       .arrow-link {
-        margin-left: 10px;
+        margin-left: $layout-padding;
         transition: all .4s ease;
       }
     }
   }
 
   &--large-box {
-    background-image: url("../../assets/forside_villa.jpg");
+    background-image: url("../assets/forside_villa.jpg");
 
     @include breakpoint($breakpoint-desk) {
       width: 50%;
@@ -43,28 +50,54 @@
 
   &--small-box {
     display: flex;
+    margin-top: $layout-padding-medium;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-top: 0;
+    }
 
     @include breakpoint($breakpoint-desk) {
       height: 50%;
     }
 
-    &.is-top {
-      background-image: url("../../assets/forside_storparcel.jpg");
-      border-top: 1px solid $gray-lighter;
+    &.is-storparcel {
+      background-image: url("../assets/forside_storparcel.jpg");
+
+      @include breakpoint($breakpoint-tablet) {
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 1px solid $gray-lighter;
+      }
     }
 
-    &.is-bottom {
-      background-image: url("../../assets/forside_erhverv.jpg");
-      border-bottom: 1px solid $gray-lighter;
-      border-right: 1px solid $gray-lighter;
+    &.is-erhverv {
+      background-image: url("../assets/forside_erhverv.jpg");
       justify-content: flex-end;
+
+      @include breakpoint($breakpoint-tablet) {
+        border-right: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 0;
+      }
     }
   }
 
   &--small-boxes {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
+
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column-reverse;
+    }
 
     @include breakpoint($breakpoint-desk) {
       flex-direction: column;
@@ -79,47 +112,73 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
+    margin-top: 50%;
     position: relative;
     width: 100%;
 
     @include breakpoint($breakpoint-tablet) {
       flex-direction: column;
-      width: 70%;
-    }
-
-    @include breakpoint($breakpoint-desk) {
+      margin-top: 0;
       width: 50%;
     }
 
-    &.is-large {
-      @include box-arrow($theme-color-villa, "right");
+    &.is-villagrund {
 
-      background-color: $theme-color-villa;
+      @include breakpoint($breakpoint-tablet) {
+        @include box-arrow($white, "right");
+
+        border-left: 1px solid $gray-lighter;
+        border-top: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        @include box-arrow($theme-color-villa, "right");
+
+        background-color: $theme-color-villa;
+        border-left: 0;
+        border-top: 0;
+      }
     }
 
-    &.is-small-top, &.is-small-bottom {
+    &.is-storparcel,
+    &.is-erhverv {
       background-color: $white;
     }
 
-    &.is-small-top {
-      @include box-arrow($white, "right");
+    &.is-storparcel {
+      @include breakpoint($breakpoint-tablet) {
+        @include box-arrow($white, "right");
+      }
     }
 
-    &.is-small-bottom {
-      @include box-arrow($white, "left");
+    &.is-erhverv {
+      @include breakpoint($breakpoint-tablet) {
+        @include box-arrow($white, "left");
+      }
     }
   }
 
   &--box-text {
-    padding: 60px;
+    padding-top: $layout-padding;
 
-    &.is-large, &.is-small-top, &.is-small-bottom {
+    @include breakpoint($breakpoint-tablet) {
+      padding: $layout-padding-medium;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding: $layout-padding-large;
+    }
+
+    &.is-villagrund,
+    &.is-storparcel,
+    &.is-erhverv {
       color: $black;
     }
   }
 
   &--box-text-title {
     @include headline-border($black);
+
     display: inline;
     font-size: 24px;
     font-weight: 600;
