@@ -42,7 +42,7 @@
     var plotlayers=[];
 
     // set up the map
-    map = new L.Map('mapid');
+    map = new L.Map('mapid', { scrollWheelZoom: false });
 
     // create the tile layer with correct attribution
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
