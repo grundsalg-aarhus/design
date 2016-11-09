@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>video</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="video">
+            <use id="circle" stroke="#1A1918" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+            <g transform="translate(13.000000, 13.000000)">
+                <g id="Frames">
+                    <rect id="Rectangle-path" x="0" y="0" width="25" height="25"></rect>
+                </g>
+                <g id="Solid" transform="translate(5.208333, 3.125000)" fill="#1A1918">
+                    <path d="M0,0.269791667 L0,18.4802083 L15.609375,9.375 L0,0.269791667 Z M2.08333333,3.896875 L11.4739583,9.375 L2.08333333,14.853125 L2.08333333,3.896875 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
