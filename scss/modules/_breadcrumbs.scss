@@ -6,19 +6,71 @@
   padding-bottom: 10px;
   padding-left: 20px;
 
+  &.is-villa {
+    .breadcrumb--home-svg {
+      fill: $black;
+    }
+
+    .breadcrumb--divider {
+      color: $black;
+    }
+
+    .breadcrumb--link {
+      color: $black;
+      font-weight: 600;
+    }
+  }
+
+  &.is-storparcel {
+    .breadcrumb--home-svg {
+      fill: $white;
+    }
+
+    .breadcrumb--divider {
+      color: $white;
+    }
+
+    .breadcrumb--link {
+      color: $white;
+    }
+  }
+
+  &.is-erhverv {
+    .breadcrumb--home-svg {
+      fill: $white;
+    }
+
+    .breadcrumb--divider {
+      color: $white;
+    }
+
+    .breadcrumb--link {
+      color: $white;
+    }
+  }
+
   &--link, &--link:visited {
-    color: $gray-darker;
+    color: $black;
+    font-weight: 400;
+    opacity: .5;
   }
 
   &--link:hover {
     color: $black;
+    opacity: 1;
   }
 
   &--home {
+    opacity: .5;
     padding-right: 6px;
   }
 
+  &--home:hover {
+    opacity: 1;
+  }
+
   &--divider {
+    opacity: .2;
     padding-left: 3px;
     padding-right: 3px;
   }

@@ -1,12 +1,6 @@
-{% macro breadcrumb(link, title) %}
-
-  <a class="breadcrumb--link" href="/{{ link }}/" title="{{ title }}" class="header-subpage--title-link">{{ title }}</a> /
-
-{% endmacro %}
-
-{% macro breadcrumbs(breadcrumbs) %}
+{% macro breadcrumbs(breadcrumbs, class) %}
   
-  <div class="breadcrumb">
+  <div class="breadcrumb {{ class }}">
   <a class="breadcrumb--home" href="/">{% include '/icons/home.svg' %}</a><span class="breadcrumb--divider">/</span>
   {% for breadcrumb in breadcrumbs %}
     <a class="breadcrumb--link" href="/{{ breadcrumb.link }}/" title="{{ breadcrumb.title }}" class="header-subpage--title-link">
