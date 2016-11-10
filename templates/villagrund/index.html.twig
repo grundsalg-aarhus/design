@@ -27,14 +27,22 @@
     {{ filters.mapFilters() }}
   </div>
 
-  <div class="content-box">
-    <div class="content-box--title">
-      <h2 class="content-box--title-text">Udbud</h2>
+  <div class="content-boxes">
+    <div class="content-box">
+      <div class="content-box--inner">
+        <div class="content-box--title">
+          <h2 class="content-box--title-text">Udbud</h2>
+        </div>
+        <div class="content-box--content">
+          <div class="boxes">
+            <div class="boxes--inner">
+              {% include 'extends/boxes/villagrund/malling/malling.html.twig' %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="content-box--inner">
-      {% include 'extends/boxes/villagrund/malling/malling.html.twig' %}
-    </div>
-  </div>
+  <div>
 
   <script>
     var map;

@@ -41,6 +41,18 @@
     justify-content: flex-start;
     position: relative;
 
+    &.is-villa {
+      background-color: $theme-color-villa;
+    }
+
+    &.is-erhverv {
+      background-color: $theme-color-erhverv;
+    }
+
+    &.is-storparcel {
+      background-color: $theme-color-storparcel;
+    }
+
     @include breakpoint($breakpoint-desk) {
       // It seems there are some rounding issues (at least in Chrome) that is why we multiply with 2.035.
       // Not pretty but necessary.
@@ -101,18 +113,6 @@
         @include headline-border($white);
       }
     }
-  }
-
-  .is-villa {
-    background-color: $theme-color-villa;
-  }
-
-  .is-erhverv {
-    background-color: $theme-color-erhverv;
-  }
-
-  .is-storparcel {
-    background-color: $theme-color-storparcel;
   }
 
   &--box-plot-title {
