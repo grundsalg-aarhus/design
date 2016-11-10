@@ -6,8 +6,8 @@
 
 .map {
   height: 700px;
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
   position: relative;
 
   @include breakpoint($breakpoint-bigscreen) {
@@ -24,8 +24,8 @@
   &--filters {
     align-items: center;
     background-color: rgba(0,0,0,.75);
-    bottom: $layout-padding;
-    left: $layout-padding;
+    bottom: $layout-spacing;
+    left: $layout-spacing;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 40px;
@@ -36,7 +36,7 @@
 
   &--filters-title {
     color: $white;
-    padding-left: $layout-padding;
+    padding-left: $layout-spacing;
   }
 
   &--filters-checkboxes {

@@ -1,6 +1,16 @@
+/**
+ *
+ * Content box
+ *
+ */
+
+
+/* Styles
+   ========================================================================== */
+
 .content-box {
-  margin-top: $box-margin-top;
-  padding-bottom: $layout-padding;
+  margin-top: $layout-spacing;
+  padding-bottom: $layout-spacing;
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -12,15 +22,15 @@
     background-color: $gray-lightest;
     display: flex;
     flex-flow: row wrap;
-    margin-left: $layout-padding;
-    margin-right: $layout-padding;
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
   }
 
   &--title {
     background-color: $gray-lightest;
-    margin-left: $layout-padding;
-    margin-right: $layout-padding;
-    padding-right: $layout-padding;
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
+    padding-right: $layout-spacing;
   }
 
   &--title-text {
@@ -29,10 +39,10 @@
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
-    padding-bottom: $layout-padding;
-    padding-left: $layout-padding;
-    padding-right: $layout-padding;
-    padding-top: $layout-padding;
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing;
     text-transform: uppercase;
   }
 }
