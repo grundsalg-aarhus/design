@@ -136,9 +136,15 @@
   }
 
   &--box-plot-link {
+    align-items: center;
+    display: flex;
+    margin-top: $layout-spacing;
+  }
+
+  &--box-plot-link a {
     display: block;
     font-weight: 600;
     text-decoration: underline;
-    padding-top: $layout-spacing;
+    margin-left: $layout-spacing;
   }
 }
