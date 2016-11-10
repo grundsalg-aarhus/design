@@ -1,3 +1,13 @@
+/**
+ *
+ * Header subpage.
+ *
+ */
+
+
+/* Styles
+   ========================================================================== */
+
 .header-subpage {
   background-color: $gray-lightest;
   display: flex;
@@ -8,6 +18,7 @@
 
   &.is-villa {
     background-color: $theme-color-villa;
+    border-bottom: 1px solid darken($theme-color-villa, 8%);
   }
 
   &.is-storparcel {
