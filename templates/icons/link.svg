@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="40px" viewBox="0 0 36 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Link</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/Link">
+            <g id="link" transform="translate(5.000000, 1.000000)">
+                <path d="M18.2692308,0 L1.46153846,0 C0.654038462,0 0,0.654038462 0,1.46153846 L0,36.5384615 C0,37.3459615 0.654038462,38 1.46153846,38 L27.7692308,38 C28.5767308,38 29.2307692,37.3459615 29.2307692,36.5384615 L29.2307692,8.76923077" id="Shape" stroke="#000000" stroke-width="2"></path>
+                <path d="M29.2307692,8.76923077 L20.4615385,0" id="Shape" stroke="#000000" stroke-width="2"></path>
+                <path d="M20.4615385,0 L20.4615385,5.84615385 C20.4615385,7.46042308 21.7703462,8.76923077 23.3846154,8.76923077 L29.2307692,8.76923077" id="Shape" stroke="#000000" stroke-width="2"></path>
+                <g id="Group-3" transform="translate(14.424621, 22.424621) rotate(-45.000000) translate(-14.424621, -22.424621) translate(8.424621, 17.924621)" stroke-width="1.5" stroke="#1A1918">
+                    <polyline id="Path-2" transform="translate(9.534332, 4.570040) rotate(-180.000000) translate(-9.534332, -4.570040) " points="11.9149576 0.155623333 7.15370643 4.57003992 11.9083289 8.9844565"></polyline>
+                    <path d="M11.8761456,4.5 L0.10369996,4.5" id="Path-3" transform="translate(5.989923, 4.500000) rotate(-180.000000) translate(-5.989923, -4.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

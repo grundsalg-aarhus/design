@@ -86,4 +86,21 @@
   &--text {
     color: $black;
   }
+
+  &--link-with-icons {
+    color: $black;
+    font-weight: 600;
+    text-decoration: underline;
+    list-style: none;
+  }
+
+  &--link-with-icon {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  &--link-with-icon-text {
+    padding-left: $layout-spacing;
+  }
 }
