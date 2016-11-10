@@ -9,11 +9,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
-  height: 21px;
+  height: 24px;
   left: $layout-spacing;
   position: relative;
   top: 34px;
-  width: 225px;
+  width: 260px;
   z-index: z($z-index-elements, logo);
 
   @include breakpoint($breakpoint-tablet) {
