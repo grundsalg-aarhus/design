@@ -8,9 +8,17 @@
 /* Styles
    ========================================================================== */
 
+.content-boxes {
+  margin-top: $layout-spacing-medium;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
+}
+
 .content-box {
-  margin-top: $layout-spacing;
-  padding-bottom: $layout-spacing;
+
+  &:not(:first-child) {
+    margin-top: $layout-spacing;
+  }
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -22,27 +30,30 @@
     background-color: $gray-lightest;
     display: flex;
     flex-flow: row wrap;
-    margin-left: $layout-spacing;
-    margin-right: $layout-spacing;
+    padding-bottom: $layout-spacing-medium;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing;
   }
 
   &--title {
     background-color: $gray-lightest;
-    margin-left: $layout-spacing;
-    margin-right: $layout-spacing;
-    padding-right: $layout-spacing;
   }
 
   &--title-text {
     background-color: $black;
     color: $white;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     padding-bottom: $layout-spacing;
     padding-left: $layout-spacing;
     padding-right: $layout-spacing;
     padding-top: $layout-spacing;
     text-transform: uppercase;
+  }
+
+  &--text {
+    color: $black;
   }
 }

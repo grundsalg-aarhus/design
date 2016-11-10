@@ -29,13 +29,36 @@
     {{ filters.mapFilters() }}
   </div>
 
-  <div class="content-box">
-    <div class="content-box--title">
-      <h2 class="content-box--title-text">Udbud</h2>
+  <div class="content-boxes">
+    
+    <div class="content-box is-alpha">
+      <div class="content-box--title">
+        <h2 class="content-box--title-text">Om grundene</h2>
+      </div>
+      <div class="content-box--inner">
+        <p class="content-box--text">
+          Aarhus kommune sælger byggegrunde ved Krekærvangen og Krekærtoften i Malling til de priser, der fremgår ved klik på de enkelte grunde eller herunder.
+          Grundene er omfattet af lokalplan 711.
+        </p>
+      </div>
     </div>
-    <div class="content-box--inner">
-      {% include 'extends/boxes/villagrund/malling/balskaervej.html.twig' %}
-      {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
+
+    <div class="content-box is-beta">
+      <div class="content-box--title">
+        <h2 class="content-box--title-text">Dokumenter</h2>
+      </div>
+      <div class="content-box--inner">
+        Inner
+      </div>
+    </div>
+
+    <div class="content-box">
+      <div class="content-box--title">
+        <h2 class="content-box--title-text">Oversigt</h2>
+      </div>
+      <div class="content-box--inner">
+        Inner
+      </div>
     </div>
   </div>
 
