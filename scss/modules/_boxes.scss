@@ -9,15 +9,13 @@
    ========================================================================== */
 
 .boxes {
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
-  margin-top: $box-margin-top;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
+  margin-top: $layout-spacing;
 
   &--inner {
     display: flex;
     flex-flow: row wrap;
-    margin-left: -$box-inner-spacing;
-    margin-right: -$box-inner-spacing;
 
     @include breakpoint($breakpoint-bigscreen) {
       margin-left: auto;
@@ -36,15 +34,14 @@
     flex-grow: 0;
     flex-shrink: 0;
     justify-content: flex-start;
-    margin: $box-inner-spacing;
     position: relative;
 
-    @include breakpoint($breakpoint-tablet) {
-      flex-basis: calc(50% - #{$box-outer-spacing});
+    @include breakpoint($breakpoint-desk) {
+      flex-basis: calc(33.333% - #{$layout-spacing-medium});
     }
 
-    @include breakpoint($breakpoint-desk) {
-      flex-basis: calc(33.333% - #{$box-outer-spacing});
+    &:not(:first-child) {
+      margin-top: $layout-spacing;
     }
 
     &.is-inside-context-box {
@@ -65,7 +62,7 @@
   }
 
   &--box-inner {
-    padding: $box-outer-spacing;
+    padding: $layout-spacing-medium;
   }
 
   &--box-header {
@@ -79,7 +76,7 @@
   }
 
   &--box-content {
-    margin-top: $layout-padding;
+    margin-top: $layout-spacing;
   }
 
   .is-storparcel,

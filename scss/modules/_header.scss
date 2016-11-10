@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: $layout-padding;
-    margin-right: $layout-padding;
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
       flex-direction: row;
@@ -34,7 +34,7 @@
 
     &:hover, &:focus, &:active {
       .arrow-link {
-        margin-left: $layout-padding;
+        margin-left: $layout-spacing;
         transition: all .4s ease;
       }
     }
@@ -50,7 +50,7 @@
 
   &--small-box {
     display: flex;
-    margin-top: $layout-padding-medium;
+    margin-top: $layout-spacing-medium;
 
     @include breakpoint($breakpoint-tablet) {
       margin-top: 0;
@@ -159,14 +159,14 @@
   }
 
   &--box-text {
-    padding-top: $layout-padding;
+    padding-top: $layout-spacing;
 
     @include breakpoint($breakpoint-tablet) {
-      padding: $layout-padding-medium;
+      padding: $layout-spacing-medium;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      padding: $layout-padding-large;
+      padding: $layout-spacing-large;
     }
 
     &.is-villagrund,
@@ -185,6 +185,6 @@
   }
 
   &--box-text-caption {
-    margin-top: $layout-padding;
+    margin-top: $layout-spacing;
   }
 }
