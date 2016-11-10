@@ -70,19 +70,24 @@
   }
 
   @if $direction == "left" {
-      &:after {
-        border-bottom: 20px solid transparent;
-        border-right: 20px solid $color;
-        border-top: 20px solid transparent;
-        left: -20px;
-      }
+    &:after {
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid $color;
+      border-top: 20px solid transparent;
+      left: -20px;
+    }
   } @else if $direction == "right" {
-      &:after {
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid $color;
-        border-top: 20px solid transparent;
-        right: -20px;
-      }
+    &:after {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid $color;
+      border-top: 20px solid transparent;
+      right: -20px;
+    }
     
   }
+}
+
+@mixin headline-border($color) {
+  border-bottom: $header-underline $color;
+  padding-bottom: 5px;
 }

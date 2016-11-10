@@ -1,0 +1,8 @@
+{% macro filterCheckbox(title, class) %}
+  
+  <div class="filters--checkbox">
+    <input class="filters--checkbox-input {{ class }}" id="{{ title }}" type="checkbox">
+    <label class="filters--checkbox-label" for="{{ title }}">{{ title }}</label>
+  </div>
+
+{% endmacro %}

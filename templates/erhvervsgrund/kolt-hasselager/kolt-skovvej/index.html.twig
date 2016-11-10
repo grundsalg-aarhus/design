@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Kolt Skovvej i Kolt Hasselager{% endblock %}
 
@@ -12,15 +13,19 @@
 
 {% block content %}
 
-  <header class="header-subpage">
-    <h1 class="header-subpage--title">
-      {{ breadcrumb.breadcrumb('erhvervsgrund', 'Erhvervsgrund') }}
-      {{ breadcrumb.breadcrumb('erhvervsgrund/kolt-hasselager', 'Kolt Hasselager') }}
-      Kolt Skovvej
-    </h1>
+  <header class="header-subpage is-erhverv">
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([{link: 'erhvervsgrund', title: 'Erhvervsgrund'}, {link: 'erhvervsgrund/kolt-hasselager', title: 'Kolt Hasselager'}], 'is-erhverv') }}
+      <h1 class="header-subpage--title is-erhverv">
+        Kolt Skovvej
+      </h1>
+    </div>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+    <div id="mapid" class="map--view"></div>
+    {{ filters.mapFilters() }}
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">

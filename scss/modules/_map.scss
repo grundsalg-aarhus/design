@@ -5,14 +5,47 @@
  */
 
 .map {
-  height: 600px;
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
-  z-index: z($z-index-elements, map);
+  height: 700px;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
+  position: relative;
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
     margin-right: auto;
     max-width: $breakpoint-bigscreen;
   }
+
+  &--view {
+    height: 700px;
+    z-index: z($z-index-elements, map);
+  }
+
+  &--filters {
+    align-items: center;
+    background-color: rgba(0,0,0,.75);
+    bottom: $layout-spacing;
+    left: $layout-spacing;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 20px;
+    position: absolute;
+    z-index: z($z-index-elements, header);
+  }
+
+  &--filters-title {
+    color: $white;
+    padding-left: $layout-spacing;
+  }
+
+  &--filters-checkboxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.leaflet-left {
+  // TODO - Remove !important here
+  left: 10px !important;
 }

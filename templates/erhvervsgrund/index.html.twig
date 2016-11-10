@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Erhvervsgrund{% endblock %}
 
@@ -12,13 +13,19 @@
 
 {% block content %}
 
-  <header class="header-subpage">
-    <h1 class="header-subpage--title">
-      Erhvervsgrund
-    </h1>
+  <header class="header-subpage is-erhverv">
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([], 'is-erhverv') }}
+      <h1 class="header-subpage--title is-erhverv">
+        Erhvervsgrund
+      </h1>
+    </div>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+    <div id="mapid" class="map--view"></div>
+    {{ filters.mapFilters() }}
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">
@@ -36,7 +43,7 @@
     var plotlayers=[];
 
     // set up the map
-    map = new L.Map('mapid');
+    map = new L.Map('mapid', { scrollWheelZoom: false });
 
     // create the tile layer with correct attribution
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';

@@ -1,5 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
+{% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Storparcel{% endblock %}
 
@@ -11,13 +13,19 @@
 
 {% block content %}
 
-  <header class="header-subpage">
-    <h1 class="header-subpage--title">
-      Storparcel
-    </h1>
+  <header class="header-subpage is-storparcel">
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([], 'is-storparcel') }}
+      <h1 class="header-subpage--title is-storparcel">
+        Storparcel
+      </h1>
+    </div>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+    <div id="mapid" class="map--view"></div>
+    {{ filters.mapFilters() }}
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">

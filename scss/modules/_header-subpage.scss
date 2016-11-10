@@ -1,10 +1,22 @@
 .header-subpage {
-  align-items: center;
   background-color: $gray-lightest;
   display: flex;
-  height: 100px;
-  margin-left: $layout-padding;
-  margin-right: $layout-padding;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
+
+  &.is-villa {
+    background-color: $theme-color-villa;
+  }
+
+  &.is-storparcel {
+    background-color: $theme-color-storparcel;
+  }
+
+  &.is-erhverv {
+    background-color: $theme-color-erhverv;
+  }
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -12,11 +24,30 @@
     max-width: $breakpoint-bigscreen;
   }
 
+  &--info {
+    margin-right: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
   &--title {
+    align-self: flex-start;
     color: $black;
     font-size: 28px;
     font-weight: 600;
-    padding-left: 40px;
+    padding-left: 20px;
+
+    &.is-villa {
+      color: $black;
+    }
+
+    &.is-storparcel {
+      color: $white;
+    }
+
+    &.is-erhverv {
+      color: $white;
+    }
   }
   
   &--title-link {

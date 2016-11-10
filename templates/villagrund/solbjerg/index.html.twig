@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Villagrund i Solbjerg{% endblock %}
 
@@ -12,14 +13,19 @@
 
 {% block content %}
 
-  <header class="header-subpage">
-    <h1 class="header-subpage--title">
-      {{ breadcrumb.breadcrumb('villagrund', 'Villagrund') }}
-      Solbjerg
-    </h1>
+  <header class="header-subpage is-villa">
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}], 'is-villa') }}
+      <h1 class="header-subpage--title is-villa">
+        Solbjerg
+      </h1>
+    </div>
   </header>
 
-  <div id="mapid" class="map"></div>
+  <div class="map">
+    <div id="mapid" class="map--view"></div>
+    {{ filters.mapFilters() }}
+  </div>
 
   <div class="content-box">
     <div class="content-box--title">
