@@ -66,6 +66,10 @@
       &.is-erhverv {
         border-top: 3px solid $theme-color-erhverv;
       }
+
+      &.is-available {
+        border-top: 6px solid $color-available;
+      }
     }
   }
 
@@ -109,5 +113,32 @@
 
   .is-storparcel {
     background-color: $theme-color-storparcel;
+  }
+
+  &--box-plot-title {
+    font-weight: 600;
+  }
+
+  &--box-plot-infos {
+    margin-top: $layout-spacing;
+  }
+
+  &--box-plot-info {
+    border-bottom: 1px solid $gray-lightest;
+    display: flex;
+    padding-bottom: $layout-spacing-small;
+    padding-top: $layout-spacing-small;
+  }
+
+  &--box-plot-info-value {
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  &--box-plot-link {
+    display: block;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-top: $layout-spacing;
   }
 }
