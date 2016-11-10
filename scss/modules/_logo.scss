@@ -5,13 +5,20 @@
  */
 
 .logo {
-  background-image: url("../../assets/logo.svg");
+  background-image: url("../assets/logo.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   display: block;
-  height: 28px;
+  height: 21px;
   left: $layout-spacing;
   position: relative;
-  top: 30px;
-  width: 300px;
+  top: 34px;
+  width: 225px;
   z-index: z($z-index-elements, logo);
+
+  @include breakpoint($breakpoint-tablet) {
+    height: 28px;
+    width: 300px;
+    top: 30px;
+  }
 }
