@@ -63,31 +63,11 @@
 
     &.is-storparcel {
       background-image: url("../assets/forside_storparcel.jpg");
-
-      @include breakpoint($breakpoint-tablet) {
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 0;
-        border-left: 0;
-        border-top: 1px solid $gray-lighter;
-      }
     }
 
     &.is-erhverv {
       background-image: url("../assets/forside_erhverv.jpg");
       justify-content: flex-end;
-
-      @include breakpoint($breakpoint-tablet) {
-        border-right: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 0;
-      }
     }
   }
 
@@ -108,6 +88,7 @@
 
   &--box-content {
     background-color: $white;
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -124,7 +105,6 @@
     }
 
     &.is-villagrund {
-
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "right");
 
@@ -149,10 +129,28 @@
     &.is-storparcel {
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "right");
+
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 1px solid $gray-lighter;
       }
     }
 
     &.is-erhverv {
+      @include breakpoint($breakpoint-tablet) {
+        border-right: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 0;
+      }
+
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "left");
       }
