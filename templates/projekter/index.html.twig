@@ -4,33 +4,21 @@
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/tabs.html.twig" as tabs %}
 
-{% block title %}Krekærtoften i Malling{% endblock %}
-
-{% block head %}
-  {{ parent() }}
-  <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-{% endblock %}
+{% block title %}Projekter{% endblock %}
 
 {% block content %}
 
-  <header class="header-subpage is-villa">
+  <header class="header-subpage">
     <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
-      <h1 class="header-subpage--title is-villa">
-        Krekærtoften
+      {{ breadcrumb.breadcrumbs([]) }}
+      <h1 class="header-subpage--title">
+        Projekter
       </h1>
     </div>
-    {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
+    {{ tabs.subheaderTabs('is-active', null, null, null, null) }}
   </header>
 
-  <div class="map">
-    <div id="mapid" class="map--view"></div>
-    {{ filters.mapFilters() }}
-  </div>
-
   <div class="content-boxes">
-    
     <div class="content-box is-alpha">
       <div class="content-box--inner">
         <div class="content-box--title">
@@ -102,63 +90,4 @@
     </div>
 
   </div>
-
-  <script>
-    var map;
-    var ajaxRequest;
-    var plotlist;
-    var plotlayers=[];
-
-    // set up the map
-    map = new L.Map('mapid', { scrollWheelZoom: false });
-
-    // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 22, attribution: osmAttrib});
-
-    var polygon1 = L.polygon([
-        [56.02985, 10.19255],
-        [56.02997, 10.19246],
-        [56.02991, 10.19206],
-        [56.02977, 10.19211],
-        [56.02979, 10.19231],
-        [56.02982, 10.19246],
-    ], { color: '#e30613' }).addTo(map);
-
-    var polygon2 = L.polygon([
-        [56.02967, 10.19262],
-        [56.02982, 10.19251],
-        [56.02976, 10.19211],
-        [56.02963, 10.19216],
-        [56.02962, 10.19236],
-        [56.02965, 10.1925],
-    ], { color: '#4e9d2d' }).addTo(map);
-
-    var polygon3 = L.polygon([
-        [56.02948, 10.19269],
-        [56.02963, 10.19258],
-        [56.02957, 10.19218],
-        [56.02943, 10.19224],
-        [56.02943, 10.19244],
-        [56.02946, 10.19257],
-    ], { color: '#4e9d2d' }).addTo(map);
-
-    var polygon4 = L.polygon([
-        [56.02932, 10.19269],
-        [56.02948, 10.19271],
-        [56.0294, 10.19225],
-        [56.02926, 10.19231],
-        [56.02926, 10.19251],
-        [56.02928, 10.19264],
-    ], { color: '#e30613' }).addTo(map);
-
-
-
-    map.setView(new L.LatLng(56.02951664, 10.19211282), 19);
-
-    
-    map.addLayer(osm);
-  </script>
-
 {% endblock %}

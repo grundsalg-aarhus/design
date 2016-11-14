@@ -16,6 +16,19 @@
   padding-bottom: 10px;
   padding-left: 20px;
 
+  .breadcrumb--home-svg {
+    fill: $black;
+  }
+
+  .breadcrumb--divider {
+    color: $black;
+  }
+
+  .breadcrumb--link {
+    color: $black;
+    font-weight: 600;
+  }
+
   &.is-villa {
     .breadcrumb--home-svg {
       fill: $black;
