@@ -23,16 +23,13 @@
 }
 
 .content-box {
-
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 
   &:not(:first-child) {
     margin-top: $layout-spacing;
-  }
 
-  &.is-alpha, &.is-beta {
     @include breakpoint($breakpoint-desk) {
       margin-top: 0;
     }
@@ -60,10 +57,12 @@
   }
 
   &--content {
-    padding-bottom: $layout-spacing-medium;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-    padding-top: $layout-spacing;
+    &.has-spacing {
+      padding-bottom: $layout-spacing-medium;
+      padding-left: $layout-spacing-medium;
+      padding-right: $layout-spacing-medium;
+      padding-top: $layout-spacing-medium;
+    }
   }
 
   &--title {
@@ -81,10 +80,6 @@
     padding-right: $layout-spacing;
     padding-top: $layout-spacing;
     text-transform: uppercase;
-  }
-
-  &--text {
-    color: $black;
   }
 
   &--link-with-icons {

@@ -1,0 +1,48 @@
+/**
+ *
+ * Content wysiwyg
+ *
+ */
+
+
+/* Styles
+   ========================================================================== */
+
+.content-wysiwyg {
+  color: $black;
+
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+
+  // Handle spacing between headers + headers and headers + content
+  h2 + h2, h2 + h3, h2 + h4, h3 + h2, h3 + h3, h3 + h4, h4 + h2, h4 + h3, h4 + h4, h2 + p, h3 + p, h4 + p {
+    margin-top: $layout-spacing-small;
+  }
+
+  // Handle spacing between content + headers and content + content
+  p + h2, p + h3, p + h4, p + p {
+    margin-top: $layout-spacing-medium;
+  }
+
+  a {
+    &:link {
+      color: $theme-color-erhverv;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: darken($theme-color-erhverv, 5%);
+    }
+
+    &:hover {
+      color: darken($theme-color-erhverv, 10%);
+      text-decoration: none;
+    }
+
+    &:focus {
+      color: darken($theme-color-erhverv, 10%);
+    }
+  }
+}
