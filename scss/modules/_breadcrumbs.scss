@@ -20,11 +20,6 @@
     fill: $white;
   }
 
-  .breadcrumb--home-text {
-    color: $white;
-    margin-left: 8px;
-  }
-
   .breadcrumb--divider {
     color: $white;
   }
@@ -32,6 +27,10 @@
   .breadcrumb--link {
     color: $white;
     font-weight: 600;
+
+    &.is-home {
+      margin-left: 8px;
+    }
   }
 
   &.is-villa {
@@ -68,22 +67,15 @@
   &--link, &--link:visited {
     color: $white;
     font-weight: 400;
-    opacity: .85;
   }
 
   &--link:hover {
     color: $white;
-    opacity: 1;
     text-decoration: underline;
   }
 
   &--home {
-    opacity: .85;
     padding-right: 6px;
-  }
-
-  &--home:hover {
-    opacity: 1;
   }
 
   &--divider {
