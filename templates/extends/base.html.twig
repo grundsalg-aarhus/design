@@ -1,4 +1,5 @@
 {% import "macros/nav.html.twig" as nav %}
+{% import "macros/footer.html.twig" as footer %}
 
 <!DOCTYPE html>
 <html>
@@ -72,5 +73,6 @@
 </nav>
 <!--menu.html.twig END-->
 <div id="content">{% block content %}{% endblock %}</div>
+{{ footer.footer() }}
 </body>
 </html>

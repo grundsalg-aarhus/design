@@ -27,6 +27,7 @@ $z-index-elements: map, header-overlay, header, content, nav, logo, overlay, ham
 /* Layout
    ================================================================================================================== */
 
+$layout-spacing-tiny:  5px;
 $layout-spacing-small:  10px;
 $layout-spacing:        20px;
 $layout-spacing-medium: 40px;
@@ -40,6 +41,7 @@ $header-underline:  3px solid;
 
 $theme-color:            #1a1919;
 $theme-color-secondary:  #e30613;
+$theme-color-tertiary:   #1F262D;
 $theme-color-erhverv:    #409cda;
 $theme-color-villa:      #f5c400;
 $theme-color-storparcel: #4e9d2d;
