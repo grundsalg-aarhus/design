@@ -1,0 +1,55 @@
+{% extends "extends/base.html.twig" %}
+{% import "extends/box.html.twig" as box %}
+{% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/filters.html.twig" as filters %}
+{% import "macros/tabs.html.twig" as tabs %}
+
+{% block title %}Projekter{% endblock %}
+
+{% block content %}
+
+  <header class="header-subpage">
+    <div class="header-subpage--info">
+      {{ breadcrumb.breadcrumbs([]) }}
+      <h1 class="header-subpage--title">
+        Projekter
+      </h1>
+    </div>
+  </header>
+
+  <div class="content-image">
+    <img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?dpr=1&auto=format&fit=crop&w=2000&h=700">
+  </div>
+
+  <div class="content-boxes">
+    <div class="content-box is-alpha">
+      <div class="content-box--inner">
+        <div class="content-box--title">
+          <h2 class="content-box--title-text">Om grundene</h2>
+        </div>
+        <div class="content-box--content">
+          <p class="content-box--text">
+            Aarhus kommune sælger byggegrunde ved Krekærvangen og Krekærtoften i Malling til de priser, der fremgår ved klik på de enkelte grunde eller herunder.
+            <br><br>Grundene er omfattet af lokalplan 711.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-box is-beta">
+      <div class="content-box--inner">
+        <div class="content-box--title">
+          <h2 class="content-box--title-text">Dokumenter</h2>
+        </div>
+        <div class="content-box--content">
+          <ul class="content-box--link-with-icons">
+            <li class="content-box--link-with-icon">{% include '/icons/pdf.svg' %}<a href="#" class="content-box--link-with-icon-text">Salgsvilkår</a></li>
+            <li class="content-box--link-with-icon">{% include '/icons/txt.svg' %}<a href="#" class="content-box--link-with-icon-text">Tilbudsblanket</a></li>
+            <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Linjeføringsforslag - Bane Danmark</a></li>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

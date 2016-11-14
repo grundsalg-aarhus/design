@@ -16,7 +16,7 @@
 
   &--tab {
     align-items: center;
-    border-right: 1px solid darken($theme-color-villa, 8%);
+    border-left: 1px solid $gray-light;
     color: $black;
     cursor: pointer;
     display: flex;
@@ -26,22 +26,34 @@
     justify-content: center;
     width: 170px;
 
-    &.is-active {
-      background-color: lighten($theme-color-villa, 30%);
+    &.is-villa {
+      border-left: 1px solid darken($theme-color-villa, 8%);
     }
-  }
 
-  &--tab:hover {
-    background-color: lighten($theme-color-villa, 30%);
-  }
+    &.is-erhverv {
+      border-left: 1px solid darken($theme-color-erhverv, 8%);
+    }
 
-  &--tab:first-child {
-    border-left: 1px solid darken($theme-color-villa, 8%);
-    border-right: 1px solid darken($theme-color-villa, 8%);
-  }
+    &.is-storparcel {
+      border-left: 1px solid darken($theme-color-storparcel, 8%);
+    }
 
-  &--tab:last-child {
-    border: none;
+    &:hover,
+    &.is-active {
+      background-color: $gray-lighter;
+
+      &.is-villa {
+        background-color: lighten($theme-color-villa, 30%);
+      }
+
+      &.is-erhverv {
+        background-color: lighten($theme-color-erhverv, 30%);
+      }
+
+      &.is-storparcel {
+        background-color: lighten($theme-color-storparcel, 30%);
+      }
+    }
   }
 
   &--tab-icon {
