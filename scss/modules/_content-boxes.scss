@@ -32,8 +32,11 @@
   width: 100%;
 
   &.is-alpha {
+    margin-top: 0;
+
     @include breakpoint($breakpoint-desk) {
       flex-basis: 66.66%;
+      margin-top: $layout-spacing;
 
       .content-box--inner {
         margin-right: $layout-spacing;
