@@ -2,6 +2,7 @@
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
+{% import "macros/nav.html.twig" as nav %}
 
 {% block title %}Villa{% endblock %}
 
@@ -9,6 +10,10 @@
   {{ parent() }}
   <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+{% endblock %}
+
+{% block nav %}
+  {{ nav.nav('is-villa', null, null, null) }}
 {% endblock %}
 
 {% block content %}

@@ -20,6 +20,15 @@
     fill: $white;
   }
 
+  .breadcrumb--home-text {
+    color: $white;
+    margin-left: 8px;
+  }
+
+  .breadcrumb--divider {
+    color: $white;
+  }
+
   .breadcrumb--link {
     color: $white;
     font-weight: 600;
@@ -28,6 +37,10 @@
   &.is-villa {
     .breadcrumb--home-svg {
       fill: $black;
+    }
+
+    .breadcrumb--home-text {
+      color: $black;
     }
 
     .breadcrumb--divider {
@@ -44,27 +57,11 @@
     .breadcrumb--home-svg {
       fill: $white;
     }
-
-    .breadcrumb--divider {
-      color: $white;
-    }
-
-    .breadcrumb--link {
-      color: $white;
-    }
   }
 
   &.is-erhverv {
     .breadcrumb--home-svg {
       fill: $white;
-    }
-
-    .breadcrumb--divider {
-      color: $white;
-    }
-
-    .breadcrumb--link {
-      color: $white;
     }
   }
 
