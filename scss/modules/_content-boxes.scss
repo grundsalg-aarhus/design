@@ -24,6 +24,7 @@
 
 .content-box {
 
+  color: $black;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -81,10 +82,6 @@
     padding-right: $layout-spacing;
     padding-top: $layout-spacing;
     text-transform: uppercase;
-  }
-
-  &--text {
-    color: $black;
   }
 
   &--link-with-icons {
