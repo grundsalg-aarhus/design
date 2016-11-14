@@ -13,7 +13,10 @@
   flex-wrap: wrap;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
-  margin-top: $layout-spacing-medium;
+
+  @include breakpoint($breakpoint-desk) {
+    margin-top: $layout-spacing;
+  }
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -25,15 +28,8 @@
 .content-box {
   display: flex;
   flex-wrap: wrap;
+  margin-top: $layout-spacing;
   width: 100%;
-
-  &:not(:first-child) {
-    margin-top: $layout-spacing;
-
-    @include breakpoint($breakpoint-desk) {
-      margin-top: 0;
-    }
-  }
 
   &.is-alpha {
     @include breakpoint($breakpoint-desk) {
