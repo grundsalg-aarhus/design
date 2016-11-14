@@ -104,7 +104,7 @@
       width: 50%;
     }
 
-    &.is-villagrund {
+    &.is-villa {
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "right");
 
@@ -168,7 +168,7 @@
       padding: $layout-spacing-large;
     }
 
-    &.is-villagrund,
+    &.is-villa,
     &.is-storparcel,
     &.is-erhverv {
       color: $black;

@@ -35,6 +35,18 @@
     }
   }
 
+  &.is-storparcel,
+  .is-erhverv {
+    color: $white;
+
+    .boxes--box-header {
+      a {
+        @include strip-link-styles($white);
+        @include headline-border($white);
+      }
+    }
+  }
+
   &--box {
     background-color: $gray-lighter;
     box-sizing: border-box;
@@ -72,6 +84,7 @@
 
     &.is-inside-context-box {
       background-color: $white;
+      color: $black;
 
       &.is-villa {
         border-top: 3px solid $theme-color-villa;
@@ -88,6 +101,13 @@
       &.is-available {
         border-top: 6px solid $color-available;
       }
+
+      .boxes--box-header {
+        a {
+          @include strip-link-styles($black);
+          @include headline-border($black);
+        }
+      }
     }
   }
 
@@ -102,23 +122,13 @@
     a {
       @include strip-link-styles($black);
       @include headline-border($black);
+
+      color: $black;
     }
   }
 
   &--box-content {
     margin-top: $layout-spacing;
-  }
-
-  .is-storparcel,
-  .is-erhverv {
-    color: $white;
-
-    .boxes--box-header {
-      a {
-        @include strip-link-styles($white);
-        @include headline-border($white);
-      }
-    }
   }
 
   &--box-plot-title {
