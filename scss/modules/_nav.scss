@@ -5,6 +5,7 @@
  */
 
 .nav {
+  border-top: 3px solid $black;
   width: 100%;
   z-index: z($z-index-elements, nav);
 
@@ -67,6 +68,25 @@
       &.is-active,
       &.is-active:hover {
         background-color: $gray-lighter;
+        border-top: 3px solid $black;
+      }
+
+      &.is-villa,
+      &.is-erhverv,
+      &.is-storparcel {
+        margin-top: -3px;
+      }
+
+      &.is-villa {
+        border-top: 3px solid $theme-color-villa;
+      }
+
+      &.is-erhverv {
+        border-top: 3px solid $theme-color-erhverv;
+      }
+
+      &.is-storparcel {
+        border-top: 3px solid $theme-color-storparcel;
       }
 
       &:hover {
