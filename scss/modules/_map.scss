@@ -51,9 +51,10 @@
     border-radius: 30px;
     bottom: $layout-spacing;
     color: $white;
+    cursor: pointer;
     display: block;
     font-weight: 600;
-    left: $layout-spacing;
+    left: $layout-spacing-small;
     padding-bottom: $layout-spacing-small;
     padding-left: $layout-spacing;
     padding-right: $layout-spacing;
@@ -63,6 +64,10 @@
 
     @include breakpoint($breakpoint-desk) {
       display: none;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 
