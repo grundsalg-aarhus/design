@@ -78,7 +78,8 @@ $color-schools:     #34495e;
 /* Typography
    ================================================================================================================== */
 
-$font-family:      "Open Sans", Arial, sans-serif;
-$font:             1em/1.5 $font-family;
-
-
+$font-size-tiny:    12px;
+$font-size-small:   14px;
+$font-size-normal:  16px;
+$font-family:       "Open Sans", Arial, sans-serif;
+$font:              1em/1.5 $font-family;

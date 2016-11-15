@@ -3,54 +3,57 @@
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/tabs.html.twig" as tabs %}
+{% import "macros/content-image.html.twig" as contentImage %}
 
 {% block title %}Kontakt{% endblock %}
 
 {% block content %}
 
   <header class="header-subpage">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([]) }}
-      <h1 class="header-subpage--title">
-        Kontakt
-      </h1>
+    <div class="header-subpage--inner">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([]) }}
+        <h1 class="header-subpage--title">
+          Kontakt
+        </h1>
+      </div>
     </div>
   </header>
 
-  <div class="content-image">
-    <img src="/assets/contact.jpg" alt="Grundsalg Aarhus">
-  </div>
+  {{ contentImage.contentImage('/assets/contact.jpg', 'Grundsalg Aarhus') }}
 
   <div class="content-boxes">
-    <div class="content-box is-alpha">
-      <div class="content-box--inner">
-        <div class="content-box--content has-spacing">
-          <div class="content-wysiwyg">
-            <p>
-              Dernæst vil der også være udbud af en ny udstykning i Skødstrup. Vi udbyder grundene d. 20. november. De 30 villagrunde er beliggende i Lauritshøj, Skødstrup. Information om udbuddet herunder pris, størrelse og geotekniske specifikation kommer løbende.
-              Aarhus Kommune udbyder løbende. Find villagrunde, storparceller og erhvervsgrunde til salg nedenfor - Her findes yderligere information for de forskellige udstykninger.
-            </p>
+    <div class="content-boxes--inner">
+      <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <p>
+                Dernæst vil der også være udbud af en ny udstykning i Skødstrup. Vi udbyder grundene d. 20. november. De 30 villagrunde er beliggende i Lauritshøj, Skødstrup. Information om udbuddet herunder pris, størrelse og geotekniske specifikation kommer løbende.
+                Aarhus Kommune udbyder løbende. Find villagrunde, storparceller og erhvervsgrunde til salg nedenfor - Her findes yderligere information for de forskellige udstykninger.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="content-box is-beta">
-      <div class="content-box--inner">
-        <div class="content-box--title">
-          <h2 class="content-box--title-text">Kontakt</h2>
-        </div>
-        <div class="content-box--content has-spacing">
-          <div class="content-wysiwyg">
-            <p>
-              Grundsalg<br>
-              Bolig og Projektudvikling<br>
-              Kalkværksvej 10<br>
-              8000 Aarhus C<br>
-              Telefon: 89 40 45 00
-            </p>
-            <p>E-mail: <a href="mailto:grundsalg@mtm.aarhus.dk">grundsalg@mtm.aarhus.dk</a></p>
-            </p>
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Kontakt</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <p>
+                Grundsalg<br>
+                Bolig og Projektudvikling<br>
+                Kalkværksvej 10<br>
+                8000 Aarhus C<br>
+                Telefon: 89 40 45 00
+              </p>
+              <p>E-mail: <a href="mailto:grundsalg@mtm.aarhus.dk">grundsalg@mtm.aarhus.dk</a></p>
+              </p>
+            </div>
           </div>
         </div>
       </div>

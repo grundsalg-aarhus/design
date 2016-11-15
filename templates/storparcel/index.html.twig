@@ -17,18 +17,22 @@
 
 {% block content %}
 
-  <header class="header-subpage is-storparcel">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([], 'is-storparcel') }}
-      <h1 class="header-subpage--title is-storparcel">
-        Storparcel
-      </h1>
+  <header class="header-subpage">
+    <div class="header-subpage--inner is-storparcel">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([], 'is-storparcel') }}
+        <h1 class="header-subpage--title is-storparcel">
+          Storparcel
+        </h1>
+      </div>
     </div>
   </header>
 
   <div class="map">
-    <div id="mapid" class="map--view"></div>
-    {{ filters.mapFilters() }}
+    <div class="map--inner">
+      <div id="mapid" class="map--view"></div>
+      {{ filters.mapFilters() }}
+    </div>
   </div>
 
   <div class="content-boxes">
