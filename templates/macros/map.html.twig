@@ -14,7 +14,7 @@
     map.addLayer(osm);
 
     {% for marker in markers %}
-      var marker{{ loop.index }} = L.marker([{{ marker.latitude }}, {{ marker.longitude }}]).addTo(map);
+      var marker{{ loop.index }} = L.marker([{{ marker.latitude }}, {{ marker.longitude }}], { maxWidth: 220 }).addTo(map);
       marker{{ loop.index }}.bindPopup("<a href='{{ marker.link }}' title='{{ header }}'><h1>{{ marker.header }}</h1></a><p>{{ marker.text }}</p><a href='{{ marker.link }}' title='{{ header }}'><img class='map--popover-image' src='/templates/icons/link-arrow.svg' /></a>");
       map.setView(new L.LatLng({{ marker.latitude }}, {{ marker.longitude }}), 11);
       markersArray.push(marker{{ loop.index }});
