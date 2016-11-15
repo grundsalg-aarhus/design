@@ -9,9 +9,6 @@
    ========================================================================== */
 
 .content-boxes {
-  margin-left: $layout-spacing;
-  margin-right: $layout-spacing;
-
   @include breakpoint($breakpoint-desk) {
     margin-top: $layout-spacing;
   }

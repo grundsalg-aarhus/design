@@ -9,9 +9,6 @@
    ========================================================================== */
 
 .content-image {
-  margin-left: $layout-spacing;
-  margin-right: $layout-spacing;
-
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
     margin-right: auto;

@@ -5,8 +5,6 @@
  */
 
 .map {
-  margin-left: $layout-spacing;
-  margin-right: $layout-spacing;
   position: relative;
 
   @include breakpoint($breakpoint-bigscreen) {
