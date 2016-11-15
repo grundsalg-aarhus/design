@@ -13,7 +13,10 @@
   flex-wrap: wrap;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
-  margin-top: $layout-spacing-medium;
+
+  @include breakpoint($breakpoint-desk) {
+    margin-top: $layout-spacing;
+  }
 
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
@@ -23,25 +26,17 @@
 }
 
 .content-box {
-
-  color: $black;
   display: flex;
   flex-wrap: wrap;
+  margin-top: $layout-spacing;
   width: 100%;
 
-  &:not(:first-child) {
-    margin-top: $layout-spacing;
-  }
-
-  &.is-alpha, &.is-beta {
-    @include breakpoint($breakpoint-desk) {
-      margin-top: 0;
-    }
-  }
-
   &.is-alpha {
+    margin-top: 0;
+
     @include breakpoint($breakpoint-desk) {
       flex-basis: 66.66%;
+      margin-top: $layout-spacing;
 
       .content-box--inner {
         margin-right: $layout-spacing;
@@ -61,10 +56,12 @@
   }
 
   &--content {
-    padding-bottom: $layout-spacing-medium;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-    padding-top: $layout-spacing;
+    &.has-spacing {
+      padding-bottom: $layout-spacing-medium;
+      padding-left: $layout-spacing-medium;
+      padding-right: $layout-spacing-medium;
+      padding-top: $layout-spacing-medium;
+    }
   }
 
   &--title {

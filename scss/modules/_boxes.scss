@@ -9,9 +9,15 @@
    ========================================================================== */
 
 .boxes {
+  margin-bottom: $layout-spacing;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
-  margin-top: $layout-spacing-large;
+  margin-top: $layout-spacing;
+
+  // Sometimes the boxes needs to be separated from the previous content (e.g. on the frontpage)
+  &.has-spacing {
+    margin-top: $layout-spacing-large;
+  }
 
   &--inner {
     display: flex;
