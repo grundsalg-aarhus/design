@@ -43,15 +43,15 @@
       background-color: $gray-lighter;
 
       &.is-villa {
-        background-color: lighten($theme-color-villa, 30%);
+        background-color: lighten($theme-color-villa, 15%);
       }
 
       &.is-erhverv {
-        background-color: lighten($theme-color-erhverv, 30%);
+        background-color: lighten($theme-color-erhverv, 15%);
       }
 
       &.is-storparcel {
-        background-color: lighten($theme-color-storparcel, 30%);
+        background-color: lighten($theme-color-storparcel, 15%);
       }
     }
   }
