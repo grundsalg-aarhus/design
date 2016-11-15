@@ -60,33 +60,37 @@
   }
 
   &--plot-info-key {
-    margin-top: $layout-spacing-small !important;
+    // !important overrides leaflet styling
     margin-bottom: $layout-spacing-small !important;
+    margin-top: $layout-spacing-small !important;
   }
 
   &--plot-info-value {
+    // !important overrides leaflet styling
     font-weight: 600;
-    margin-top: $layout-spacing-small !important;
     margin-bottom: $layout-spacing-small !important;
     margin-left: auto !important;
+    margin-top: $layout-spacing-small !important;
   }
 
   &--plot-footer a {
+    // !important overrides leaflet styling
     color: $black !important;
     display: flex;
     font-size: 18px;
-    text-decoration: underline;
-    margin-top: $layout-spacing;
     margin-bottom: $layout-spacing;
+    margin-top: $layout-spacing;
+    text-decoration: underline;
   }
 
   &--plot-link-text {
+    // !important overrides leaflet styling
     display: inline;
     margin: 0 !important;
   }
 
   &--plot-link-image {
-    width: 20px;
     margin-left: auto;
+    width: 20px;
   }
 }
