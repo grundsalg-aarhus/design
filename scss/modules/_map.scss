@@ -23,14 +23,45 @@
   &--filters {
     align-items: center;
     background-color: rgba(0,0,0,.75);
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing-medium;
+    padding-top: $layout-spacing;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: z($z-index-elements, header);
+
+    @include breakpoint($breakpoint-desk) {
+      bottom: $layout-spacing;
+      display: flex;
+      left: $layout-spacing;
+      right: auto;
+      top: auto;
+    }
+  }
+
+  &--filters-mobile {
+    background-color: $black;
     bottom: $layout-spacing;
+    border-radius: 30px;
+    color: $white;
+    display: block;
+    font-weight: 600;
     left: $layout-spacing;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 40px;
-    padding-top: 20px;
+    padding-bottom: $layout-spacing-small;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing-small;
     position: absolute;
     z-index: z($z-index-elements, header);
+
+    @include breakpoint($breakpoint-desk) {
+      display: none;
+    }
   }
 
   &--filters-title {
