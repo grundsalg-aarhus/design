@@ -3,6 +3,7 @@
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/nav.html.twig" as nav %}
+{% import "macros/map.html.twig" as map %}
 
 {% block title %}Villagrund i Malling{% endblock %}
 
@@ -51,26 +52,10 @@
     </div>
   </div>
 
-  <script>
-    var map;
-    var ajaxRequest;
-    var plotlist;
-    var plotlayers=[];
-
-    // set up the map
-    map = new L.Map('mapid', { scrollWheelZoom: false });
-
-    // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
-
-    var marker = L.marker([56.037144, 10.194626]).addTo(map);
-    var marker = L.marker([56.057144, 10.124626]).addTo(map);
-
-    // start the map in South-East England
-    map.setView(new L.LatLng(56.050660, 10.187073),11);
-    map.addLayer(osm);
-  </script>
+  {{ map.area([
+      { latitude: 56.037144, longitude: 10.194626, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+      { latitude: 56.057144, longitude: 10.124626, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },      
+    ]) 
+  }}
 
 {% endblock %}
