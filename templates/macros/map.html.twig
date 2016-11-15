@@ -10,19 +10,19 @@
     // create the tile layer with correct attribution
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
+    var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 20, attribution: osmAttrib});
     map.addLayer(osm);
 
     {% for marker in markers %}
-      var marker{{ loop.index }} = L.marker([{{ marker.latitude }}, {{ marker.longitude }}], { maxWidth: 220 }).addTo(map);
-      marker{{ loop.index }}.bindPopup("<a href='{{ marker.link }}' title='{{ header }}'><h1>{{ marker.header }}</h1></a><p>{{ marker.text }}</p><a href='{{ marker.link }}' title='{{ header }}'><img class='map--popover-image' src='/templates/icons/link-arrow.svg' /></a>");
+      var marker{{ loop.index }} = L.marker([{{ marker.latitude }}, {{ marker.longitude }}]).addTo(map);
+      marker{{ loop.index }}.bindPopup("<a href='{{ marker.link }}' title='{{ header }}'><h1>{{ marker.header }}</h1></a><p>{{ marker.text }}</p><a href='{{ marker.link }}' title='{{ header }}'><img class='map--popover-image' src='/templates/icons/link-arrow.svg' /></a>", { maxWidth: 220 });
       map.setView(new L.LatLng({{ marker.latitude }}, {{ marker.longitude }}), 11);
       markersArray.push(marker{{ loop.index }});
 
     {% endfor %}
 
     var group = new L.featureGroup(markersArray);
-    map.fitBounds(group.getBounds().pad(0.3));
+    map.fitBounds(group.getBounds().pad(0.1));
 
   </script>
 {% endmacro %}
