@@ -12,6 +12,10 @@
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 {% endblock %}
 
+{% block nav %}
+  {{ nav.nav('is-villa', null, null, null) }}
+{% endblock %}
+
 {% block content %}
 
   <header class="header-subpage is-villa">
