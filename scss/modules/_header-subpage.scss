@@ -11,10 +11,14 @@
 .header-subpage {
   background-color: $black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
+
+  @include breakpoint($breakpoint-desk) {
+    flex-direction: row;
+  }
 
   &.is-villa {
     background-color: $theme-color-villa;
