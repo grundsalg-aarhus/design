@@ -5,7 +5,6 @@
  */
 
 .map {
-  height: 700px;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
   position: relative;
@@ -17,7 +16,7 @@
   }
 
   &--view {
-    height: 700px;
+    height: 60vh;
     z-index: z($z-index-elements, map);
   }
 
