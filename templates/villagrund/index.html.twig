@@ -2,7 +2,7 @@
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
-{% import "macros/nav.html.twig" as nav %}
+{% import "macros/map.html.twig" as map %}
 
 {% block title %}Villa{% endblock %}
 
@@ -10,10 +10,6 @@
   {{ parent() }}
   <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-{% endblock %}
-
-{% block nav %}
-  {{ nav.nav('is-villa', null, null, null) }}
 {% endblock %}
 
 {% block content %}
@@ -43,37 +39,21 @@
             <div class="boxes--inner">
               {% include 'extends/boxes/villagrund/malling/malling.html.twig' %}
             </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-  <script>
-    var map;
-    var ajaxRequest;
-    var plotlist;
-    var plotlayers=[];
-
-    // set up the map
-    map = new L.Map('mapid', { scrollWheelZoom: false });
-
-    // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
-
-    var marker = L.marker([56.235337, 10.222778]).addTo(map);
-    var marker = L.marker([56.248691, 10.260544]).addTo(map);
-    var marker = L.marker([56.165053, 10.130081]).addTo(map);
-    var marker = L.marker([56.157406, 10.150681]).addTo(map);
-    var marker = L.marker([56.149757, 10.171280]).addTo(map);
-    var marker = L.marker([56.037144, 10.194626]).addTo(map);
-    var marker = L.marker([56.057144, 10.124626]).addTo(map);
-
-    // start the map in South-East England
-    map.setView(new L.LatLng(56.150660, 10.187073),11);
-    map.addLayer(osm);
-  </script>
+{{ map.area([
+    { latitude: 56.235337, longitude: 10.222778, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.248691, longitude: 10.260544, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.165053, longitude: 10.130081, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.157406, longitude: 10.150681, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.149757, longitude: 10.171280, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.037144, longitude: 10.194626, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },
+    { latitude: 56.057144, longitude: 10.124626, link:'#', header: 'Malling', text: 'Aarhus har markant tilflytning og vækst, nye bydele og erhvervsområder, og en letbane på vej. Se de store byudviklingsprojekter her.' },       
+  ]) 
+}}
 
 {% endblock %}

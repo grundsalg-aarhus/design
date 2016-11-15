@@ -43,9 +43,8 @@
     display: flex;
     flex-direction: column;
   }
-}
 
-.leaflet-left {
-  // TODO - Remove !important here
-  left: 10px !important;
+  &--popover-image {
+    width: 20px;
+  }
 }
