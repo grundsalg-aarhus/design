@@ -15,6 +15,11 @@
     max-width: $breakpoint-bigscreen;
   }
 
+  &--inner {
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
+  }
+
   &--view {
     height: 60vh;
     z-index: z($z-index-elements, map);

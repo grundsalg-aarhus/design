@@ -17,4 +17,9 @@
     margin-right: auto;
     max-width: $breakpoint-bigscreen;
   }
+
+  &--inner {
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
+  }
 }

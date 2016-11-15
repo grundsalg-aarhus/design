@@ -17,7 +17,6 @@
       flex-direction: row;
     }
 
-
     @include breakpoint($breakpoint-largedesk) {
       min-height: 700px;
     }

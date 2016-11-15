@@ -20,89 +20,94 @@
 
 {% block content %}
 
-  <header class="header-subpage is-villa">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
-      <h1 class="header-subpage--title is-villa">
-        Krekærtoften
-      </h1>
+  <header class="header-subpage">
+    <div class="header-subpage--inner is-villa">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
+        <h1 class="header-subpage--title is-villa">
+          Krekærtoften
+        </h1>
+      </div>
+      {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
     </div>
-    {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
   </header>
 
   <div class="map">
-    <div id="mapid" class="map--view"></div>
-    {{ filters.mapFilters() }}
+    <div class="map--inner">
+      <div id="mapid" class="map--view"></div>
+      {{ filters.mapFilters() }}
+    </div>
   </div>
 
   <div class="content-boxes">
-    
-    <div class="content-box is-alpha">
-      <div class="content-box--inner">
-        <div class="content-box--title">
-          <h2 class="content-box--title-text">Om grundene</h2>
-        </div>
-        <div class="content-box--content">
-          <p class="content-box--text">
-            Aarhus kommune sælger byggegrunde ved Krekærvangen og Krekærtoften i Malling til de priser, der fremgår ved klik på de enkelte grunde eller herunder.
-            <br><br>Grundene er omfattet af lokalplan 711.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="content-box is-beta">
-      <div class="content-box--inner">
-        <div class="content-box--title">
-          <h2 class="content-box--title-text">Dokumenter</h2>
-        </div>
-        <div class="content-box--content">
-          <ul class="content-box--link-with-icons">
-            <li class="content-box--link-with-icon">{% include '/icons/pdf.svg' %}<a href="#" class="content-box--link-with-icon-text">Salgsvilkår</a></li>
-            <li class="content-box--link-with-icon">{% include '/icons/txt.svg' %}<a href="#" class="content-box--link-with-icon-text">Tilbudsblanket</a></li>
-            <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Linjeføringsforslag - Bane Danmark</a></li>
-          </p>
+    <div class="content-boxes--inner">
+      <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Om grundene</h2>
+          </div>
+          <div class="content-box--content">
+            <p class="content-box--text">
+              Aarhus kommune sælger byggegrunde ved Krekærvangen og Krekærtoften i Malling til de priser, der fremgår ved klik på de enkelte grunde eller herunder.
+              <br><br>Grundene er omfattet af lokalplan 711.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="content-box">
-      <div class="content-box--inner">
-        <div class="content-box--title">
-          <h2 class="content-box--title-text">Oversigt</h2>
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Dokumenter</h2>
+          </div>
+          <div class="content-box--content">
+            <ul class="content-box--link-with-icons">
+              <li class="content-box--link-with-icon">{% include '/icons/pdf.svg' %}<a href="#" class="content-box--link-with-icon-text">Salgsvilkår</a></li>
+              <li class="content-box--link-with-icon">{% include '/icons/txt.svg' %}<a href="#" class="content-box--link-with-icon-text">Tilbudsblanket</a></li>
+              <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Linjeføringsforslag - Bane Danmark</a></li>
+            </p>
+          </div>
         </div>
-        <div class="content-box--content">
-            <div class="boxes">
-              <div class="boxes--inner">
-                <article class="boxes--box is-inside-context-box is-available">
-                  <div class="boxes--box-inner">
-                    <h3 class="boxes--box-plot-title">Krekærtoften 50</h3>
-                    <div class="boxes--box-plot-infos">
-                      <div class="boxes--box-plot-info">
-                        <p class="boxes--box-plot-info-key">Status</p>
-                        <p class="boxes--box-plot-info-value">Ledig</p>
+      </div>
+
+      <div class="content-box">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Oversigt</h2>
+          </div>
+          <div class="content-box--content">
+              <div class="boxes">
+                <div class="boxes--inner">
+                  <article class="boxes--box is-inside-context-box is-available">
+                    <div class="boxes--box-inner">
+                      <h3 class="boxes--box-plot-title">Krekærtoften 50</h3>
+                      <div class="boxes--box-plot-infos">
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Status</p>
+                          <p class="boxes--box-plot-info-value">Ledig</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Areal (m2)</p>
+                          <p class="boxes--box-plot-info-value">745</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Mindstepris</p>
+                          <p class="boxes--box-plot-info-value">732.000</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Salgspris</p>
+                          <p class="boxes--box-plot-info-value">732.000</p>
+                        </div>
                       </div>
-                      <div class="boxes--box-plot-info">
-                        <p class="boxes--box-plot-info-key">Areal (m2)</p>
-                        <p class="boxes--box-plot-info-value">745</p>
-                      </div>
-                      <div class="boxes--box-plot-info">
-                        <p class="boxes--box-plot-info-key">Mindstepris</p>
-                        <p class="boxes--box-plot-info-value">732.000</p>
-                      </div>
-                      <div class="boxes--box-plot-info">
-                        <p class="boxes--box-plot-info-key">Salgspris</p>
-                        <p class="boxes--box-plot-info-value">732.000</p>
+                      <div class="boxes--box-plot-link">
+                        <div class="boxes--box-plot-link-icon">{% include '/icons/pdf.svg' %}</div>
+                        <a href="#" class="boxes--box-plot-link-text">Yderligere information</a>
                       </div>
                     </div>
-                    <div class="boxes--box-plot-link">
-                      <div class="boxes--box-plot-link-icon">{% include '/icons/pdf.svg' %}</div>
-                      <a href="#" class="boxes--box-plot-link-text">Yderligere information</a>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </div>
               </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>

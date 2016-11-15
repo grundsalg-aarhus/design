@@ -3,55 +3,58 @@
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/tabs.html.twig" as tabs %}
+{% import "macros/content-image.html.twig" as contentImage %}
 
 {% block title %}Projekter{% endblock %}
 
 {% block content %}
 
   <header class="header-subpage">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([]) }}
-      <h1 class="header-subpage--title">
-        Projekter
-      </h1>
+    <div class="header-subpage--inner">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([]) }}
+        <h1 class="header-subpage--title">
+          Projekter
+        </h1>
+      </div>
     </div>
   </header>
 
-  <div class="content-image">
-    <img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?dpr=1&auto=format&fit=crop&w=2000&h=600">
-  </div>
+  {{ contentImage.contentImage('https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?dpr=1&auto=format&fit=crop&w=2000&h=600', 'Projekter') }}
 
   <div class="content-boxes">
-    <div class="content-box is-alpha">
-      <div class="content-box--inner">
-        <div class="content-box--content has-spacing">
-          <div class="content-wysiwyg">
-            <h2>Overskrift til indledning</h2>
-            <p>
-              Opførelse af nye kommunale ejendomme og renovering af eksisterende bygninger sker altid med fokus på
-              kommunens energi- og klimamål.
-            </p>
-            <h3>Andet afsnit</h3>
-            <p>
-              Center for Administration og Ejendomme spiller en væsentlig rolle som bygherre i nybyggeri og renovering af
-              kommunes bygningsmasse. Vi bygger for fremtiden og her er kodeordene: fleksibelt og bæredygtigt byggeri.
-              Det betyder, at vi overholder retningslinierne for energi- og miljørigtigt byggeri samt at vi med respekt
-              for arkitekturen samtidig forsøger at opfylde og imødekomme borgernes og brugernes behov.
-            </p>
+    <div class="content-boxes--inner">
+      <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <h2>Overskrift til indledning</h2>
+              <p>
+                Opførelse af nye kommunale ejendomme og renovering af eksisterende bygninger sker altid med fokus på
+                kommunens energi- og klimamål.
+              </p>
+              <h3>Andet afsnit</h3>
+              <p>
+                Center for Administration og Ejendomme spiller en væsentlig rolle som bygherre i nybyggeri og renovering af
+                kommunes bygningsmasse. Vi bygger for fremtiden og her er kodeordene: fleksibelt og bæredygtigt byggeri.
+                Det betyder, at vi overholder retningslinierne for energi- og miljørigtigt byggeri samt at vi med respekt
+                for arkitekturen samtidig forsøger at opfylde og imødekomme borgernes og brugernes behov.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="content-box is-beta">
-      <div class="content-box--inner">
-        <div class="content-box--title">
-          <h2 class="content-box--title-text">Bonusinfo</h2>
-        </div>
-        <div class="content-box--content has-spacing">
-          <div class="content-wysiwyg">
-            <p>Alle projekter i denne kategori er under opførelse dvs. der er taget første spadestik. Udviklings- og byggeprojekter for et stort milliardbeløb er i øjeblikket under arbejde i Aarhus.</p>
-            <p><a href="https://www.aarhus.dk/da/aarhus/FremtidensAarhus1/Igangvaerende-projekter.aspx">Mere om projekterne på aarhus.dk</a></p>
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Bonusinfo</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <p>Alle projekter i denne kategori er under opførelse dvs. der er taget første spadestik. Udviklings- og byggeprojekter for et stort milliardbeløb er i øjeblikket under arbejde i Aarhus.</p>
+              <p><a href="https://www.aarhus.dk/da/aarhus/FremtidensAarhus1/Igangvaerende-projekter.aspx">Mere om projekterne på aarhus.dk</a></p>
+            </div>
           </div>
         </div>
       </div>

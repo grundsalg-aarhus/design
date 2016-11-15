@@ -9,10 +9,6 @@
    ========================================================================== */
 
 .header-subpage {
-  background-color: $black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
 
@@ -20,17 +16,30 @@
     flex-direction: row;
   }
 
-  &.is-villa {
-    background-color: $theme-color-villa;
-    border-bottom: 1px solid darken($theme-color-villa, 8%);
-  }
+  &--inner {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
 
-  &.is-storparcel {
-    background-color: $theme-color-storparcel;
-  }
+    @include breakpoint($breakpoint-desk) {
+      flex-direction: row;
+    }
 
-  &.is-erhverv {
-    background-color: $theme-color-erhverv;
+    &.is-villa {
+      background-color: $theme-color-villa;
+      border-bottom: 1px solid darken($theme-color-villa, 8%);
+    }
+
+    &.is-storparcel {
+      background-color: $theme-color-storparcel;
+    }
+
+    &.is-erhverv {
+      background-color: $theme-color-erhverv;
+    }
   }
 
   @include breakpoint($breakpoint-bigscreen) {
