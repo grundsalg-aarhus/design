@@ -1,6 +1,4 @@
 {% macro area(markers) %}
-  
-  {% import "macros/arrow.html.twig" as arrow %}
 
   <script>
     var map;
@@ -25,6 +23,59 @@
 
     var group = new L.featureGroup(markersArray);
     map.fitBounds(group.getBounds().pad(0.3));
+
+  </script>
+{% endmacro %}
+
+{% macro offering(plots) %}
+
+  <script>
+    var map;
+    var plotsArray = [];
+
+    // set up the map
+    map = new L.Map('mapid', { scrollWheelZoom: false });
+
+    // create the tile layer with correct attribution
+    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osm = new L.TileLayer(osmUrl, {minZoom: 1 , maxZoom: 20, attribution: osmAttrib});
+    map.addLayer(osm);
+
+    {% for plot in plots %}
+      var plot{{ loop.index }} = L.polygon([{{ plot.polygon }}], { color: '{{ plot.color }}' }).addTo(map);
+      plot{{ loop.index }}.bindPopup(" \
+        <h1 class='map--plot-header'>{{ plot.header }}</h1> \
+        <div class='map--plot-info'> \
+          <p class='map--plot-info-key'>Status</p> \
+          <p class='map--plot-info-value'>{{ plot.status }}</p> \
+        </div> \
+        <div class='map--plot-info'> \
+          <p class='map--plot-info-key'>Areal (m2)</p> \
+          <p class='map--plot-info-value'>{{ plot.area }}</p> \
+        </div> \
+        <div class='map--plot-info'> \
+          <p class='map--plot-info-key'>Mindstepris</p> \
+          <p class='map--plot-info-value'>{{ plot.minimumPrice }}</p> \
+        </div> \
+        <div class='map--plot-info'> \
+          <p class='map--plot-info-key'>Salgspris</p> \
+          <p class='map--plot-info-value'>{{ plot.minimumPrice }}</p> \
+        </div> \
+        <div class='map--plot-footer' > \
+          <a href='{{ plot.link }}'> \
+            <p class='map--plot-link-text'>Yderligere information</p> \
+            <img class='map--plot-link-image' src='/templates/icons/link-arrow.svg' /> \
+          </a> \
+        </div>",
+        { minWidth: 220 }
+      );
+      plotsArray.push(plot{{ loop.index }});
+
+    {% endfor %}
+
+    var group = new L.featureGroup(plotsArray);
+    map.fitBounds(group.getBounds().pad(.1));
 
   </script>
 {% endmacro %}

@@ -47,4 +47,47 @@
   &--popover-image {
     width: 20px;
   }
+
+  &--plot-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: $layout-spacing-small;
+  }
+
+  &--plot-info {
+    border-bottom: 1px solid $gray-lightest;
+    display: flex;
+    font-size: 16px;
+  }
+
+  &--plot-info-key {
+    margin-top: $layout-spacing-small !important;
+    margin-bottom: $layout-spacing-small !important;
+  }
+
+  &--plot-info-value {
+    font-weight: 600;
+    margin-top: $layout-spacing-small !important;
+    margin-bottom: $layout-spacing-small !important;
+    margin-left: auto !important;
+  }
+
+  &--plot-footer a {
+    color: $black !important;
+    display: flex;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-top: $layout-spacing;
+    margin-bottom: $layout-spacing;
+  }
+
+  &--plot-link-text {
+    display: inline;
+    margin: 0 !important;
+  }
+
+  &--plot-link-image {
+    width: 20px;
+    margin-left: auto;
+  }
 }
