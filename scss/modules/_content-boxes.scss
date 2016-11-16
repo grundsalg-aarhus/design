@@ -93,7 +93,11 @@
   &--link-with-icon {
     align-items: center;
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: $layout-spacing;
+
+    svg {
+      width: 30px;
+    }
   }
 
   &--link-with-icon-text {
