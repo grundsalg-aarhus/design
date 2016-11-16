@@ -27,6 +27,8 @@ $z-index-elements: map, header-overlay, header, content, nav, logo, overlay, ham
 /* Layout
    ================================================================================================================== */
 
+$layout-spacing-tiny:   5px;
+$layout-spacing-small:  10px;
 $layout-spacing:        20px;
 $layout-spacing-medium: 40px;
 $layout-spacing-large:  60px;
@@ -76,7 +78,8 @@ $color-schools:     #34495e;
 /* Typography
    ================================================================================================================== */
 
-$font-family:      "Open Sans", Arial, sans-serif;
-$font:             1em/1.5 $font-family;
-
-
+$font-size-tiny:    12px;
+$font-size-small:   14px;
+$font-size-normal:  16px;
+$font-family:       "Open Sans", Arial, sans-serif;
+$font:              1em/1.5 $font-family;

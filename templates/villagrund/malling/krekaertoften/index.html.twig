@@ -3,6 +3,8 @@
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/tabs.html.twig" as tabs %}
+{% import "macros/nav.html.twig" as nav %}
+{% import "macros/map.html.twig" as map %}
 
 {% block title %}Krekærtoften i Malling{% endblock %}
 
@@ -12,89 +14,176 @@
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 {% endblock %}
 
+{% block nav %}
+  {{ nav.nav('is-villa', null, null, null) }}
+{% endblock %}
+
 {% block content %}
 
-  <header class="header-subpage is-villa">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
-      <h1 class="header-subpage--title is-villa">
-        Krekærtoften
-      </h1>
+  <header class="header-subpage">
+    <div class="header-subpage--inner is-villa">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
+        <h1 class="header-subpage--title is-villa">
+          Krekærtoften
+        </h1>
+      </div>
+      {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
     </div>
-    {{ tabs.subheaderTabs() }}
   </header>
 
   <div class="map">
-    <div id="mapid" class="map--view"></div>
-    {{ filters.mapFilters() }}
-  </div>
-
-  <div class="content-box">
-    <div class="content-box--title">
-      <h2 class="content-box--title-text">Udbud</h2>
-    </div>
-    <div class="content-box--inner">
-      {% include 'extends/boxes/villagrund/malling/balskaervej.html.twig' %}
-      {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
+    <div class="map--inner">
+      <div id="mapid" class="map--view"></div>
+      {{ filters.mapFilters() }}
     </div>
   </div>
 
-  <script>
-    var map;
-    var ajaxRequest;
-    var plotlist;
-    var plotlayers=[];
+  <div class="content-boxes">
+    <div class="content-boxes--inner">
+      <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Om grundene</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <p class="content-box--text">
+              Aarhus kommune sælger byggegrunde ved Krekærvangen og Krekærtoften i Malling til de priser, der fremgår ved klik på de enkelte grunde eller herunder.
+              <br><br>Grundene er omfattet af lokalplan 711.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    // set up the map
-    map = new L.Map('mapid', { scrollWheelZoom: false });
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Dokumenter</h2>
+          </div>
+          <div class="content-box--content">
+            <ul class="content-box--link-with-icons">
+              <li class="content-box--link-with-icon">{% include '/icons/pdf.svg' %}<a href="#" class="content-box--link-with-icon-text">Salgsvilkår</a></li>
+              <li class="content-box--link-with-icon">{% include '/icons/txt.svg' %}<a href="#" class="content-box--link-with-icon-text">Tilbudsblanket</a></li>
+              <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Linjeføringsforslag - Bane Danmark</a></li>
+            </p>
+          </div>
+        </div>
+      </div>
 
-    // create the tile layer with correct attribution
-    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 22, attribution: osmAttrib});
+      <div class="content-box">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Oversigt</h2>
+          </div>
+          <div class="content-box--content">
+              <div class="boxes">
+                <div class="boxes--inner">
+                  <article class="boxes--box is-inside-context-box is-available">
+                    <div class="boxes--box-inner">
+                      <h3 class="boxes--box-plot-title">Krekærtoften 50</h3>
+                      <div class="boxes--box-plot-infos">
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Status</p>
+                          <p class="boxes--box-plot-info-value">Ledig</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Areal (m2)</p>
+                          <p class="boxes--box-plot-info-value">745</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Mindstepris</p>
+                          <p class="boxes--box-plot-info-value">732.000</p>
+                        </div>
+                        <div class="boxes--box-plot-info">
+                          <p class="boxes--box-plot-info-key">Salgspris</p>
+                          <p class="boxes--box-plot-info-value">732.000</p>
+                        </div>
+                      </div>
+                      <div class="boxes--box-plot-link">
+                        <div class="boxes--box-plot-link-icon">{% include '/icons/pdf.svg' %}</div>
+                        <a href="#" class="boxes--box-plot-link-text">Yderligere information</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    var polygon1 = L.polygon([
-        [56.02985, 10.19255],
-        [56.02997, 10.19246],
-        [56.02991, 10.19206],
-        [56.02977, 10.19211],
-        [56.02979, 10.19231],
-        [56.02982, 10.19246],
-    ], { color: '#e30613' }).addTo(map);
+  </div>
 
-    var polygon2 = L.polygon([
-        [56.02967, 10.19262],
-        [56.02982, 10.19251],
-        [56.02976, 10.19211],
-        [56.02963, 10.19216],
-        [56.02962, 10.19236],
-        [56.02965, 10.1925],
-    ], { color: '#4e9d2d' }).addTo(map);
-
-    var polygon3 = L.polygon([
-        [56.02948, 10.19269],
-        [56.02963, 10.19258],
-        [56.02957, 10.19218],
-        [56.02943, 10.19224],
-        [56.02943, 10.19244],
-        [56.02946, 10.19257],
-    ], { color: '#4e9d2d' }).addTo(map);
-
-    var polygon4 = L.polygon([
-        [56.02932, 10.19269],
-        [56.02948, 10.19271],
-        [56.0294, 10.19225],
-        [56.02926, 10.19231],
-        [56.02926, 10.19251],
-        [56.02928, 10.19264],
-    ], { color: '#e30613' }).addTo(map);
-
-
-
-    map.setView(new L.LatLng(56.02951664, 10.19211282), 19);
-
-    
-    map.addLayer(osm);
-  </script>
+  {{ map.offering([
+      { 
+        polygon: '[
+          [56.02985, 10.19255],
+          [56.02997, 10.19246],
+          [56.02991, 10.19206],
+          [56.02977, 10.19211],
+          [56.02979, 10.19231],
+          [56.02982, 10.19246],
+        ]',
+        color: '#4e9d2d',
+        link:'#', 
+        header: 'Krekærtoften 52', 
+        status: 'Ledig',
+        area: '745', 
+        minimumPrice: '732.000', 
+        salesPrice: '732.000',
+      },
+      { 
+        polygon: '[
+          [56.02967, 10.19262],
+          [56.02982, 10.19251],
+          [56.02976, 10.19211],
+          [56.02963, 10.19216],
+          [56.02962, 10.19236],
+          [56.02965, 10.1925],
+        ]', 
+        link:'#',
+        color: '#4e9d2d',
+        header: 'Krekærtoften 50', 
+        status: 'Ledig', 
+        area: '745', 
+        minimumPrice: '732.000', 
+        salesPrice: '732.000',
+      },
+      { 
+        polygon: '[
+          [56.02948, 10.19269],
+          [56.02963, 10.19258],
+          [56.02957, 10.19218],
+          [56.02943, 10.19224],
+          [56.02943, 10.19244],
+          [56.02946, 10.19257],
+        ]', 
+        link:'#',
+        color: '#e30613',
+        header: 'Krekærtoften 48', 
+        status: 'Solgt', 
+        area: '745', 
+        minimumPrice: '732.000', 
+        salesPrice: '732.000',
+      },
+      { 
+        polygon: '[
+          [56.02932, 10.19269],
+          [56.02948, 10.19271],
+          [56.0294, 10.19225],
+          [56.02926, 10.19231],
+          [56.02926, 10.19251],
+          [56.02928, 10.19264],
+        ]', 
+        link:'#',
+        color: '#e30613',
+        header: 'Krekærtoften 46', 
+        status: 'Solgt', 
+        area: '745', 
+        minimumPrice: '732.000', 
+        salesPrice: '732.000',
+      },
+    ]) 
+  }}
 
 {% endblock %}

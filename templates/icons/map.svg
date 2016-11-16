@@ -1,31 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
-    <title>map</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <circle id="path-1" cx="25" cy="25" r="25"></circle>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="50" height="50" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="map">
-            <use id="circle" stroke="#1A1918" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
-            <g id="location-pin-4.1" transform="translate(13.000000, 13.000000)">
-                <g id="Group">
-                    <g id="Frames-24px">
-                        <rect id="Rectangle-path" x="0" y="0" width="24" height="23.04096"></rect>
-                        <rect id="Rectangle-path" x="0" y="0" width="24" height="23.04096"></rect>
-                    </g>
-                    <g id="Outline" transform="translate(5.000000, 2.000000)" fill="#1A1918">
-                        <g id="Group">
-                            <path d="M6.5,19.5155556 C9.10325,16.3111111 13,10.8211111 13,6.66888889 C13,2.99222222 10.08475,0.00222222222 6.5,0.00222222222 C2.91525,0.00222222222 0,2.99222222 0,6.66888889 C0,10.8211111 3.89891667,16.3133333 6.5,19.5155556 Z M6.5,2.22444444 C8.88983333,2.22444444 10.8333333,4.21777778 10.8333333,6.66888889 C10.8333333,9.45444444 8.19216667,13.6622222 6.5,15.9822222 C4.80675,13.6644444 2.16666667,9.45888889 2.16666667,6.66888889 C2.16666667,4.21777778 4.11125,2.22444444 6.5,2.22444444 Z" id="Shape"></path>
-                            <ellipse id="Oval" cx="6.5" cy="6.66888889" rx="2.16666667" ry="2.22222222"></ellipse>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="a" cx="25" cy="25" r="25"/>
+    <mask id="b" x="0" y="0" width="50" height="50" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use stroke="#1A1918" mask="url(#b)" stroke-width="4" xlink:href="#a"/>
+    <path d="M24.5 34.516C27.103 31.31 31 25.82 31 21.67 31 17.99 28.085 15 24.5 15S18 17.992 18 21.67c0 4.15 3.9 9.643 6.5 12.846zm0-17.292c2.39 0 4.333 1.994 4.333 4.445 0 2.784-2.64 6.992-4.333 9.312-1.693-2.318-4.333-6.523-4.333-9.313 0-2.452 1.944-4.446 4.333-4.446z" fill="#1A1918"/>
+    <ellipse fill="#1A1918" cx="24.5" cy="21.669" rx="2.167" ry="2.222"/>
+  </g>
 </svg>

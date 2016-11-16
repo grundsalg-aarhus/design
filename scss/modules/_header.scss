@@ -1,5 +1,10 @@
-.header {
+/**
+ *
+ * Header
+ *
+ */
 
+.header {
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
     margin-right: auto;
@@ -16,7 +21,6 @@
     @include breakpoint($breakpoint-desk) {
       flex-direction: row;
     }
-
 
     @include breakpoint($breakpoint-largedesk) {
       min-height: 700px;
@@ -63,31 +67,11 @@
 
     &.is-storparcel {
       background-image: url("../assets/forside_storparcel.jpg");
-
-      @include breakpoint($breakpoint-tablet) {
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 0;
-        border-left: 0;
-        border-top: 1px solid $gray-lighter;
-      }
     }
 
     &.is-erhverv {
       background-image: url("../assets/forside_erhverv.jpg");
       justify-content: flex-end;
-
-      @include breakpoint($breakpoint-tablet) {
-        border-right: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 0;
-      }
     }
   }
 
@@ -108,6 +92,7 @@
 
   &--box-content {
     background-color: $white;
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -123,8 +108,7 @@
       width: 50%;
     }
 
-    &.is-villagrund {
-
+    &.is-villa {
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "right");
 
@@ -149,10 +133,28 @@
     &.is-storparcel {
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "right");
+
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 1px solid $gray-lighter;
       }
     }
 
     &.is-erhverv {
+      @include breakpoint($breakpoint-tablet) {
+        border-right: 1px solid $gray-lighter;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        border-bottom: 1px solid $gray-lighter;
+        border-left: 0;
+      }
+
       @include breakpoint($breakpoint-tablet) {
         @include box-arrow($white, "left");
       }
@@ -170,7 +172,7 @@
       padding: $layout-spacing-large;
     }
 
-    &.is-villagrund,
+    &.is-villa,
     &.is-storparcel,
     &.is-erhverv {
       color: $black;

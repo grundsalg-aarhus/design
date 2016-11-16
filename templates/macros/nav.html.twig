@@ -1,0 +1,15 @@
+{% macro nav(isVilla, isErhverv, isStorparcel, isContact) %}
+
+  <nav class="nav">
+    <div class="nav--inner">
+      <a href="/" class="logo" title="Grundsalg Aarhus" aria-label="Grundsalg Aarhus"></a>
+      <div class="nav--links">
+        <a href="/villagrund/" class="nav--link {{ isVilla }}">Villagrund</a>
+        <a href="/erhvervsgrund/" class="nav--link {{ isErhverv }}">Erhvervsgrund</a>
+        <a href="/storparcel/" class="nav--link {{ isStorparcel }}">Storparcel</a>
+        <a href="/kontakt/" class="nav--link {{ isContact }}">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+{% endmacro %}    

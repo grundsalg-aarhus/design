@@ -3,6 +3,7 @@
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
 {% import "macros/checkbox.html.twig" as checkbox %}
 {% import "macros/filters.html.twig" as filters %}
+{% import "macros/nav.html.twig" as nav %}
 
 {% block title %}Balskærvej i Malling{% endblock %}
 
@@ -12,28 +13,47 @@
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 {% endblock %}
 
+{% block nav %}
+  {{ nav.nav('is-villa', null, null, null) }}
+{% endblock %}
+
 {% block content %}
 
-  <header class="header-subpage is-villa">
-    <div class="header-subpage--info">
-      {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
-      <h1 class="header-subpage--title is-villa">
-        Balskærvej
-      </h1>
+  <header class="header-subpage">
+    <div class="header-subpage--inner is-villa">
+      <div class="header-subpage--info">
+        {{ breadcrumb.breadcrumbs([{link: 'villagrund', title: 'Villagrund'}, {link: 'villagrund/malling', title: 'Malling'}], 'is-villa') }}
+        <h1 class="header-subpage--title is-villa">
+          Balskærvej
+        </h1>
+      </div>
     </div>
   </header>
 
   <div class="map">
+    <div class="map--inner">
       <div id="mapid" class="map--view"></div>
+      {{ filters.mapFilters() }}
+    </div>
   </div>
 
-  <div class="content-box">
-    <div class="content-box--title">
-      <h2 class="content-box--title-text">Udbud</h2>
-    </div>
-    <div class="content-box--inner">
-      {% include 'extends/boxes/villagrund/malling/krekaertoften.html.twig' %}
-      {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
+  <div class="content-boxes">
+  <div class="content-boxes--inner">
+      <div class="content-box">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Udbud</h2>
+          </div>
+          <div class="content-box--content">
+            <div class="boxes">
+              <div class="boxes--inner">
+                {% include 'extends/boxes/villagrund/malling/krekaertoften.html.twig' %}
+                {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

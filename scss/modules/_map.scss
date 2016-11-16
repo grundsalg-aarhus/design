@@ -5,33 +5,70 @@
  */
 
 .map {
-  height: 700px;
-  margin-left: $layout-spacing;
-  margin-right: $layout-spacing;
-  position: relative;
-
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
     margin-right: auto;
     max-width: $breakpoint-bigscreen;
   }
 
+  &--inner {
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
+    position: relative;
+  }
+
   &--view {
-    height: 700px;
+    height: 60vh;
     z-index: z($z-index-elements, map);
   }
 
   &--filters {
     align-items: center;
     background-color: rgba(0,0,0,.75);
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing-medium;
+    padding-top: $layout-spacing;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: z($z-index-elements, header);
+
+    @include breakpoint($breakpoint-desk) {
+      bottom: $layout-spacing;
+      display: flex;
+      left: $layout-spacing;
+      right: auto;
+      top: auto;
+    }
+  }
+
+  &--filters-mobile {
+    background-color: $black;
+    border-radius: 30px;
     bottom: $layout-spacing;
-    left: $layout-spacing;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 40px;
-    padding-top: 20px;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    left: $layout-spacing-small;
+    padding-bottom: $layout-spacing-small;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing-small;
     position: absolute;
     z-index: z($z-index-elements, header);
+
+    @include breakpoint($breakpoint-desk) {
+      display: none;
+    }
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &--filters-title {
@@ -43,9 +80,55 @@
     display: flex;
     flex-direction: column;
   }
-}
 
-.leaflet-left {
-  // TODO - Remove !important here
-  left: 10px !important;
+  &--popover-image {
+    width: 20px;
+  }
+
+  &--plot-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: $layout-spacing-small;
+  }
+
+  &--plot-info {
+    border-bottom: 1px solid $gray-lightest;
+    display: flex;
+    font-size: 16px;
+  }
+
+  &--plot-info-key {
+    // !important overrides leaflet styling
+    margin-bottom: $layout-spacing-small !important;
+    margin-top: $layout-spacing-small !important;
+  }
+
+  &--plot-info-value {
+    // !important overrides leaflet styling
+    font-weight: 600;
+    margin-bottom: $layout-spacing-small !important;
+    margin-left: auto !important;
+    margin-top: $layout-spacing-small !important;
+  }
+
+  &--plot-footer a {
+    // !important overrides leaflet styling
+    color: $black !important;
+    display: flex;
+    font-size: 18px;
+    margin-bottom: $layout-spacing;
+    margin-top: $layout-spacing;
+    text-decoration: underline;
+  }
+
+  &--plot-link-text {
+    // !important overrides leaflet styling
+    display: inline;
+    margin: 0 !important;
+  }
+
+  &--plot-link-image {
+    margin-left: auto;
+    width: 20px;
+  }
 }

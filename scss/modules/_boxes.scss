@@ -9,9 +9,15 @@
    ========================================================================== */
 
 .boxes {
+  margin-bottom: $layout-spacing;
   margin-left: $layout-spacing;
   margin-right: $layout-spacing;
   margin-top: $layout-spacing;
+
+  // Sometimes the boxes needs to be separated from the previous content (e.g. on the frontpage)
+  &.has-spacing {
+    margin-top: $layout-spacing-large;
+  }
 
   &--inner {
     display: flex;
@@ -29,6 +35,18 @@
     }
   }
 
+  &.is-storparcel,
+  .is-erhverv {
+    color: $white;
+
+    .boxes--box-header {
+      a {
+        @include strip-link-styles($white);
+        @include headline-border($white);
+      }
+    }
+  }
+
   &--box {
     background-color: $gray-lighter;
     box-sizing: border-box;
@@ -40,6 +58,18 @@
     flex-shrink: 0;
     justify-content: flex-start;
     position: relative;
+
+    &.is-villa {
+      background-color: $theme-color-villa;
+    }
+
+    &.is-erhverv {
+      background-color: $theme-color-erhverv;
+    }
+
+    &.is-storparcel {
+      background-color: $theme-color-storparcel;
+    }
 
     @include breakpoint($breakpoint-desk) {
       // It seems there are some rounding issues (at least in Chrome) that is why we multiply with 2.035.
@@ -54,6 +84,7 @@
 
     &.is-inside-context-box {
       background-color: $white;
+      color: $black;
 
       &.is-villa {
         border-top: 3px solid $theme-color-villa;
@@ -65,6 +96,17 @@
 
       &.is-erhverv {
         border-top: 3px solid $theme-color-erhverv;
+      }
+
+      &.is-available {
+        border-top: 6px solid $color-available;
+      }
+
+      .boxes--box-header {
+        a {
+          @include strip-link-styles($black);
+          @include headline-border($black);
+        }
       }
     }
   }
@@ -80,6 +122,8 @@
     a {
       @include strip-link-styles($black);
       @include headline-border($black);
+
+      color: $black;
     }
   }
 
@@ -87,27 +131,40 @@
     margin-top: $layout-spacing;
   }
 
-  .is-storparcel,
-  .is-erhverv {
-    color: $white;
-
-    .boxes--box-header {
-      a {
-        @include strip-link-styles($white);
-        @include headline-border($white);
-      }
-    }
+  &--box-plot-title {
+    font-weight: 600;
   }
 
-  .is-villa {
-    background-color: $theme-color-villa;
+  &--box-plot-infos {
+    margin-top: $layout-spacing;
   }
 
-  .is-erhverv {
-    background-color: $theme-color-erhverv;
+  &--box-plot-info {
+    border-bottom: 1px solid $gray-lightest;
+    display: flex;
+    padding-bottom: $layout-spacing-small;
+    padding-top: $layout-spacing-small;
   }
 
-  .is-storparcel {
-    background-color: $theme-color-storparcel;
+  &--box-plot-info-value {
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  &--box-plot-link {
+    align-items: center;
+    display: flex;
+    margin-top: $layout-spacing;
+  }
+
+  &--box-plot-link-icon {
+    width: 30px;
+  }
+
+  &--box-plot-link a {
+    display: block;
+    font-weight: 600;
+    margin-left: $layout-spacing;
+    text-decoration: underline;
   }
 }
