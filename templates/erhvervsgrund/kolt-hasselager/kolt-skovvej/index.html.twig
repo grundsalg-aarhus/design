@@ -18,7 +18,7 @@
 {% block content %}
 
   <header class="header-subpage">
-    <div class="header-subpage-inner is-erhverv">
+    <div class="header-subpage--inner is-erhverv">
       <div class="header-subpage--info">
         {{ breadcrumb.breadcrumbs([{link: 'erhvervsgrund', title: 'Erhvervsgrund'}, {link: 'erhvervsgrund/kolt-hasselager', title: 'Kolt Hasselager'}], 'is-erhverv') }}
         <h1 class="header-subpage--title is-erhverv">
@@ -29,8 +29,10 @@
   </header>
 
   <div class="map">
-    <div id="mapid" class="map--view"></div>
-    {{ filters.mapFilters() }}
+    <div class="map--inner">
+      <div id="mapid" class="map--view"></div>
+      {{ filters.mapFilters() }}
+    </div>
   </div>
 
   <div class="content-boxes">
