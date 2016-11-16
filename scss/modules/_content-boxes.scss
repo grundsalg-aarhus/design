@@ -58,6 +58,8 @@
   }
 
   &--content {
+    color: $black;
+
     &.has-spacing {
       padding-bottom: $layout-spacing-medium;
       padding-left: $layout-spacing-medium;
