@@ -102,6 +102,22 @@
         border-top: 6px solid $color-available;
       }
 
+      &.is-offering {
+        border-top: 6px solid $color-offering;
+      }
+
+      &.is-reserved {
+        border-top: 6px solid $color-reserved;
+      }
+
+      &.is-sold {
+        border-top: 6px solid $color-sold;
+      }
+
+      &.is-future {
+        border-top: 6px solid $color-future;
+      }
+
       .boxes--box-header {
         a {
           @include strip-link-styles($black);

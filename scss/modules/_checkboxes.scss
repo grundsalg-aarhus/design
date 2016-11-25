@@ -80,6 +80,14 @@
       background: $color-available;
     }
 
+    &.is-reserved + .filters--checkbox-label:before {
+      background: $color-available;
+    }
+
+    &.is-reserved:checked + .filters--checkbox-label:before {
+      background: $color-available;
+    }
+
     &.is-future + .filters--checkbox-label:before {
       background: $color-future;
     }
