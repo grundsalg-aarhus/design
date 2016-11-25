@@ -19,6 +19,10 @@
     max-width: $breakpoint-bigscreen;
   }
 
+  &.has-spacing {
+    margin-top: $layout-spacing;
+  }
+
   &--inner {
     display: flex;
     flex-wrap: wrap;
