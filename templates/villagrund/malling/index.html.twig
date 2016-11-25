@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/nav.html.twig" as nav %}
 {% import "macros/map.html.twig" as map %}
@@ -27,6 +28,7 @@
           Malling
         </h1>
       </div>
+      {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
     </div>
   </header>
 
