@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/filters.html.twig" as filters %}
 
 {% block title %}Erhvervsgrund{% endblock %}
@@ -43,11 +44,6 @@
             <h2 class="content-box--title-text">Udbud</h2>
           </div>
           <div class="content-box--content">
-            <div class="boxes">
-              <div class="boxes--inner">
-                {% include 'extends/boxes/erhvervsgrunde/kolt-hasselager/kolt-skovvej.html.twig' %}
-              </div>
-            </div>
           </div>
         </div>
       </div>
