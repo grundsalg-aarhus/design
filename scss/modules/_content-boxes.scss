@@ -54,6 +54,10 @@
     @include breakpoint($breakpoint-desk) {
       flex-basis: 33.33%;
     }
+
+    &.has-no-stretch {
+      align-items: flex-start;
+    } 
   }
 
   &--inner {
