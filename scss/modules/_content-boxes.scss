@@ -109,4 +109,23 @@
   &--link-with-icon-text {
     padding-left: $layout-spacing;
   }
+
+  &--show-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $layout-spacing-medium;
+  }
+
+  &--show-more a {
+    border-bottom: 3px solid $black;
+    color: $black;
+    font-weight: 600;
+    padding-bottom: $layout-spacing-tiny;
+  }
+
+  &--show-more-arrow {
+    margin-left: $layout-spacing-small;
+    margin-top: 2px;
+    width: 15px;
+  }
 }

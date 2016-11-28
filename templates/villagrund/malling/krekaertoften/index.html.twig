@@ -5,6 +5,7 @@
 {% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/nav.html.twig" as nav %}
 {% import "macros/map.html.twig" as map %}
+{% import "macros/arrow.html.twig" as arrow %}
 
 {% block title %}Krekærtoften i Malling{% endblock %}
 
@@ -41,6 +42,7 @@
 
   <div class="content-boxes">
     <div class="content-boxes--inner">
+      
       <div class="content-box is-alpha">
         <div class="content-box--inner">
           <div class="content-box--title">
@@ -85,23 +87,11 @@
                 {{ box.boxPlot('is-available', 'Krekærtoften 108', 'Ledig', '752', '787500', '787500') }}
                 {{ box.boxPlot('is-available', 'Krekærtoften 116', 'Ledig', '752', '787500', '787500') }}
                 {{ box.boxPlot('is-available', 'Krekærtoften 112', 'Ledig', '752', '787500', '787500') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 132', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 106', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 122', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 124', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 126', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-reserved', 'Krekærtoften 130', 'Reserveret', '757', '900201', '900201') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 114', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 118', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 120', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 142', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 144', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 146', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-sold', 'Krekærtoften 150', 'Sold', '564', '658000', '658000') }}
-                {{ box.boxPlot('is-future', 'Krekærtoften 100', 'Fremtidig', '856', '475500', '475500') }}
-                {{ box.boxPlot('is-future', 'Krekærtoften 108', 'Fremtidig', '856', '475500', '475500') }}
                 </div>
               </div>
+          </div>
+          <div class="content-box--show-more">
+            <h3><a href="#">Vis alle grunde</a></h3>{{ arrow.arrowLink('#', 'content-box--show-more-arrow', 'down') }}
           </div>
         </div>
       </div>
