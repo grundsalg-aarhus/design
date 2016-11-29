@@ -38,10 +38,12 @@
 
     &.is-storparcel {
       background-color: $theme-color-storparcel;
+      border-bottom: 1px solid darken($theme-color-storparcel, 8%);
     }
 
     &.is-erhverv {
       background-color: $theme-color-erhverv;
+      border-bottom: 1px solid darken($theme-color-erhverv, 8%);
     }
   }
 
