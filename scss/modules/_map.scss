@@ -123,12 +123,12 @@
 
   &--plot-link-text {
     // !important overrides leaflet styling
-    display: inline;
     margin: 0 !important;
   }
 
   &--plot-link-image {
-    margin-left: auto;
+    height: 23px;
+    margin-left: $layout-spacing-small;
     width: 20px;
   }
 }

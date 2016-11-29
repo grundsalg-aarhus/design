@@ -59,6 +59,7 @@
     &.is-erhverv {
       border-left: 1px solid darken($theme-color-erhverv, 8%);
       border-top: 1px solid darken($theme-color-erhverv, 8%);
+      color: $white;
 
       @include breakpoint($breakpoint-desk) {
         border-top: 0;
@@ -76,6 +77,7 @@
     &.is-storparcel {
       border-left: 1px solid darken($theme-color-storparcel, 8%);
       border-top: 1px solid darken($theme-color-storparcel, 8%);
+      color: $white;
 
       @include breakpoint($breakpoint-desk) {
         border-top: 0;
@@ -103,15 +105,15 @@
       background-color: $gray-lighter;
 
       &.is-villa {
-        background-color: lighten($theme-color-villa, 15%);
+        background-color: lighten($theme-color-villa, 10%);
       }
 
       &.is-erhverv {
-        background-color: lighten($theme-color-erhverv, 15%);
+        background-color: darken($theme-color-erhverv, 10%);
       }
 
       &.is-storparcel {
-        background-color: lighten($theme-color-storparcel, 15%);
+        background-color: darken($theme-color-storparcel, 10%);
       }
     }
   }

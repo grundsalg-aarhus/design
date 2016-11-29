@@ -19,6 +19,10 @@
     max-width: $breakpoint-bigscreen;
   }
 
+  &.has-spacing {
+    margin-top: $layout-spacing;
+  }
+
   &--inner {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +54,10 @@
     @include breakpoint($breakpoint-desk) {
       flex-basis: 33.33%;
     }
+
+    &.has-no-stretch {
+      align-items: flex-start;
+    } 
   }
 
   &--inner {
@@ -104,5 +112,24 @@
 
   &--link-with-icon-text {
     padding-left: $layout-spacing;
+  }
+
+  &--show-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $layout-spacing-medium;
+  }
+
+  &--show-more-title a {
+    border-bottom: 3px solid $black;
+    color: $black;
+    font-weight: 600;
+    padding-bottom: $layout-spacing-tiny;
+  }
+
+  &--show-more-arrow {
+    margin-left: $layout-spacing-small;
+    margin-top: 2px;
+    width: 15px;
   }
 }
