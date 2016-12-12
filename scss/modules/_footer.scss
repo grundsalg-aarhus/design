@@ -71,7 +71,18 @@ $left-and-right-padding: 1em;
     width: 100%;
   }
 
-  &--col a, &--quick-links a {
+  &--logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $layout-spacing;
+    width: 120px;
+    
+    @include breakpoint($breakpoint-tablet) {
+      margin-left: 0;
+    }
+  }
+
+  &--col a, &--quick-link a {
     color: $theme-color-erhverv;
     text-decoration: underline;
   }

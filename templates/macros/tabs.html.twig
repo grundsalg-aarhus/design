@@ -1,20 +1,44 @@
-{% macro subheaderTabs(activeMap, activeImages, activeVideo, activeStreetview, class) %}
+{% macro subheaderTabs(activeMap, activeImages, activeVideo, activeStreetview, class, iconColor) %}
     
     <div class="tabs">
       <div class="tabs--tab {{ activeMap }} {{ class }}">
-        <div class="tabs--tab-icon">{% include 'icons/map.svg' %}</div>
+        <div class="tabs--tab-icon">
+          {% if iconColor == 'light' %}
+            {% include 'icons/map-light.svg' %}
+          {% else %}
+            {% include 'icons/map.svg' %}
+          {% endif %}
+        </div>
         <div class="tabs--tab-title">Kort</div>
       </div>
       <div class="tabs--tab {{ activeImages }} {{ class }}">
-        <div class="tabs--tab-icon">{% include 'icons/camera.svg' %}</div>
+        <div class="tabs--tab-icon">
+          {% if iconColor == 'light' %}
+            {% include 'icons/camera-light.svg' %}
+          {% else %}
+            {% include 'icons/camera.svg' %}
+          {% endif %}
+        </div>
         <div class="tabs--tab-title">Billeder</div>
       </div>
       <div class="tabs--tab {{ activeVideo }} {{ class }}">
-        <div class="tabs--tab-icon">{% include 'icons/video.svg' %}</div>
+        <div class="tabs--tab-icon">
+          {% if iconColor == 'light' %}
+            {% include 'icons/camera-light.svg' %}
+          {% else %}
+            {% include 'icons/camera.svg' %}
+          {% endif %}
+        </div>
         <div class="tabs--tab-title">Video</div>
       </div>
       <div class="tabs--tab {{ activeStreetview }} {{ class }}">
-        <div class="tabs--tab-icon">{% include 'icons/streetview.svg' %}</div>
+        <div class="tabs--tab-icon">
+          {% if iconColor == 'light' %}
+            {% include 'icons/streetview-light.svg' %}
+          {% else %}
+            {% include 'icons/streetview.svg' %}
+          {% endif %}
+        </div>
         <div class="tabs--tab-title">Streetview</div>
       </div>
     </div>

@@ -9,12 +9,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
-  height: 24px;
+  height: 20px;
   left: $layout-spacing;
   position: relative;
-  top: 31px;
-  width: 260px;
+  top: 34px;
+  width: 220px;
   z-index: z($z-index-elements, logo);
+
+  @include breakpoint($breakpoint-lap) {
+    height: 24px;
+    top: 31px;
+    width: 260px;
+  }
 
   @include breakpoint($breakpoint-tablet) {
     height: 28px;

@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/nav.html.twig" as nav %}
 
@@ -26,6 +27,7 @@
           Solbjerg
         </h1>
       </div>
+      {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
     </div>
   </header>
 
@@ -38,10 +40,51 @@
 
   <div class="content-boxes">
     <div class="content-boxes--inner">
+
+    <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Beskrivelse</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <h2>Solbjerg</h2>
+              <p>
+                Her kan være en tekst omkring Solbjerg og området deromkring.
+              </p>
+              <h3>Andet afsnit</h3>
+              <p>
+                Der kan blandt andet laves afsnit som denne.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Kontakt</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <p>
+                Grundsalg<br>
+                Bolig og Projektudvikling<br>
+                Kalkværksvej 10<br>
+                8000 Aarhus C<br>
+                Telefon: 89 40 45 00
+              </p>
+              <p>E-mail: <a href="mailto:grundsalg@mtm.aarhus.dk">grundsalg@mtm.aarhus.dk</a></p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="content-box">
         <div class="content-box--inner">
           <div class="content-box--title">
-            <h2 class="content-box--title-text">Udbud</h2>
+            <h2 class="content-box--title-text">Villagrunde i Solbjerg</h2>
           </div>
           <div class="content-box--content">
           </div>
@@ -63,9 +106,6 @@
     var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
-
-    var marker = L.marker([56.037144, 10.194626]).addTo(map);
-    var marker = L.marker([56.057144, 10.124626]).addTo(map);
 
     // start the map in South-East England
     map.setView(new L.LatLng(56.050660, 10.187073),11);

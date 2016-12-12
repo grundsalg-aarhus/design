@@ -5,6 +5,7 @@
 {% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/nav.html.twig" as nav %}
 {% import "macros/map.html.twig" as map %}
+{% import "macros/arrow.html.twig" as arrow %}
 
 {% block title %}Krekærtoften i Malling{% endblock %}
 
@@ -39,8 +40,9 @@
     </div>
   </div>
 
-  <div class="content-boxes">
+  <div class="content-boxes has-spacing">
     <div class="content-boxes--inner">
+      
       <div class="content-box is-alpha">
         <div class="content-box--inner">
           <div class="content-box--title">
@@ -62,6 +64,7 @@
           </div>
           <div class="content-box--content">
             <ul class="content-box--link-with-icons">
+              <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Lokalplan</a></li>
               <li class="content-box--link-with-icon">{% include '/icons/pdf.svg' %}<a href="#" class="content-box--link-with-icon-text">Salgsvilkår</a></li>
               <li class="content-box--link-with-icon">{% include '/icons/txt.svg' %}<a href="#" class="content-box--link-with-icon-text">Tilbudsblanket</a></li>
               <li class="content-box--link-with-icon">{% include '/icons/link.svg' %}<a href="#" class="content-box--link-with-icon-text">Linjeføringsforslag - Bane Danmark</a></li>
@@ -73,40 +76,22 @@
       <div class="content-box">
         <div class="content-box--inner">
           <div class="content-box--title">
-            <h2 class="content-box--title-text">Oversigt</h2>
+            <h2 class="content-box--title-text">Villagrunde i Krekærtoften</h2>
           </div>
           <div class="content-box--content">
               <div class="boxes">
                 <div class="boxes--inner">
-                  <article class="boxes--box is-inside-context-box is-available">
-                    <div class="boxes--box-inner">
-                      <h3 class="boxes--box-plot-title">Krekærtoften 50</h3>
-                      <div class="boxes--box-plot-infos">
-                        <div class="boxes--box-plot-info">
-                          <p class="boxes--box-plot-info-key">Status</p>
-                          <p class="boxes--box-plot-info-value">Ledig</p>
-                        </div>
-                        <div class="boxes--box-plot-info">
-                          <p class="boxes--box-plot-info-key">Areal (m2)</p>
-                          <p class="boxes--box-plot-info-value">745</p>
-                        </div>
-                        <div class="boxes--box-plot-info">
-                          <p class="boxes--box-plot-info-key">Mindstepris</p>
-                          <p class="boxes--box-plot-info-value">732.000</p>
-                        </div>
-                        <div class="boxes--box-plot-info">
-                          <p class="boxes--box-plot-info-key">Salgspris</p>
-                          <p class="boxes--box-plot-info-value">732.000</p>
-                        </div>
-                      </div>
-                      <div class="boxes--box-plot-link">
-                        <div class="boxes--box-plot-link-icon">{% include '/icons/pdf.svg' %}</div>
-                        <a href="#" class="boxes--box-plot-link-text">Yderligere information</a>
-                      </div>
-                    </div>
-                  </article>
+                {{ box.boxPlot('is-offering', 'Krekærtoften 102', 'Udbud', '879', '792500', '792500') }}
+                {{ box.boxPlot('is-offering', 'Krekærtoften 104', 'Udbud', '879', '792500', '792500') }}
+                {{ box.boxPlot('is-available', 'Krekærtoften 110', 'Ledig', '752', '787500', '787500') }}
+                {{ box.boxPlot('is-available', 'Krekærtoften 108', 'Ledig', '752', '787500', '787500') }}
+                {{ box.boxPlot('is-available', 'Krekærtoften 116', 'Ledig', '752', '787500', '787500') }}
+                {{ box.boxPlot('is-available', 'Krekærtoften 112', 'Ledig', '752', '787500', '787500') }}
                 </div>
               </div>
+          </div>
+          <div class="content-box--show-more">
+            <h3 class="content-box--show-more-title"><a href="#">Vis alle grunde</a></h3><a href="#">{{ arrow.arrowLink('#', 'content-box--show-more-arrow', 'down') }}</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 {% extends "extends/base.html.twig" %}
 {% import "extends/box.html.twig" as box %}
 {% import "macros/breadcrumb.html.twig" as breadcrumb %}
+{% import "macros/tabs.html.twig" as tabs %}
 {% import "macros/filters.html.twig" as filters %}
 {% import "macros/nav.html.twig" as nav %}
 {% import "macros/map.html.twig" as map %}
@@ -27,6 +28,7 @@
           Malling
         </h1>
       </div>
+      {{ tabs.subheaderTabs('is-active', null, null, null, 'is-villa') }}
     </div>
   </header>
 
@@ -37,19 +39,56 @@
     </div>
   </div>
 
-  <div class="content-boxes">
+  <div class="content-boxes has-spacing">
     <div class="content-boxes--inner">
+      <div class="content-box is-alpha">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Beskrivelse</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <h2>Malling</h2>
+              <p>
+                Her kan være en tekst omkring Malling og området deromkring.
+              </p>
+              <h3>Andet afsnit</h3>
+              <p>
+                Der kan blandt andet laves afsnit som denne.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-box is-beta">
+        <div class="content-box--inner">
+          <div class="content-box--title">
+            <h2 class="content-box--title-text">Kontakt</h2>
+          </div>
+          <div class="content-box--content has-spacing">
+            <div class="content-wysiwyg">
+              <p>
+                Grundsalg<br>
+                Bolig og Projektudvikling<br>
+                Kalkværksvej 10<br>
+                8000 Aarhus C<br>
+                Telefon: 89 40 45 00
+              </p>
+              <p>E-mail: <a href="mailto:grundsalg@mtm.aarhus.dk">grundsalg@mtm.aarhus.dk</a></p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="content-box">
         <div class="content-box--inner">
           <div class="content-box--title">
-            <h2 class="content-box--title-text">Udbud</h2>
+            <h2 class="content-box--title-text">Villagrunde i Malling</h2>
           </div>
           <div class="content-box--content">
             <div class="boxes">
               <div class="boxes--inner">
-                {% include 'extends/boxes/villagrund/malling/balskaervej.html.twig' %}
                 {% include 'extends/boxes/villagrund/malling/krekaertoften.html.twig' %}
-                {% include 'extends/boxes/villagrund/malling/krekaervangen.html.twig' %}
               </div>
             </div>
           </div>
