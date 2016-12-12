@@ -2,10 +2,16 @@
   background: $white;
   border-top: 1px solid $gray-light; 
   bottom: 0;
+  color: $black;
   left: 0;
   position: fixed;
   width: 100%;
   z-index: 99;
+
+  a {
+    color: $theme-color-erhverv;
+    text-decoration: underline;
+  }
 }
 
 .cookies--inner {
@@ -24,6 +30,10 @@
   margin-right: .5em;
 }
 
-.cookies .button {
+.cookieterms--button {
+  background: $black;
+  color: $white;
   cursor: pointer;
+  display: inline-block;
+  padding: .5em 1em;
 }

@@ -58,7 +58,7 @@ var configuration = {
   // Base theme.
   'grundsalg-design': {
     "js": {
-      "paths": ['./js/*.js', '!./grundsalg-design/js/*.min.*'],
+      "paths": ['./js/*.js', '!./js/*.min.*'],
       "dest": './js'
     },
     "sass": {

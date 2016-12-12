@@ -71,7 +71,7 @@ $left-and-right-padding: 1em;
     width: 100%;
   }
 
-  &--col a, &--quick-link a {
+  &--col a, &--quick-links a {
     color: $theme-color-erhverv;
     text-decoration: underline;
   }
@@ -97,8 +97,8 @@ $left-and-right-padding: 1em;
     }
   }
 
-  &--quick-link {
-      
+  &--quick-links p {
+
       &:not(:last-child) {
         margin-bottom: $layout-spacing-small;
       }
@@ -111,7 +111,7 @@ $left-and-right-padding: 1em;
       }
     }
 
-  &--quick-link a {
+  &--quick-links a {
     margin-left: $layout-spacing-tiny;
   }
 }

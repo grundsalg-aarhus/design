@@ -1,7 +1,14 @@
 {% macro contentImage(url, alt) %}
+  {% import "macros/arrow.html.twig" as arrow %}
   <div class="content-image">
     <div class="content-image--inner">
       <img src="{{ url }}" alt="{{ alt }}">
+    </div>
+    <div class="content-image--arrow-left">
+      {{ arrow.arrowLink('', type) }}
+    </div>
+    <div class="content-image--arrow-right">
+      {{ arrow.arrowLink('', type) }}
     </div>
   </div>
 {% endmacro %}
