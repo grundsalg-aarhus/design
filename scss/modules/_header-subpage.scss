@@ -8,6 +8,8 @@
 /* Styles
    ========================================================================== */
 
+$header-spacing: 30px;
+
 .header-subpage {
   @include breakpoint($breakpoint-desk) {
     flex-direction: row;
@@ -59,8 +61,8 @@
     padding-top: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
-      padding-bottom: $layout-spacing-medium;
-      padding-top: $layout-spacing-medium;
+      padding-bottom: $header-spacing;
+      padding-top: $header-spacing;
     }
   }
 
@@ -91,7 +93,7 @@
       color: $white;
     }
   }
-  
+
   &--title-link {
     @include strip-link-styles($gray-darkest);
 

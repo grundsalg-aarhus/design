@@ -12,25 +12,66 @@
   }
 
   &--inner {
+    border-bottom: 1px solid $gray-lighter;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: $layout-spacing-large;
     margin-left: $layout-spacing;
     margin-right: $layout-spacing;
+    padding-bottom: $layout-spacing-large;
+  }
+
+  &--item {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $layout-spacing;
+    position: relative;
+    height: 100%;
+
+    @include breakpoint($breakpoint-tablet) {
+      min-height: 450px;
+    }
 
     @include breakpoint($breakpoint-desk) {
-      flex-direction: row;
+      margin-bottom: $layout-spacing-medium;
+      min-height: 500px;
     }
 
     @include breakpoint($breakpoint-largedesk) {
-      min-height: 700px;
+      min-height: 650px;
     }
-  }
 
-  &--large-box,
-  &--small-box {
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+    @include breakpoint($breakpoint-bigscreen) {
+      min-height: 800px;
+    }
+
+    &:before {
+      background-position: center;
+      background-size: cover;
+      content: "";
+      height: 65%;
+      position: absolute;
+      width: 100%;
+
+      @include breakpoint($breakpoint-tablet) {
+        height: 50%;
+        position: relative;
+      }
+
+      @include breakpoint($breakpoint-desk) {
+        height: 60%;
+      }
+
+      @include breakpoint($breakpoint-largedesk) {
+        height: 65%;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include breakpoint($breakpoint-tablet) {
       background-position: 50%;
@@ -39,155 +80,114 @@
 
     &:hover, &:focus, &:active {
       .arrow-link {
-        margin-left: $layout-spacing;
+        margin-left: $layout-spacing-tiny;
         transition: all .4s ease;
       }
     }
-  }
 
-  &--large-box {
-    background-image: url("../assets/forside_villa.jpg");
-
-    @include breakpoint($breakpoint-desk) {
-      width: 50%;
-    }
-  }
-
-  &--small-box {
-    display: flex;
-    margin-top: $layout-spacing-medium;
-
-    @include breakpoint($breakpoint-tablet) {
-      margin-top: 0;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      height: 50%;
+    &.is-villa {
+      &:before {
+        background-image: url("../assets/forside_villa.jpg");
+      }
     }
 
     &.is-storparcel {
-      background-image: url("../assets/forside_storparcel.jpg");
+      &:before {
+        background-image: url("../assets/forside_storparcel.jpg");
+      }
     }
 
     &.is-erhverv {
-      background-image: url("../assets/forside_erhverv.jpg");
-      justify-content: flex-end;
-    }
-  }
-
-  &--small-boxes {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    @include breakpoint($breakpoint-tablet) {
-      flex-direction: column-reverse;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      flex-direction: column;
-      width: 50%;
+      &:before {
+        background-image: url("../assets/forside_erhverv.jpg");
+      }
     }
   }
 
   &--box-content {
-    background-color: $white;
+    align-items: center;
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
     margin-top: 50%;
-    position: relative;
     width: 100%;
+    z-index: 1;
 
     @include breakpoint($breakpoint-tablet) {
-      flex-direction: column;
+      height: 50%;
       margin-top: 0;
-      width: 50%;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      height: 40%;
+    }
+
+    @include breakpoint($breakpoint-largedesk) {
+      height: 35%;
     }
 
     &.is-villa {
-      @include breakpoint($breakpoint-tablet) {
-        @include box-arrow($white, "right");
-
-        border-left: 1px solid $gray-lighter;
-        border-top: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        @include box-arrow($theme-color-villa, "right");
-
-        background-color: $theme-color-villa;
-        border-left: 0;
-        border-top: 0;
-      }
-    }
-
-    &.is-storparcel,
-    &.is-erhverv {
-      background-color: $white;
+      background-color: $theme-color-villa;
     }
 
     &.is-storparcel {
-      @include breakpoint($breakpoint-tablet) {
-        @include box-arrow($white, "right");
-
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 0;
-        border-left: 0;
-        border-top: 1px solid $gray-lighter;
-      }
+      background-color: $theme-color-storparcel;
+      color: $white;
     }
 
     &.is-erhverv {
-      @include breakpoint($breakpoint-tablet) {
-        border-right: 1px solid $gray-lighter;
-      }
-
-      @include breakpoint($breakpoint-desk) {
-        border-bottom: 1px solid $gray-lighter;
-        border-left: 0;
-      }
-
-      @include breakpoint($breakpoint-tablet) {
-        @include box-arrow($white, "left");
-      }
+      background-color: $theme-color-erhverv;
+      color: $white;
     }
   }
 
   &--box-text {
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing-medium;
+    padding-right: $layout-spacing-medium;
     padding-top: $layout-spacing;
 
+    @include breakpoint($breakpoint-lap) {
+      padding-bottom: $layout-spacing-medium;
+      padding-top: $layout-spacing-medium;
+    }
+
     @include breakpoint($breakpoint-tablet) {
-      padding: $layout-spacing-medium;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      padding: $layout-spacing-large;
-    }
-
-    &.is-villa,
-    &.is-storparcel,
-    &.is-erhverv {
-      color: $black;
+      padding-bottom: $layout-spacing-medium;
+      padding-left: $layout-spacing-medium;
+      padding-right: $layout-spacing-medium;
+      padding-top: $layout-spacing-medium;
     }
   }
 
   &--box-text-title {
-    @include headline-border($black);
 
     display: inline;
     font-size: 24px;
     font-weight: 600;
+
+    @include breakpoint($breakpoint-largedesk) {
+      font-size: 26px;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 30px;
+    }
   }
 
   &--box-text-caption {
     margin-top: $layout-spacing;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-top: $layout-spacing-small;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: 16px;
+    }
+
+    @include breakpoint($breakpoint-largedesk) {
+      font-size: 18px;
+    }
   }
 }

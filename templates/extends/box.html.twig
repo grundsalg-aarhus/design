@@ -2,14 +2,14 @@
 
 {% import "macros/arrow.html.twig" as arrow %}
 
-  <article class="boxes--box {{ type }}">
-    {% if image %}<a href="{{ link }}" title="{{ header }}"><img src="{{ image }}" width="380" height="130" alt=""></a>{% endif %}
+  <a class="boxes--box {{ type }}" href="{{ link }}" title="{{ header }}">
+    {% if image %}<img src="{{ image }}" width="380" height="130" alt="">{% endif %}
     <div class="boxes--box-inner">
-      <h2 class="boxes--box-header"><a href="{{ link }}" title="{{ header }}">{{ header }}</a></h2>
+      <h2 class="boxes--box-header">{{ header }}</h2>
       <p class="boxes--box-content">{{ description }}</p>
-      <a href="{{ link }}" title="{{ header }}">{{ arrow.arrowLink('', type) }}</a>
+      <div>{{ arrow.arrowLink('', type) }}</div>
     </div>
-  </article>
+  </a>
 
 {% endmacro %}
 

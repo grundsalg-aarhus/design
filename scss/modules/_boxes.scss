@@ -8,15 +8,21 @@
 /* Styles
    ========================================================================== */
 
+$boxes-spacing: 30px;
+
 .boxes {
   margin-bottom: $layout-spacing;
-  margin-left: $layout-spacing;
-  margin-right: $layout-spacing;
+  margin-left: $boxes-spacing;
+  margin-right: $boxes-spacing;
   margin-top: $layout-spacing;
 
   // Sometimes the boxes needs to be separated from the previous content (e.g. on the frontpage)
   &.has-spacing {
     margin-top: $layout-spacing-large;
+  }
+
+  &.has-no-spacing {
+    margin-top: 0;
   }
 
   &--inner {
@@ -42,7 +48,6 @@
     .boxes--box-header {
       a {
         @include strip-link-styles($white);
-        @include headline-border($white);
       }
     }
   }
@@ -59,6 +64,13 @@
     justify-content: flex-start;
     position: relative;
 
+    &:hover, &:focus, &:active {
+      .arrow-link {
+        margin-left: $layout-spacing-tiny;
+        transition: all .4s ease;
+      }
+    }
+
     &.is-villa {
       background-color: $theme-color-villa;
     }
@@ -74,12 +86,12 @@
     @include breakpoint($breakpoint-desk) {
       // It seems there are some rounding issues (at least in Chrome) that is why we multiply with 2.035.
       // Not pretty but necessary.
-      flex-basis: calc(33.3333% - #{$layout-spacing * 2.035});
-      margin: $layout-spacing;
+      flex-basis: calc(33.3333% - #{$layout-spacing-small * 2.035});
+      margin: $layout-spacing-small;
     }
 
     &:not(:first-child) {
-      margin-top: $layout-spacing;
+      margin-top: $layout-spacing-small;
     }
 
     &.is-inside-context-box {
@@ -137,7 +149,6 @@
 
     a {
       @include strip-link-styles($black);
-      @include headline-border($black);
 
       color: $black;
     }
