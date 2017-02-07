@@ -5,10 +5,49 @@
  */
 
 
+/* Mixins for this document
+   ========================================================================== */
+
+@mixin slideshow-arrow($rotation) {
+  background: $black;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include breakpoint($breakpoint-bigscreen) {
+    padding: 1.8em;
+  }
+
+  .arrow-link {
+    line-height: 1em;
+    padding: 0;
+    transform: rotate($rotation);
+    width: auto;
+
+    svg {
+      height: 15px;
+
+      @include breakpoint($breakpoint-bigscreen) {
+        height: 30px;
+      }
+    }
+
+    g {
+      fill: $white;
+    }
+  }
+}
+
+
 /* Styles
    ========================================================================== */
 
 .content-image {
+  position: relative;
+  
   @include breakpoint($breakpoint-bigscreen) {
     margin-left: auto;
     margin-right: auto;
@@ -18,5 +57,40 @@
   &--inner {
     margin-left: $layout-spacing;
     margin-right: $layout-spacing;
+    
+    img {
+      .animate-enter,
+      .animate-leave {
+        transition: 300ms cubic-bezier(.250, .250, .750, .750) all;
+      }
+
+      .animate-enter {
+        left: 100%;
+      }
+
+      .animate-enter.animate-enter-active {
+        left: 0;
+      }
+
+      .animate-leave {
+        left: 0;
+      }
+
+      .animate-leave.animate-leave-active{
+        left: -100%;
+      }
+    }
+  }
+
+  &--arrow-left {
+    @include slideshow-arrow(180deg);
+
+    left: 20px;
+  }
+
+  &--arrow-right {
+    @include slideshow-arrow(0deg);
+
+    right: 20px;
   }
 }

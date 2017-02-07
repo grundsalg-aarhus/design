@@ -28,7 +28,7 @@ foreach ($regex as $match) {
 	$app->get($path, function(Request $request) use($app) {
 		try {
 			// Find and render index.html.twig
-			$templatePath = $request->getRequestUri() . 'index.html.twig';
+			$templatePath = $request->getPathInfo() . 'index.html.twig';
 			return $app['twig']->render($templatePath);
 		} catch (\Exception $e) {
 			return $e->getMessage();

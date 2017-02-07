@@ -67,6 +67,14 @@
       border-top: 1px solid darken($theme-color-erhverv, 8%);
       color: $white;
 
+      .icon-item-stroke {
+        stroke: $white;
+      }
+
+      .icon-item-fill {
+        fill: $white;
+      }
+
       @include breakpoint($breakpoint-desk) {
         border-top: 0;
       }
@@ -84,6 +92,14 @@
       border-left: 1px solid darken($theme-color-storparcel, 8%);
       border-top: 1px solid darken($theme-color-storparcel, 8%);
       color: $white;
+
+      .icon-item-stroke {
+        stroke: $white;
+      }
+
+      .icon-item-fill {
+        fill: $white;
+      }
 
       @include breakpoint($breakpoint-desk) {
         border-top: 0;
