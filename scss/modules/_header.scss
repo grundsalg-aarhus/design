@@ -161,10 +161,9 @@
   }
 
   &--box-text-title {
-
-    display: inline;
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: $layout-spacing;
 
     @include breakpoint($breakpoint-largedesk) {
       font-size: 26px;
