@@ -26,9 +26,9 @@
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    height: 100%;
     margin-bottom: $layout-spacing;
     position: relative;
-    height: 100%;
 
     @include breakpoint($breakpoint-tablet) {
       min-height: 450px;

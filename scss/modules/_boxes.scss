@@ -71,6 +71,16 @@ $boxes-spacing: 30px;
       }
     }
 
+    &.has-no-top-spacing {
+      @include breakpoint($breakpoint-desk) {
+        margin-top: 0;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+
     &.is-villa {
       background-color: $theme-color-villa;
     }

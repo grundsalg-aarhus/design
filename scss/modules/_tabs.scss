@@ -32,7 +32,7 @@
     color: $black;
     cursor: pointer;
     display: flex;
-    flex-basis: 25%;
+    flex-basis: 100%;
     flex-direction: column;
     font-weight: 600;
     height: 100%;
@@ -41,6 +41,7 @@
     padding-top: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
+      flex-basis: 25%;
       padding-bottom: 0;
       padding-top: 0;
     }
@@ -142,11 +143,12 @@
 
   &--tab-icon {
     display: none;
+    height: 45px;
+    margin-top: 5px;
+    width: 45px;
 
     @include breakpoint($breakpoint-desk) {
       display: block;
-      height: 50px;
-      width: 50px;
     }
   }
 
