@@ -30,7 +30,9 @@ $header-spacing: 25px;
     margin-right: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
+      align-items: center;
       flex-direction: row;
+      height: 118px;
     }
 
     &.is-villa {
@@ -61,9 +63,8 @@ $header-spacing: 25px;
     padding-top: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
-      margin-top: $layout-spacing-tiny;
-      padding-bottom: $header-spacing;
-      padding-top: $header-spacing;
+      padding-bottom: 0;
+      padding-top: 0;
     }
   }
 

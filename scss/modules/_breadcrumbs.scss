@@ -13,8 +13,8 @@
   color: $white;
   font-size: 15px;
   font-weight: 600;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  padding-bottom: $layout-spacing-tiny;
+  padding-left: $layout-spacing;
 
   .breadcrumb--home-svg {
     fill: $white;
