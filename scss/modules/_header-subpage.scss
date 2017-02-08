@@ -61,6 +61,7 @@ $header-spacing: 25px;
     padding-top: $layout-spacing;
 
     @include breakpoint($breakpoint-desk) {
+      margin-top: $layout-spacing-tiny;
       padding-bottom: $header-spacing;
       padding-top: $header-spacing;
     }
