@@ -11,18 +11,21 @@
 .tabs {
   align-items: center;
   display: flex;
-  flex-basis: 65%;
   flex-direction: row;
   justify-content: flex-end;
 
+  @include breakpoint($breakpoint-desk) {
+    flex-basis: 65%;
+    margin-left: auto;
+  }
+
+
   @include breakpoint($breakpoint-largedesk) {
     flex-basis: 45%;
-    margin-left: auto;
   }
 
   @include breakpoint($breakpoint-bigscreen) {
     flex-basis: 40%;
-    margin-left: auto;
   }
 
   &--tab {
@@ -35,15 +38,14 @@
     flex-basis: 100%;
     flex-direction: column;
     font-weight: 600;
-    height: 100%;
     justify-content: center;
-    padding-bottom: $layout-spacing;
-    padding-top: $layout-spacing;
+    padding-bottom: $layout-spacing-small;
+    padding-top: $layout-spacing-small;
 
     @include breakpoint($breakpoint-desk) {
       flex-basis: 25%;
-      padding-bottom: 0;
-      padding-top: 0;
+      padding-bottom: $layout-spacing;
+      padding-top: $layout-spacing;
     }
 
     &.is-villa {

@@ -35,6 +35,7 @@ h3,
 h4,
 h5,
 h6 {
+  @include word-wrap();
   font-weight: normal;
   /* This fixes huge spaces when a heading wraps onto two lines */
   line-height: 1.2;
