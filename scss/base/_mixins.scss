@@ -50,7 +50,7 @@
   -webkit-hyphens: auto;
   hyphens: auto;
   overflow-wrap: break-word;
-  -ms-word-break: break-all;
+  -ms-word-break: break-word;
   word-break: break-word;
   word-wrap: break-word;
 }
@@ -83,7 +83,7 @@
       border-top: 20px solid transparent;
       right: -20px;
     }
-    
+
   }
 }
 
