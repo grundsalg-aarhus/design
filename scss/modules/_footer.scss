@@ -65,32 +65,28 @@ $left-and-right-padding: 1em;
     text-transform: uppercase;
   }
 
-  &--text {
-    color: $gray-lighter;
-    margin-bottom: $layout-spacing-tiny;
-    width: 100%;
-  }
-
   &--logo {
     margin-left: auto;
     margin-right: auto;
     margin-top: $layout-spacing;
     width: 120px;
-    
+
     @include breakpoint($breakpoint-tablet) {
       margin-left: 0;
     }
   }
 
-  &--col a, &--quick-link a {
-    color: $theme-color-erhverv;
-    text-decoration: underline;
-  }
-
   &--col a {
+    color: $theme-color-erhverv;
     display: block;
     margin-bottom: $layout-spacing-tiny;
+    text-decoration: underline;
     width: 100%;
+  }
+
+  &--col p {
+    color: $gray-lighter;
+    margin-bottom: $layout-spacing-tiny;
   }
 
   &--quick-links {
@@ -123,6 +119,8 @@ $left-and-right-padding: 1em;
     }
 
   &--quick-links a {
+    color: $theme-color-erhverv;
     margin-left: $layout-spacing-tiny;
+    text-decoration: underline;
   }
 }

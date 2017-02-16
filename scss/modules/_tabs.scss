@@ -146,8 +146,8 @@
 
   &--tab-icon {
     display: none;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
 
     @include breakpoint($breakpoint-desk) {
       display: block;
@@ -160,7 +160,7 @@
 
     @include breakpoint($breakpoint-desk) {
       font-size: $font-size-normal;
-      margin-top: $layout-spacing-small;
+      margin-top: 15px;
     }
   }
 }
