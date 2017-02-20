@@ -57,7 +57,7 @@
 
     &.has-no-stretch {
       align-items: flex-start;
-    } 
+    }
   }
 
   &--inner {
@@ -106,6 +106,7 @@
     margin-bottom: $layout-spacing;
 
     svg {
+      height: 40px;
       width: 30px;
     }
   }
@@ -128,6 +129,7 @@
   }
 
   &--show-more-arrow {
+    height: 20px;
     margin-left: $layout-spacing-small;
     margin-top: 2px;
     width: 15px;

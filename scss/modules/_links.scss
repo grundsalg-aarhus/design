@@ -4,6 +4,10 @@
   transition: all .3s ease-in-out;
   width: 20px;
 
+  @include breakpoint($breakpoint-bigscreen) {
+    height: 20px;
+  }
+
   &.is-villa {
     .arrow-link--svg {
       fill: $black;
