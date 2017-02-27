@@ -131,6 +131,80 @@
     margin-left: $layout-spacing-small;
     width: 20px;
   }
+
+  /* Legend */
+  &--legend {
+    background-color: transparentize($black, .1);
+    bottom: $layout-spacing;
+    display: none;
+    font-size: $font-size-small;
+    left: $layout-spacing;
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing;
+    position: absolute;
+    z-index: z($z-index-elements, header);
+
+    @include breakpoint($breakpoint-tablet) {
+      display: block;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: $font-size-normal;
+    }
+  }
+
+  &--legend-item {
+    align-items: center;
+    color: $white;
+    display: flex;
+    margin-bottom: $layout-spacing-small;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 12px;
+      margin-right: $layout-spacing-small;
+      width: 12px;
+    }
+
+    &.is-available {
+      &:before {
+        background-color: $color-available;
+      }
+    }
+
+    &.is-reserved {
+      &:before {
+        background-color: $color-reserved;
+      }
+    }
+
+    &.is-sold {
+      &:before {
+        background-color: $color-sold;
+      }
+    }
+
+    &.is-future {
+      &:before {
+        background-color: $color-future;
+      }
+    }
+
+    &.is-offering {
+      &:before {
+        background-color: $color-offering;
+      }
+    }
+  }
 }
 
 /* Map controls overrides */
