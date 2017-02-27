@@ -8,13 +8,26 @@
 /* Styles
    ========================================================================== */
 
-$boxes-spacing: 30px;
-
 .boxes {
   margin-bottom: $layout-spacing;
-  margin-left: $boxes-spacing;
-  margin-right: $boxes-spacing;
+  margin-left: $layout-spacing;
+  margin-right: $layout-spacing;
   margin-top: $layout-spacing;
+
+  &--container {
+    @include breakpoint($breakpoint-bigscreen) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $breakpoint-bigscreen;
+    }
+  }
+
+  &--container-inner {
+    @include breakpoint($breakpoint-desk) {
+      margin-left: $layout-spacing-small;
+      margin-right: $layout-spacing-small;
+    }
+  }
 
   // Sometimes the boxes needs to be separated from the previous content (e.g. on the frontpage)
   &.has-spacing {
@@ -32,12 +45,6 @@ $boxes-spacing: 30px;
     @include breakpoint($breakpoint-desk) {
       margin-left: -$layout-spacing;
       margin-right: -$layout-spacing;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: $breakpoint-bigscreen;
     }
   }
 

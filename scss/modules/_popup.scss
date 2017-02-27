@@ -1,0 +1,88 @@
+.popup {
+  background-color: $white;
+  border-radius: 0;
+  position: absolute;
+  text-align: left;
+  width: 300px;
+
+  &--close-button-wrapper {
+    display: flex;
+    font-size: $font-size-medium;
+    justify-content: flex-end;
+  }
+
+  &--close-button {
+    cursor: pointer;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+    padding-top: $layout-spacing-small;
+  }
+
+  &--content-wrapper {
+    padding-bottom: $layout-spacing;
+    padding-left: $layout-spacing;
+    padding-right: $layout-spacing;
+  }
+
+  &--title {
+    font-size: $font-size-normal;
+    font-weight: 600;
+    margin-bottom: $layout-spacing-small;
+  }
+
+  &--metadata {
+    border-bottom: 1px solid $gray-lightest;
+    padding-bottom: $layout-spacing-small;
+    padding-top: $layout-spacing-small;
+
+    &:last-child {
+      border: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      &:first-child {
+        margin-bottom: $layout-spacing-tiny;
+      }
+    }
+  }
+
+  &--value {
+    font-weight: 600;
+  }
+
+  &--link-wrapper {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &--link {
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    margin-right: $layout-spacing;
+    text-decoration: underline;
+  }
+
+  &--link-text {
+    margin-right: $layout-spacing-small;
+    text-decoration: underline;
+  }
+
+  &--link-icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  &--link-type-icon {
+    height: 35px;
+    margin-right: $layout-spacing-small;
+    width: 30px;
+  }
+}

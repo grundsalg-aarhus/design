@@ -2,42 +2,46 @@
 
   {% import "macros/arrow.html.twig" as arrow %}
 
-  <header class="boxes has-no-spacing">
-    <div class="boxes--inner">
-      <div class="boxes--box has-no-top-spacing">
-        <a class="header--item is-villa" href="/villagrund/" title="Villagrund">
-          <div class="header--box-content is-villa">
-            <div class="header--box-text">
-              <h1 class="header--box-text-title">Villagrund</h1>
-              <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
-              {{ arrow.arrowLink() }}
-            </div>
+  <header class="boxes--container">
+    <div class="boxes--container-inner">
+      <div class="boxes has-no-spacing">
+        <div class="boxes--inner">
+          <div class="boxes--box has-no-top-spacing">
+            <a class="header--item is-villa" href="/villagrund/" title="Villagrund">
+              <div class="header--box-content is-villa">
+                <div class="header--box-text">
+                  <h1 class="header--box-text-title">Villagrund</h1>
+                  <p class="header--box-text-caption">Den helt rigtige byggegrund nær by natur og vand.</p>
+                  {{ arrow.arrowLink() }}
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="boxes--box has-no-top-spacing">
-        <a class="header--item is-storparcel" href="/storparcel/" title="Storparcel">
-          <div class="header--box-content is-storparcel">
-            <div class="header--box-text">
-              <h2 class="header--box-text-title">Storparcel</h2>
-              <p class="header--box-text-caption">Se mulighederne for at bygge på storparcelgrunde.</p>
-              {{ arrow.arrowLink(null, "is-storparcel", null) }}
-            </div>
+          <div class="boxes--box has-no-top-spacing">
+            <a class="header--item is-storparcel" href="/storparcel/" title="Storparcel">
+              <div class="header--box-content is-storparcel">
+                <div class="header--box-text">
+                  <h2 class="header--box-text-title">Storparcel</h2>
+                  <p class="header--box-text-caption">Se mulighederne for at bygge på storparcelgrunde.</p>
+                  {{ arrow.arrowLink(null, "is-storparcel", null) }}
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="boxes--box has-no-top-spacing">
-        <a class="header--item is-erhverv" href="/erhvervsgrund/" title="Erhvervsgrund">
-          <div class="header--box-content is-erhverv">
-            <div class="header--box-text">
-              <h2 class="header--box-text-title">Erhvervsgrund</h2>
-              <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
-              {{ arrow.arrowLink(null, "is-erhverv", null) }}
-            </div>
+          <div class="boxes--box has-no-top-spacing">
+            <a class="header--item is-erhverv" href="/erhvervsgrund/" title="Erhvervsgrund">
+              <div class="header--box-content is-erhverv">
+                <div class="header--box-text">
+                  <h2 class="header--box-text-title">Erhvervsgrund</h2>
+                  <p class="header--box-text-caption">Få den helt rigtige erhvervsgrund i Aarhus og omegn.</p>
+                  {{ arrow.arrowLink(null, "is-erhverv", null) }}
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
+        </div>
       </div>
-    </div>
+    <div>
   </header>
 
 {% endmacro %}

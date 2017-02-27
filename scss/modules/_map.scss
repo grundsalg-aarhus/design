@@ -132,3 +132,71 @@
     width: 20px;
   }
 }
+
+/* Map controls overrides */
+.ol-control {
+  background-color: $white;
+  box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+  padding: 0;
+
+  &:hover, &:focus {
+    background-color: $white;
+  }
+
+  button {
+    &:hover, &:focus {
+      background-color: $gray-lightest;
+    }
+  }
+
+}
+
+.ol-zoom {
+  left: $layout-spacing;
+  top: $layout-spacing-medium;
+
+  .ol-zoom-in, .ol-zoom-out {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+.layer-switcher {
+  right: $layout-spacing;
+  top: $layout-spacing-medium;
+
+  &.shown {
+    box-shadow: none;
+  }
+
+  .panel {
+    border: 0;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+    padding: $layout-spacing;
+
+    li {
+      align-items: center;
+      display: flex;
+      margin-bottom: $layout-spacing-small;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    li label {
+      padding-left: 5px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  button {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAuBJREFUeAHtmb9u2zAQxkW5DbIU6JraBTznBVLYY1CgfQBvLlAUbp7Dz5E2XWp08QMkS5cMRvIA7WzAktyhQ4dMKSzmzoEbw6Zisvwj2fi8SKKO9PGno3ifLorwAwEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQ8EtA+B0+3OidTqc2Go26Ms8/REIcRlLuCyF+CCnPJln2mc6lD292AmCz2Xz+9/b2Qkp5pIJE8L4/3dvrjsfjX6r7Nm2xTecq9O33+zHBOy+Cxz7SvWOyGdDRecA4HzA01Eaj0c1ns686/0vRcpJMp590bHVtnAN8cXDg5V1jMKHzKI5P5vZ5fkrOvF30paV8nWbZq8W1i+PuAYzjl2maJgynXq83aFOZLIG6yabTZ0vX1qdb/w60JmA5wBPL/tXrTsuWIu/fEl52kNOa5WsX586XsAunTMYw2kSE+JhQTmgy/ibbrV/CvV7vG0XW1aaJci44SdOzTXam97c+AnnCSKRNH/uKPSmMP612uy3i+D3duiQp95uON5y2zHO/NH3tQ4WwG6VF4Jp2ZW+k/EkQvrRarcFwOJxxU9V/pQDUWHLXpF3fcGRVHWDwTURTux6xvmXbqgMMHoFGaUet9i5JkkGVIToHaKqFyYFC7eoDHEk5p3Muf4mQ8GftOtevi48APsh5GrN8gJ4mFmrY8rXwI9o1FASb/3H6PtBxZNc2keBL2EC7XrGtzkMp0yZ4BPJkkUhbPnKldr3Xr5esZ1nXboMKYQylRKAlf2X3NW2NurCSk7JR45WAurCSHDVqamvUhYsAGqVFqAsXYXxop5d6obbmD6yoCz+wUp7RLo66sJJMRRvL18KuwTyirWkJoy68yttoE0FdeBVfFBloa9SF1/HdtyCRLiKj2a7U1oHqwpouwgwEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQOC/CdwBqK5uvTo25D4AAAAASUVORK5CYII=");
+    background-position: 0;
+    background-size: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+/**
+ *
+ * Streetview.
+ *
+ */
+
+.streetview {
+  @include breakpoint($breakpoint-bigscreen) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $breakpoint-bigscreen;
+  }
+
+  &--inner {
+    height: 60vh;
+    margin-left: $layout-spacing;
+    margin-right: $layout-spacing;
+    position: relative;
+  }
+}
