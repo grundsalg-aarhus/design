@@ -114,6 +114,7 @@
     &.is-inside-context-box {
       background-color: $white;
       color: $black;
+      display: block;
 
       &.is-villa {
         border-top: 3px solid $theme-color-villa;
@@ -158,6 +159,7 @@
 
   &--box-inner {
     padding: $layout-spacing-medium;
+    height: 100%;
   }
 
   &--box-header {
