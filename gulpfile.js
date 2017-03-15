@@ -5,13 +5,16 @@ var argv = require('yargs')
   .alias('s', 'sync')
   .alias('t', 'theme')
   .alias('d', 'domain')
+  .alias('p', 'production')
   .default('sync', false)
   .default('theme', ['grundsalg-design'])
   .default('domain', 'grundsalg-design.vm')
+  .default('production', false)
   .argv;
 
 // Gulp basic.
 var chalk = require('chalk');
+var gulpif = require('gulp-if');
 var gulp = require('gulp-help')(require('gulp'), {
   'afterPrintCallback' : function() {
     var args = [];
@@ -24,6 +27,8 @@ var gulp = require('gulp-help')(require('gulp'), {
     args.push('Enabled browser-sync' + '\n');
     args.push(chalk.cyan('--domain (-d)'));
     args.push('Domain to use with browser-sync' + '\n\n');
+    args.push(chalk.cyan('--production (-p)'));
+    args.push('Production compile (remove sourcemaps etc.)' + '\n\n');
 
     console.log.apply(console, args);
     console.log(chalk.underline('Usage examples:'));
@@ -96,7 +101,7 @@ function sassTask(theme, config) {
       .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(postcss(processors))
-      .pipe(sourcemaps.write())
+      .pipe(gulpif(!argv.production, sourcemaps.write()))
       .pipe(gulp.dest(config.sass.dest));
 
     // It's unknow why gulp-if don't work with browser-sync, so this if
@@ -218,7 +223,7 @@ function minifyJSTasks(theme, config) {
       gulp.src(config.js.paths)
         .pipe(sourcemaps.init())
         .pipe(uglify())
-        .pipe(sourcemaps.write('/maps'))
+        .pipe(gulpif(!argv.production, sourcemaps.write('/maps')))
         .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest(config.js.dest));
     }
