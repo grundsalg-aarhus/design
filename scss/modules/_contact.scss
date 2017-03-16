@@ -1,0 +1,21 @@
+.contact-form {
+  margin-top: $layout-spacing;
+
+  .form-item {
+    margin-bottom: $layout-spacing-tiny;
+  }
+
+  label::after {
+    color: $theme-color-secondary;
+    content: "*";
+  }
+
+  .form-text,
+  .form-email {
+    display: block;
+  }
+
+  .button {
+    padding: 8px 15px 8px 15px;
+  }
+}
