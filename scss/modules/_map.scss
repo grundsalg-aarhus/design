@@ -22,65 +22,6 @@
     z-index: z($z-index-elements, map);
   }
 
-  &--filters {
-    align-items: center;
-    background-color: rgba(0,0,0,.75);
-    bottom: 0;
-    display: none;
-    left: 0;
-    padding-bottom: $layout-spacing;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing-medium;
-    padding-top: $layout-spacing;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: z($z-index-elements, header);
-
-    @include breakpoint($breakpoint-desk) {
-      bottom: $layout-spacing;
-      display: flex;
-      left: $layout-spacing;
-      right: auto;
-      top: auto;
-    }
-  }
-
-  &--filters-mobile {
-    background-color: $black;
-    border-radius: 30px;
-    bottom: $layout-spacing;
-    color: $white;
-    cursor: pointer;
-    display: block;
-    font-weight: 600;
-    left: $layout-spacing-small;
-    padding-bottom: $layout-spacing-small;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-    padding-top: $layout-spacing-small;
-    position: absolute;
-    z-index: z($z-index-elements, header);
-
-    @include breakpoint($breakpoint-desk) {
-      display: none;
-    }
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  &--filters-title {
-    color: $white;
-    padding-left: $layout-spacing;
-  }
-
-  &--filters-checkboxes {
-    display: flex;
-    flex-direction: column;
-  }
-
   &--popover-image {
     width: 20px;
   }
@@ -135,19 +76,25 @@
   /* Legend */
   &--legend {
     background-color: transparentize($black, .1);
-    bottom: $layout-spacing;
-    display: none;
-    font-size: $font-size-small;
-    left: $layout-spacing;
-    padding-bottom: $layout-spacing;
-    padding-left: $layout-spacing;
-    padding-right: $layout-spacing;
-    padding-top: $layout-spacing;
+    bottom: 0;
+    font-size: 10px;
+    left: 0;
+    padding-bottom: $layout-spacing-tiny;
+    padding-left: $layout-spacing-tiny;
+    padding-right: $layout-spacing-tiny;
+    padding-top: $layout-spacing-tiny;
     position: absolute;
     z-index: z($z-index-elements, header);
 
     @include breakpoint($breakpoint-tablet) {
+      bottom: $layout-spacing-small;
       display: block;
+      font-size: $font-size-small;
+      left: $layout-spacing;
+      padding-bottom: $layout-spacing;
+      padding-left: $layout-spacing;
+      padding-right: $layout-spacing;
+      padding-top: $layout-spacing;
     }
 
     @include breakpoint($breakpoint-desk) {
@@ -159,8 +106,12 @@
     align-items: center;
     color: $white;
     display: flex;
-    margin-bottom: $layout-spacing-small;
+    margin-bottom: $layout-spacing-tiny;
     position: relative;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: $layout-spacing-small;
+    }
 
     &:last-child {
       margin-bottom: 0;
