@@ -84,7 +84,7 @@
     padding-right: $layout-spacing-tiny;
     padding-top: $layout-spacing-tiny;
     position: absolute;
-    z-index: z($z-index-elements, header);
+    z-index: z($z-index-elements, map-legend);
 
     @include breakpoint($breakpoint-tablet) {
       bottom: $layout-spacing-small;

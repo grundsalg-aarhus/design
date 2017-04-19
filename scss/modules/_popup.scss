@@ -4,6 +4,7 @@
   position: absolute;
   text-align: left;
   width: 300px;
+  z-index: z($z-index-elements, map-popup);
 
   &--close-button-wrapper {
     display: flex;
